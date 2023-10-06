@@ -23,14 +23,14 @@
                         <div class="modal-dialog">
                             <div class="modal-content" id="modal-content">
                                 <div class="modal-header" style="background-color: #153757;">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRO DE CARGO</h1>
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRO DE MARCAS</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="guardar" method="post" enctype="multipart/form-data">
+                                    <form action="guardarMarca" method="post" enctype="multipart/form-data">
                                         <div class="form-group">
-                                            <label for="nombre">Nombre</label>
-                                            <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="nombre">
+                                            <label for="nombre">Nombre de la marca</label>
+                                            <input type="text" class="form-control" placeholder="Nombre" name="nombre">
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -69,13 +69,13 @@
                             </div>
                         </div>
                     </div>
-                    <?php foreach ($cargos as $cargo) : ?>
+                    <?php foreach ($marcas as $marca) : ?>
                         <tr>
-                            <td><?= $cargo['id_cargo'] ?></td>
-                            <td><?= $cargo['nombre_cargo'] ?></td>
+                            <td><?= $marca['id_marca'] ?></td>
+                            <td><?= $marca['nombre'] ?></td>
                             <td>
-                                <a href="<?= base_url('editarcargo/' . $cargo['id_cargo']) ?>" class="btn btn-info" type="button">Editar</a>
-                                <a href="<?= base_url('borrar/' . $cargo['id_cargo']) ?>" class="btn btn-danger" type="button">Borrar</a>
+                                <a href="<?= base_url('editarcargo/' . $marca['id_marca']) ?>" class="btn btn-info" type="button">Editar</a>
+                                <a href="<?= base_url('borrar/' . $marca['id_marca']) ?>" class="btn btn-danger" type="button">Borrar</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

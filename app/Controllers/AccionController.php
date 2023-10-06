@@ -2,13 +2,19 @@
 
 namespace App\Controllers;
 
+use App\Models\Activos;
 use CodeIgniter\Controller;
 use App\Models\Cargo;
 use App\Models\Condicion;
+use App\Models\Marca;
 use App\Models\Responsables;
 
 class AccionController extends Controller
 {
+    /*
+    --------------------------------------------
+    ! TODO: INICIO DE FUNCIONES DE GUARDAR DATOS
+    */
     public function save()
     {
         $datos = [
@@ -27,9 +33,8 @@ class AccionController extends Controller
         $condicion = new Condicion();
         $condicion->insertar($datos);
         return $this->response->redirect(site_url('/condicion'));
-        echo "<script>alert('¡Ya existe un cargo con ese nombre o descripción!'); 
-			window.location='./index.php';</script>";
     }
+
 
     public function saveresp()
     {
@@ -47,5 +52,72 @@ class AccionController extends Controller
         $responsable = new Responsables();
         $responsable->insertar($datos);
         return $this->response->redirect(site_url('/resp'));
+    }
+    public function saveactivo()
+    {
+        $datos = [
+            'codigo_act' => $_POST['codigo'],
+            'marca' => $_POST['marca'],
+            'modelo' => $_POST['modelo'],
+            'serial' => $_POST['seria'],
+            'condicion_act' => $_POST['condicion'],
+            'tipo' => $_POST['tipo'],
+            'descripcion' => $_POST['descripcion'],
+            'observacion' => $_POST['observaciones'],
+            'proveedor' => $_POST['proveedor'],
+            'n_factura' => $_POST['factura'],
+            'costo' => $_POST['costo'],
+            'n_orden' => $_POST['orden'],
+            'garantia_inicio' => $_POST['inicio'],
+            'garantia_fin' => $_POST['fin'],
+
+        ];
+        $activo = new Activos();
+        $activo->insertar($datos);
+        return $this->response->redirect(site_url('/activos'));
+    }
+
+    public function savemarca()
+    {
+        $datos = [
+            'nombre' => $_POST['nombre']
+        ];
+        $marca = new Marca();
+        $marca->insertar($datos);
+        return $this->response->redirect(site_url('/marca'));
+    }
+    /*
+    ! TODO: FIN DE FUNCIONES DE GUARDAR DATOS
+    -----------------------------------------
+    */
+
+
+    public function obtenerCargo($id = null)
+    {
+
+        /* $cargo = new Cargo();
+        $dato = ['id_nombre' => $id];
+        $pep = $cargo->obtenerCargo($id);
+        $datos = ['datos' => $cargo];
+        */
+        $cargo = new Cargo();
+        $datos['cargos'] = $cargo->where('id_cargo', $id)->first();
+
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+
+        return view('responsables/editar', $datos);
+    }
+
+    public function cargoupdate()
+    {
+        $cargo = new Cargo();
+        $datos = [
+            'nombre_cargo' => $_POST['nombre']
+        ];
+        $id = $this->request = ('id_cargo');
+        $cargo->actualizar($id, $datos);
+        return view('responsables/cargo', $datos);
     }
 }
