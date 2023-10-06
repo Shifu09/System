@@ -1,0 +1,12 @@
+CRITICAL - 2023-09-29 18:27:29 --> Class "App\Models\Responsables" not found
+in APPPATH\Controllers\VistaController.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-29 18:27:45 --> Class "App\Models\Responsables" not found
+in APPPATH\Controllers\VistaController.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

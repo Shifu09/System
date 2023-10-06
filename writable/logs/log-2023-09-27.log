@@ -1,0 +1,53 @@
+CRITICAL - 2023-09-27 17:45:59 --> Undefined variable $condicion
+in APPPATH\Views\templates\header.php on line 12.
+ 1 APPPATH\Views\templates\header.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $condicion', 'C:\\wamp64\\www\\system\\app\\Views\\templates\\header.php', 12)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\CargoController.php(28): view('templates/header')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CargoController->condicion()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CargoController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-27 18:01:30 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'patrimonioprueb...', 8080, '', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\system\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\system\app\Controllers\CargoController.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\CargoController->condicion()
+#8 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CargoController))
+#9 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\wamp64\www\system\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\wamp64\www\system\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\wamp64\www\system\app\Controllers\CargoController.php(26): CodeIgniter\BaseModel->findAll()
+#6 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\CargoController->condicion()
+#7 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CargoController))
+#8 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-09-27 18:01:30 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `resp_condicion`
+ORDER BY `id_condicion` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\CargoController.php(26): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CargoController->condicion()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CargoController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

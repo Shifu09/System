@@ -1,0 +1,87 @@
+CRITICAL - 2023-10-02 02:32:47 --> Undefined property: App\Controllers\AccionController::$resquest
+in APPPATH\Controllers\AccionController.php on line 14.
+ 1 APPPATH\Controllers\AccionController.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AccionController::$resquest', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 02:34:56 --> Undefined property: App\Controllers\AccionController::$resquest
+in APPPATH\Controllers\AccionController.php on line 14.
+ 1 APPPATH\Controllers\AccionController.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AccionController::$resquest', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 02:35:11 --> Undefined property: App\Controllers\AccionController::$resquest
+in APPPATH\Controllers\AccionController.php on line 14.
+ 1 APPPATH\Controllers\AccionController.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AccionController::$resquest', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 02:36:58 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1750.
+ 1 SYSTEMPATH\BaseModel.php(748): CodeIgniter\BaseModel->transformDataToArray('pepe', 'insert')
+ 2 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert('pepe', true)
+ 3 APPPATH\Controllers\AccionController.php(17): CodeIgniter\Model->insert('pepe')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 02:37:18 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1750.
+ 1 SYSTEMPATH\BaseModel.php(748): CodeIgniter\BaseModel->transformDataToArray('pepe', 'insert')
+ 2 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert('pepe', true)
+ 3 APPPATH\Controllers\AccionController.php(17): CodeIgniter\Model->insert('pepe')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 02:39:15 --> Undefined property: App\Controllers\AccionController::$resquest
+in APPPATH\Controllers\AccionController.php on line 15.
+ 1 APPPATH\Controllers\AccionController.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AccionController::$resquest', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 02:39:45 --> Call to undefined method App\Controllers\AccionController::getVat()
+in APPPATH\Controllers\AccionController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 02:56:29 --> Undefined array key "nombre_cargo"
+in APPPATH\Controllers\AccionController.php on line 14.
+ 1 APPPATH\Controllers\AccionController.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_cargo"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 02:56:48 --> Undefined array key "descripcion_cargo"
+in APPPATH\Controllers\AccionController.php on line 15.
+ 1 APPPATH\Controllers\AccionController.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion_cargo"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 02:57:09 --> Undefined array key "descripcion_cargo"
+in APPPATH\Controllers\AccionController.php on line 15.
+ 1 APPPATH\Controllers\AccionController.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion_cargo"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 03:19:37 --> Call to undefined method App\Models\Cargo::insertar
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\AccionController.php(17): CodeIgniter\Model->__call('insertar', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 03:20:38 --> Array to string conversion
+in APPPATH\Controllers\AccionController.php on line 17.
+ 1 APPPATH\Controllers\AccionController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
