@@ -19,10 +19,18 @@ class AccionController extends Controller
     {
         $datos = [
             'nombre_cargo' => $_POST['nombre']
+
         ];
         $cargo = new Cargo();
-        $cargo->insertar($datos);
-        return $this->response->redirect(site_url('/cargo'));
+        $respuesta = $cargo->insertar($datos);
+
+        if ($respuesta > 0) {
+            return redirect()->to(base_url() . '/cargo')->with('mensaje', '1');
+        } else {
+            return redirect()->to(base_url() . '/cargo')->with('mensaje', '0');
+        }
+
+        //return $this->response->redirect(site_url('/cargo'));
     }
 
     public function savecon()
@@ -56,7 +64,7 @@ class AccionController extends Controller
     public function saveactivo()
     {
         $datos = [
-            'codigo_act' => $_POST['codigo'],
+            'codigo' => $_POST['codigo'],
             'marca' => $_POST['marca'],
             'modelo' => $_POST['modelo'],
             'serial' => $_POST['seria'],

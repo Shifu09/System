@@ -4,7 +4,7 @@
     <div class="card-body">
         <div class="table-responsive">
             <table id="tabla" class="table table-hover">
-                <thead class="thead-light">
+                <thead class=" thead-light">
                     <tr>
                         <th>Codigo</th>
                         <th>Nombre</th>
@@ -13,7 +13,7 @@
                 </thead>
                 <tbody>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Registrar Marca
+                        Registrar Cargo
                     </button>
                     <!-- /**
                     * TODO: Modal (form) de Registro de Cargo
@@ -23,14 +23,14 @@
                         <div class="modal-dialog">
                             <div class="modal-content" id="modal-content">
                                 <div class="modal-header" style="background-color: #153757;">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRO DE MARCAS</h1>
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRO DE CARGO</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="guardarMarca" method="post" enctype="multipart/form-data">
+                                    <form action="guardar" method="post" enctype="multipart/form-data">
                                         <div class="form-group">
-                                            <label for="nombre">Nombre de la marca</label>
-                                            <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+                                            <label for="nombre">Nombre</label>
+                                            <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="nombre">
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -69,13 +69,13 @@
                             </div>
                         </div>
                     </div>
-                    <?php foreach ($marcas as $marca) : ?>
+                    <?php foreach ($condicion_act as $condicion) : ?>
                         <tr>
-                            <td><?= $marca['id_marca'] ?></td>
-                            <td><?= $marca['nombre'] ?></td>
+                            <td><?= $condicion['id_activo_condicion'] ?></td>
+                            <td><?= $condicion['nombre'] ?></td>
                             <td>
-                                <a href="<?= base_url('editarcargo/' . $marca['id_marca']) ?>" class="btn btn-info" type="button">Editar</a>
-                                <a href="<?= base_url('borrar/' . $marca['id_marca']) ?>" class="btn btn-danger" type="button">Borrar</a>
+                                <a href="<?= base_url('editarcargo/' . $condicion['id_activo_condicion']) ?>" class="btn btn-info" type="button">Editar</a>
+                                <a href="<?= base_url('borrar/' . $condicion['id_activo_condicion']) ?>" class="btn btn-danger" type="button">Borrar</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

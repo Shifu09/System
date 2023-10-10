@@ -1,9 +1,9 @@
 <?= $header ?>
 <?= $style ?>
-<div class="card shadow mt-1 mx-5 border-white" style="width:80%;  left: 5%;">
+<div class="card shadow mt-1 mx-5 border-white" style="width:85%;  left: 5%;">
     <div class="card-body">
         <div class="table-responsive">
-            <table id="tabla" class="table table-hover  ">
+            <table id="tabla" class="table table-hover">
                 <thead class="thead-light">
                     <tr>
                         <th>Cedula</th>
@@ -21,18 +21,12 @@
                         <div class="modal-dialog">
                             <div class="modal-content" id="modal-content">
                                 <div class="modal-header" style="background-color: #153757;">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRO DE CONDICION</h1>
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRO DE RESPONSABLES</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <form action="guardarResp" method="post" enctype="multipart/form-data">
                                         <div class=" row">
-                                            <div class="col-12 col-md-4">
-                                                <div class=" form-group">
-                                                    <label for="nombre">Cedula</label>
-                                                    <input type="text" id="nombre" class="form-control" placeholder="Cedula" name="cedula">
-                                                </div>
-                                            </div>
                                             <div class="col-12 col-md-4">
                                                 <div class=" form-group">
                                                     <label for="nombre">Nombre</label>
@@ -167,10 +161,10 @@
         </tbody>
         </table>
         <script>
-            new DataTable('#tabla', {
-                language: {
-                    url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/de-DE.json'
-                }
+            let table = new DataTable('#tabla', {
+                perPage: 5,
+                perPageSelect: [5, 7, 10, 15],
+
             });
         </script>
         <?= $footer ?>

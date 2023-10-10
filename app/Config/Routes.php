@@ -17,6 +17,11 @@ $routes->get('crear', 'VistaController::CrearCargo');
 $routes->get('activos', 'VistaController::activo');
 $routes->get('marca', 'VistaController::marca');
 $routes->get('resp', 'VistaController::resp');
+$routes->get('condicionActivo', 'VistaController::condicion_act');
+$routes->get('tipoActivo', 'VistaController::tipo_act');
+$routes->get('zona', 'VistaController::zona_mov');
+
+
 
 /**
 --------------------------------------
@@ -32,3 +37,4 @@ $routes->post('cargoupdate', 'AccionController::cargoupdate');
 $routes->get('editarcargo/(:num)', 'AccionController::obtenercargo/$1');
 $routes->post('guardarActivo', 'AccionController::saveactivo');
 $routes->post('guardarMarca', 'AccionController::savemarca');
+$routes->get('ubicacion', 'VistaController::ubicacion_mov');

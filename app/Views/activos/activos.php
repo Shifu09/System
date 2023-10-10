@@ -31,14 +31,14 @@
                                     <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRO DE ACTIVOS</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <form action="guardarActivo" method="postenctype=" multipart-form-data">
+                                <form action="guardarActivo" method="post" enctype="multipart/form-data">
                                     <div class=" form-group">
                                         <label for="nombre">Codigo</label>
                                         <input type="text" class="form-control" placeholder="Codigo" name="codigo">
                                     </div>
                                     <div class="form-group">
                                         <label for="descripcion">Descripción</label>
-                                        <textarea name="descripcion" id="descripcion" cols="3" rows="3" class="form-control" placeholder="Descripción"></textarea>
+                                        <textarea name="descripcion" id="descripcion" cols="3" rows="3" class="form-control" placeholder="Descripción del activo"></textarea>
                                     </div>
 
                                     <div class="row">
@@ -159,7 +159,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="observaciones">Observaciones</label>
-                                            <textarea name="observaciones" id="observaciones" cols="3" rows=3" class="form-control" placeholder="Observaciones"></textarea>
+                                            <textarea name="observaciones" id="observaciones" cols="3" rows=3" class="form-control" placeholder="Observaciones  "></textarea>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -173,7 +173,7 @@
         </div>
         <?php foreach ($activos as $activo) : ?>
             <tr>
-                <td><?= $activo['codigo_act'] ?></td>
+                <td><?= $activo['codigo'] ?></td>
                 <td><?= $activo['serial'] ?></td>
                 <td><?= $activo['descripcion'] ?></td>
                 <td><?= $activo['modelo'] ?></td>
@@ -186,8 +186,8 @@
                 }
                 ?>
                 <td>
-                    <a href="<?= base_url('editarcargo/' . $activo['codigo_act']) ?>" class="btn btn-info" type="button">Editar</a>
-                    <a href="<?= base_url('borrar/' . $activo['codigo_act']) ?>" class="btn btn-danger" type="button">Borrar</a>
+                    <a href="<?= base_url('editarcargo/' . $activo['codigo']) ?>" class="btn btn-info" type="button">Editar</a>
+                    <a href="<?= base_url('borrar/' . $activo['codigo']) ?>" class="btn btn-danger" type="button">Borrar</a>
                 </td>
             </tr>
         <?php endforeach; ?>

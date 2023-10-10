@@ -88,4 +88,12 @@
 
                 });
             </script>
+            <script>
+                let mensaje = '<php echo $mensaje ?>';
+                if (mensaje == '1') {
+                    alert("SIUUU");
+                } else if (mensaje == '0') {
+                    alert("nooo");
+                }
+            </script>
             <?= $footer ?>
