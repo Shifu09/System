@@ -46,6 +46,7 @@
                     * TODO: Modal (form) Edicion de Cargo
                     */
                     -->
+
                     <div class="modal fade" id="example" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content" id="modal-content">
@@ -54,7 +55,11 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="guardarcargo" method="post" enctype="multipart/form-data">
+                                    <form action="guardarcargo" id="exam" method="post" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label for="nombre">Codigo</label>
+                                            <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="id">
+                                        </div>
                                         <div class="form-group">
                                             <label for="nombre">Nombre</label>
                                             <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="nombre">

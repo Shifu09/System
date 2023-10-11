@@ -11,6 +11,7 @@ class Responsables extends Model
     protected $primaryKey = 'cedula';
     protected $allowedFields = ['cedula', 'nombre', 'apellido', 'correo', 'telefono', 'condicion_resp', 'cargo_resp', 'gerencia', 'division'];
 
+
     public function insertar($datos)
     {
         $table = $this->table('resp_responsables');

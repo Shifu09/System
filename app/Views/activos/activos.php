@@ -98,21 +98,7 @@
 
                                                 <div class="form-group">
                                                     <label for="nombre">Tipo de Activo</label>
-                                                    <select name="tipo" class="form-control" required onChange="selectGerenciasRespCons()" required>
-                                                        <option value="">Seleccione una opción...</option>
-
-                                                        <?php
-
-                                                        use App\Models\Tipo_act;
-
-                                                        $tipo = new Tipo_act();
-                                                        $datos['tipo'] = $tipo->findAll();
-                                                        foreach ($datos['tipo'] as $dato) {
-
-                                                            echo '<option value=' . $dato['id_tipo'] .  '>' . $dato['nombre'] . '</option>';
-                                                        }
-                                                        ?>
-                                                    </select>
+                                                    <input type="text" name="tipo" class="form-control" placeholder="Equipos electronicos etc..">
                                                 </div>
 
                                             </div>

@@ -28,37 +28,14 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="guardar" method="post" enctype="multipart/form-data">
+                                    <form action="guardarzona" method="post" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <label for="nombre">Nombre</label>
                                             <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="nombre">
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                            <button type="submit" style="background-color: #66944c; color:#ffff" class="btn">Guardar</button>
-
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /**
-                    * TODO: Modal (form) Edicion de Cargo
-                    */
-                    -->
-                    <div class="modal fade" id="example" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content" id="modal-content">
-                                <div class="modal-header" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #153757;">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">EDICION DE CARGO</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form action="guardarcargo" method="post" enctype="multipart/form-data">
                                         <div class="form-group">
-                                            <label for="nombre">Nombre</label>
-                                            <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="nombre">
+                                            <label for="nombre">Direccion</label>
+                                            <input type="text" id="nombre" class="form-control" placeholder="Direccion" name="direccion">
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

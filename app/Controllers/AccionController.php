@@ -6,13 +6,16 @@ use App\Models\Activos;
 use CodeIgniter\Controller;
 use App\Models\Cargo;
 use App\Models\Condicion;
+use App\Models\Condicion_act;
 use App\Models\Marca;
 use App\Models\Responsables;
+use App\Models\ubicacion;
+use App\Models\Zona;
 
 class AccionController extends Controller
 {
     /*
-    --------------------------------------------
+    ------------------------------------------------------------------------------------------
     ! TODO: INICIO DE FUNCIONES DE GUARDAR DATOS
     */
     public function save()
@@ -24,13 +27,9 @@ class AccionController extends Controller
         $cargo = new Cargo();
         $respuesta = $cargo->insertar($datos);
 
-        if ($respuesta > 0) {
-            return redirect()->to(base_url() . '/cargo')->with('mensaje', '1');
-        } else {
-            return redirect()->to(base_url() . '/cargo')->with('mensaje', '0');
-        }
 
-        //return $this->response->redirect(site_url('/cargo'));
+
+        return $this->response->redirect(base_url('cargo'));
     }
 
     public function savecon()
@@ -40,9 +39,18 @@ class AccionController extends Controller
         ];
         $condicion = new Condicion();
         $condicion->insertar($datos);
-        return $this->response->redirect(site_url('/condicion'));
+        return $this->response->redirect(base_url('condicion'));
     }
 
+    public function saveconact()
+    {
+        $datos = [
+            'nombre' => $_POST['nombre']
+        ];
+        $condicion = new Condicion_act();
+        $condicion->insertar($datos);
+        return $this->response->redirect(base_url('condicionActivo'));
+    }
 
     public function saveresp()
     {
@@ -59,7 +67,7 @@ class AccionController extends Controller
         ];
         $responsable = new Responsables();
         $responsable->insertar($datos);
-        return $this->response->redirect(site_url('/resp'));
+        return $this->response->redirect(base_url('/resp'));
     }
     public function saveactivo()
     {
@@ -82,9 +90,8 @@ class AccionController extends Controller
         ];
         $activo = new Activos();
         $activo->insertar($datos);
-        return $this->response->redirect(site_url('/activos'));
+        return $this->response->redirect(base_url('activos'));
     }
-
     public function savemarca()
     {
         $datos = [
@@ -92,11 +99,35 @@ class AccionController extends Controller
         ];
         $marca = new Marca();
         $marca->insertar($datos);
-        return $this->response->redirect(site_url('/marca'));
+        return $this->response->redirect(base_url('/marca'));
     }
+
+    public function savezona()
+    {
+        $datos = [
+            'nombre' => $_POST['nombre'],
+            'direccion' => $_POST['direccion']
+        ];
+        $marca = new Zona();
+        $marca->insertar($datos);
+        return $this->response->redirect(base_url('zona'));
+    }
+
+    public function saveubi()
+    {
+        $datos = [
+            'sede' => $_POST['nombre'],
+            'direccion' => $_POST['direccion']
+        ];
+        $marca = new ubicacion();
+        $marca->insertar($datos);
+        return $this->response->redirect(base_url('ubicacion'));
+    }
+
+
     /*
     ! TODO: FIN DE FUNCIONES DE GUARDAR DATOS
-    -----------------------------------------
+    ------------------------------------------------------------------------------------------
     */
 
 
@@ -118,14 +149,40 @@ class AccionController extends Controller
         return view('responsables/editar', $datos);
     }
 
-    public function cargoupdate()
+    public function cargoupdate($id = null)
     {
         $cargo = new Cargo();
-        $datos = [
-            'nombre_cargo' => $_POST['nombre']
-        ];
-        $id = $this->request = ('id_cargo');
-        $cargo->actualizar($id, $datos);
-        return view('responsables/cargo', $datos);
+        // $datos = ['id_cargo' => $id];
+        $datos['cargos'] = $cargo->find($id);
+
+        print_r($datos);
+        return view('responsables/editar', $datos);
+    }
+
+    public function updatecargo()
+    {
+        $cargo = new Cargo();
+        $id = $_POST['id'];
+        $val = $this->validate([
+            'nombre' => 'required',
+        ]);
+        if ($_POST && $val) {
+            $datos = [
+                'nombre_cargo' => $_POST['nombre']
+
+            ];
+
+            $cargo->update($id, $datos);
+            return redirect()->to(base_url('cargo'));
+        }
+
+        echo '<script> 
+    alert ("Registro exitoso","aja","sds");
+    </script>';
+
+        // $datos = ['id_cargo' => $id];
+        //print_r($_POST);
+
+
     }
 }

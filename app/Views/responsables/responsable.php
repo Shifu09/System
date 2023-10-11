@@ -29,8 +29,14 @@
                                         <div class=" row">
                                             <div class="col-12 col-md-4">
                                                 <div class=" form-group">
-                                                    <label for="nombre">Nombre</label>
-                                                    <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="nombre">
+                                                    <label for="nombre">Cedula</label>
+                                                    <input type="text" id="nombre" class="form-control" placeholder="Cedula" name="cedula">
+                                                </div>
+                                                <div class="col-12 col-md-4">
+                                                    <div class=" form-group">
+                                                        <label for="nombre">Nombre</label>
+                                                        <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="nombre">
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-4">

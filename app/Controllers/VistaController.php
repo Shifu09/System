@@ -7,10 +7,9 @@ use CodeIgniter\Controller;
 use App\Models\Cargo;
 use App\Models\condicion;
 use App\Models\Condicion_act;
-use App\Models\Tipo_act;
 use App\Models\Marca;
 use App\Models\Responsables;
-use App\Models\Tipo_mov;
+use App\Models\ubicacion;
 use App\Models\Zona;
 
 class VistaController extends Controller
@@ -89,19 +88,6 @@ class VistaController extends Controller
         return view('activos/condicion', $datos);
     }
 
-    public function Tipo_act()
-    {
-        $resp = new Tipo_act();
-        $datos['tipos'] =  $resp->orderBy('id_tipo', 'ASC')->findAll();
-
-        $datos['header'] = view('templates/header');
-        $datos['footer'] = view('templates/footer');
-        $datos['style'] = view('templates/style');
-
-        return view('activos/tipo', $datos);
-    }
-
-
     public function zona_mov()
     {
         $resp = new Zona();
@@ -112,5 +98,16 @@ class VistaController extends Controller
         $datos['style'] = view('templates/style');
 
         return view('movimientos/zona', $datos);
+    }
+    public function ubicacion()
+    {
+        $resp = new ubicacion();
+        $datos['ubicaciones'] =  $resp->orderBy('id_ubicacion', 'ASC')->findAll();
+
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+
+        return view('movimientos/ubicacion', $datos);
     }
 }

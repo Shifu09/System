@@ -1,0 +1,327 @@
+CRITICAL - 2023-10-11 00:25:27 --> Undefined array key "nombre"
+in APPPATH\Controllers\AccionController.php on line 135.
+ 1 APPPATH\Controllers\AccionController.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->pepe()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 00:27:11 --> Undefined array key "id_cargo"
+in APPPATH\Controllers\AccionController.php on line 134.
+ 1 APPPATH\Controllers\AccionController.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_cargo"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 134)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->pepe()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 00:27:45 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 134.
+ 1 APPPATH\Controllers\AccionController.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 134)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->pepe()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 00:27:58 --> Undefined array key "nombre"
+in APPPATH\Controllers\AccionController.php on line 136.
+ 1 APPPATH\Controllers\AccionController.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 136)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->pepe()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 00:30:54 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 134.
+ 1 APPPATH\Controllers\AccionController.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 134)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->pepe()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 00:31:15 --> Undefined array key "id_cargo"
+in APPPATH\Controllers\AccionController.php on line 134.
+ 1 APPPATH\Controllers\AccionController.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_cargo"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 134)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->pepe()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 00:32:17 --> Undefined array key "id_cargo"
+in APPPATH\Controllers\AccionController.php on line 134.
+ 1 APPPATH\Controllers\AccionController.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_cargo"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 134)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->pepe()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 00:32:56 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 134.
+ 1 APPPATH\Controllers\AccionController.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 134)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->pepe()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 00:33:04 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 134.
+ 1 APPPATH\Controllers\AccionController.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 134)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->pepe()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 00:37:13 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1724.
+ 1 SYSTEMPATH\BaseModel.php(1724): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(916): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\AccionController.php(140): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->pepe()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 00:48:34 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 134.
+ 1 APPPATH\Controllers\AccionController.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 134)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->pepe()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 00:48:38 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 134.
+ 1 APPPATH\Controllers\AccionController.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 134)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->pepe()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 00:48:52 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 134.
+ 1 APPPATH\Controllers\AccionController.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 134)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->pepe()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 01:34:22 --> Undefined array key "id_cargo"
+in APPPATH\Views\responsables\cargo.php on line 63.
+ 1 APPPATH\Views\responsables\cargo.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_cargo"', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\cargo.php', 63)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\cargo.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/cargo', [...], true)
+ 5 APPPATH\Controllers\VistaController.php(32): view('responsables/cargo', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 01:34:38 --> Undefined variable $cargo
+in APPPATH\Views\responsables\cargo.php on line 63.
+ 1 APPPATH\Views\responsables\cargo.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cargo', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\cargo.php', 63)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\cargo.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/cargo', [...], true)
+ 5 APPPATH\Controllers\VistaController.php(32): view('responsables/cargo', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 02:04:56 --> Undefined variable $header
+in APPPATH\Views\responsables\editar.php on line 1.
+ 1 APPPATH\Views\responsables\editar.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $header', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editar', [], true)
+ 5 APPPATH\Controllers\AccionController.php(128): view('responsables/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->cargoupdate('71')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 02:05:12 --> Cannot access offset of type string on string
+in APPPATH\Views\responsables\editar.php on line 77.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editar', [], true)
+ 4 APPPATH\Controllers\AccionController.php(128): view('responsables/editar', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->cargoupdate('71')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 02:06:01 --> Undefined variable $header
+in APPPATH\Views\responsables\editar.php on line 1.
+ 1 APPPATH\Views\responsables\editar.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $header', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editar', [], true)
+ 5 APPPATH\Controllers\AccionController.php(128): view('responsables/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->cargoupdate('71')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 02:06:26 --> Undefined variable $header
+in APPPATH\Views\responsables\editar.php on line 1.
+ 1 APPPATH\Views\responsables\editar.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $header', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editar', [], true)
+ 5 APPPATH\Controllers\AccionController.php(128): view('responsables/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->cargoupdate('71')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 02:06:35 --> Undefined variable $style
+in APPPATH\Views\responsables\editar.php on line 1.
+ 1 APPPATH\Views\responsables\editar.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $style', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editar', [], true)
+ 5 APPPATH\Controllers\AccionController.php(128): view('responsables/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->cargoupdate('71')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 02:07:09 --> Undefined variable $style
+in APPPATH\Views\responsables\editar.php on line 1.
+ 1 APPPATH\Views\responsables\editar.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $style', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editar', [], true)
+ 5 APPPATH\Controllers\AccionController.php(128): view('responsables/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->cargoupdate('71')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 02:07:10 --> Undefined variable $style
+in APPPATH\Views\responsables\editar.php on line 1.
+ 1 APPPATH\Views\responsables\editar.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $style', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editar', [], true)
+ 5 APPPATH\Controllers\AccionController.php(128): view('responsables/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->cargoupdate('71')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 02:07:10 --> Undefined variable $style
+in APPPATH\Views\responsables\editar.php on line 1.
+ 1 APPPATH\Views\responsables\editar.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $style', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editar', [], true)
+ 5 APPPATH\Controllers\AccionController.php(128): view('responsables/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->cargoupdate('71')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 02:07:10 --> Undefined variable $style
+in APPPATH\Views\responsables\editar.php on line 1.
+ 1 APPPATH\Views\responsables\editar.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $style', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editar', [], true)
+ 5 APPPATH\Controllers\AccionController.php(128): view('responsables/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->cargoupdate('71')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 02:07:56 --> Undefined variable $style
+in APPPATH\Views\responsables\editar.php on line 1.
+ 1 APPPATH\Views\responsables\editar.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $style', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editar', [], true)
+ 5 APPPATH\Controllers\AccionController.php(128): view('responsables/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->cargoupdate('71')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 02:26:16 --> syntax error, unexpected identifier "Good", expecting "," or ";"
+in APPPATH\Controllers\AccionController.php on line 150.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AccionController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AccionController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\AccionController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 13:12:26 --> Undefined variable $ubicaciones
+in APPPATH\Views\movimientos\ubicacion.php on line 47.
+ 1 APPPATH\Views\movimientos\ubicacion.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ubicaciones', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\ubicacion.php', 47)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\ubicacion.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/ubicacion', [], true)
+ 5 APPPATH\Controllers\VistaController.php(126): view('movimientos/ubicacion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->ubicacion()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 13:12:45 --> Undefined array key "nombre"
+in APPPATH\Views\movimientos\ubicacion.php on line 50.
+ 1 APPPATH\Views\movimientos\ubicacion.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\ubicacion.php', 50)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\ubicacion.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/ubicacion', [], true)
+ 5 APPPATH\Controllers\VistaController.php(126): view('movimientos/ubicacion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->ubicacion()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-11 13:27:48 --> mysqli_sql_exception: Unknown column 'resp_responsables.deleted_at' in 'where clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\system\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\system\app\Controllers\VistaController.php(50): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+#8 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+#9 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-11 13:27:48 --> Unknown column 'resp_responsables.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `resp_responsables`
+WHERE `resp_responsables`.`deleted_at` IS NULL
+ORDER BY `cedula` ASC', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\VistaController.php(50): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 13:30:08 --> Undefined array key "cedula"
+in APPPATH\Controllers\AccionController.php on line 46.
+ 1 APPPATH\Controllers\AccionController.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cedula"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->saveresp()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 14:17:48 --> Class "App\Models\Tipo_act" not found
+in APPPATH\Views\activos\activos.php on line 108.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/activos', [], true)
+ 4 APPPATH\Controllers\VistaController.php(66): view('activos/activos', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->activo()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 14:17:51 --> Class "App\Models\Tipo_act" not found
+in APPPATH\Views\activos\activos.php on line 108.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/activos', [], true)
+ 4 APPPATH\Controllers\VistaController.php(66): view('activos/activos', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->activo()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 14:17:55 --> Class "App\Models\Tipo_act" not found
+in APPPATH\Views\activos\activos.php on line 108.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/activos', [], true)
+ 4 APPPATH\Controllers\VistaController.php(66): view('activos/activos', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->activo()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 17:48:23 --> Call to undefined method App\Models\Condicion_act::insertar
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\AccionController.php(49): CodeIgniter\Model->__call('insertar', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->saveconact()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

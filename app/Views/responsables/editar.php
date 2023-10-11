@@ -1,7 +1,3 @@
-<?php
-print_r($cargos);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,20 +9,18 @@ print_r($cargos);
 </head>
 
 <body>
-    <form action="cargoupdate" method="post" enctype="multipart/form-data">
+    <form action="<?= base_url('actualizar'); ?>" method="post">
         <div class="form-group">
             <label for="nombre">Codigo</label>
-            <input type="text" id="nombre" class="form-control" value="<?= $cargos['id_cargo'] ?>">
+            <input type="text" name="id" readonly class="form-control" value="<?= $cargos['id_cargo'] ?>">
         </div>
         <div class="form-group">
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" class="form-control" value="<?= $cargos['nombre_cargo'] ?>">
+            <input type="text" name="nombre" class="form-control" value="<?= $cargos['nombre_cargo'] ?>">
         </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="submit" style="background-color: #66944c; color:#ffff" class="btn">Guardar</button>
 
-        </div>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" style="background-color: #66944c; color:#ffff" class="btn">Guardar</button>
     </form>
     </div>
     </div>
