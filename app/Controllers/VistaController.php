@@ -17,8 +17,6 @@ class VistaController extends Controller
     public function index()
     {
         $cargo = new Cargo();
-        $mensaje = session('mensaje');
-        $datoss['mensaje'] =  $mensaje;
         $datos['cargos'] = $cargo->orderBy('id_cargo', 'ASC')->findAll();
 
 
@@ -28,7 +26,7 @@ class VistaController extends Controller
         $datos['style'] = view('templates/style');
 
 
-        return view('responsables/cargo', $datos, $datoss);
+        return view('responsables/cargo', $datos);
     }
     public function condicion()
     {

@@ -46,8 +46,7 @@
                     * TODO: Modal (form) Edicion de Cargo
                     */
                     -->
-
-                    <div class="modal fade" id="example" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content" id="modal-content">
                                 <div class="modal-header" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #153757;">
@@ -62,7 +61,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="nombre">Nombre</label>
-                                            <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="nombre">
+                                            <input name="nombre" class="form-control">
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -76,13 +75,34 @@
                     </div>
                     <?php foreach ($cargos as $cargo) : ?>
                         <tr>
+
                             <td><?= $cargo['id_cargo'] ?></td>
                             <td><?= $cargo['nombre_cargo'] ?></td>
                             <td>
+                                <a href="<?= base_url('cargo/' . $cargo['id_cargo']) ?>" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal">Read</a>
                                 <a href="<?= base_url('editarcargo/' . $cargo['id_cargo']) ?>" class="btn btn-info" type="button">Editar</a>
-                                <a href="<?= base_url('borrar/' . $cargo['id_cargo']) ?>" class="btn btn-danger" type="button">Borrar</a>
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Borrar</button>
                             </td>
                         </tr>
+                        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5>AVISO</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ¿Seguro que deseas borrar el registro seleccionado?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        <a href="<?= base_url('borrar/' . $cargo['id_cargo']) ?>" type="button" class="btn btn-danger">Borrar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     <?php endforeach; ?>
                 </tbody>
             </table>
@@ -92,13 +112,5 @@
                     perPageSelect: [5, 7, 10, 15],
 
                 });
-            </script>
-            <script>
-                let mensaje = '<php echo $mensaje ?>';
-                if (mensaje == '1') {
-                    alert("SIUUU");
-                } else if (mensaje == '0') {
-                    alert("nooo");
-                }
             </script>
             <?= $footer ?>

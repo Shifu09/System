@@ -95,7 +95,7 @@
                                 </a>
                                 <ul class="dropdown-menu" style="background-color: #153757">
                                     <li><a class="dropdown-item" style="color: #ffffff;" href="#">Movimientos</a></li>
-                                    <li><a class="dropdown-item" style="color: #ffffff;" href="#">Ubicaciones</a></li>
+                                    <li><a class="dropdown-item" style="color: #ffffff;" href="ubicacion">Ubicaciones</a></li>
                                     <li><a class="dropdown-item" style="color: #ffffff;" href="zona">Zonas</a></li>
 
                                 </ul>

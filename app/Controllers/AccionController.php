@@ -154,9 +154,13 @@ class AccionController extends Controller
         $cargo = new Cargo();
         // $datos = ['id_cargo' => $id];
         $datos['cargos'] = $cargo->find($id);
-
+        $datos2['cargos'] = $cargo->orderBy('id_cargo', 'ASC')->findAll();
         print_r($datos);
-        return view('responsables/editar', $datos);
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+
+        return view('responsables/editar', $datos, $datos2);
     }
 
     public function updatecargo()

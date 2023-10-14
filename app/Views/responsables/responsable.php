@@ -68,6 +68,7 @@
                                                         <option value="">Seleccione una opción...</option>
                                                         <?php
 
+
                                                         use App\Models\condicion;
 
                                                         $condicion = new condicion();
