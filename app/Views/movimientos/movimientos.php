@@ -11,7 +11,9 @@
                         <th>Fecha</th>
                         <th>Observaciones</th>
                         <th>Opciones</th>
-                        <th>Opciones</th>
+                        <th>Responsable</th>
+                        <th></th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -26,20 +28,130 @@
                         <div class="modal-dialog">
                             <div class="modal-content" id="modal-content">
                                 <div class="modal-header" style="background-color: #153757;">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRO DE MOVIMIENTO</h1>
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRO DE MOVIMIENTOS</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="guardar" method="post" enctype="multipart/form-data">
-                                        <div class="form-group">
-                                            <label for="nombre">Nombre</label>
-                                            <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="nombre">
+                                    <form action="guardarResp" method="post" enctype="multipart/form-data">
+                                        <div class=" row">
+                                            <div class="col-12 col-md-4">
+                                                <div class=" form-group">
+                                                    <label for="nombre">Codigo del activo</label>
+                                                    <select name="codigo" class="form-control" required>
+                                                        <option value="">Seleccione una opción...</option>
+                                                        <?php
+
+
+                                                        use App\Models\Activos;
+
+                                                        $condicion = new Activos();
+                                                        $datos['activos'] =  $condicion->orderBy('codigo')->findAll();
+                                                        foreach ($datos['activos'] as $dato) {
+
+                                                            echo '<option value=' . $dato['codigo'] .  '>' . $dato['codigo'] . '</option>';
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class=" form-group">
+                                                    <label for="nombre">Nombre</label>
+                                                    <select name="cedula" class="form-control" required>
+                                                        <option value="">Seleccione una opción...</option>
+                                                        <?php
+
+                                                        use App\Models\Responsables;
+
+
+                                                        $condicion = new Responsables();
+                                                        $datos['responsables'] =  $condicion->orderBy('cedula')->findAll();
+                                                        foreach ($datos['responsables'] as $dato) {
+
+                                                            echo '<option value=' . $dato['cedula'] .  '>' . $dato['nombre'] . " " . $dato['apellido'] . '</option>';
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <label for="descripcion">Motivo</label>
+                                                    <select name="motivo" class="form-control" required>
+                                                        <option value="">Seleccione una opción...</option>
+                                                        <?php
+
+                                                        use App\Models\Motivo;
+
+
+                                                        $condicion = new Motivo();
+                                                        $datos['motivos'] =  $condicion->orderBy('id_motivo')->findAll();
+                                                        foreach ($datos['motivos'] as $dato) {
+
+                                                            echo '<option value=' . $dato['id_motivo'] .  '>' . $dato['nombre'] . '</option>';
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <div class="col-12 col-lg-4">
+                                            <div class="form-group">
+                                                <label for="descripcion">Zona</label>
+                                                <select name="zona" class="form-control" required>
+                                                    <option value="">Seleccione una opción...</option>
+                                                    <?php
+
+                                                    use App\Models\Zona;
+
+                                                    $condicion = new Zona();
+                                                    $datos['zonas'] =  $condicion->orderBy('id_zona')->findAll();
+                                                    foreach ($datos['zonas'] as $dato) {
+
+                                                        echo '<option value=' . $dato['id_zona'] .  '>' . $dato['nombre'] . '</option>';
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="descripcion">Ubicacion</label>
+                                            <select name="ubicacion" class="form-control" required>
+                                                <option value="">Seleccione una opción...</option>
+                                                <?php
+
+                                                use App\Models\ubicacion;
+
+                                                $condicion = new ubicacion();
+                                                $datos['ubicaciones'] =  $condicion->orderBy('id_ubicacion')->findAll();
+                                                foreach ($datos['ubicaciones'] as $dato) {
+
+                                                    echo '<option value=' . $dato['id_ubicacion'] .  '>' . $dato['sede'] . '</option>';
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="periodo">Fecha del Movimiento</label>
+                                            <input type="date" name="fecha" id="periodo" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-16">
+                                        <label for="periodo">Observaciones</label>
+                                        <textarea name="observaciones" id="observaciones" cols="3" rows=3" class="form-control" placeholder="Observaciones  "></textarea>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                             <button type="submit" style="background-color: #66944c; color:#ffff" class="btn">Guardar</button>
-
                                         </div>
+                                    </div>
                                     </form>
                                 </div>
                             </div>
@@ -53,6 +165,10 @@
                             <td><?= $movimiento['codigo_act'] ?></td>
                             <td><?= $movimiento['fecha'] ?></td>
                             <td><?= $movimiento['observacion'] ?></td>
+                            <td><?= $movimiento['cedula_resp'] ?></td>
+                            <td><?= $movimiento['nombret'] ?></td>
+                            <td><?= $movimiento['nombre'] . " " . $movimiento['apellido'] ?></td>
+
 
 
                             <td>

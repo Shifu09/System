@@ -134,13 +134,17 @@ class VistaController extends Controller
 
         return view('movimientos/motivo', $datos);
     }
+
     public function movimiento()
     {
-        $resp = new Movimientos();
-        $datos['movimientos'] =  $resp->orderBy('id_movimientos', 'ASC')->findAll();
+        $db      = \Config\Database::connect();
+        $builder = $db->table('mov_movimientos  mov');
+        $builder->select('mov.*, dt.cedula_resp, res.nombre, res.apellido, mot.nombre as nombret');
+        $builder->join('mov_detalles  dt', 'dt.id = mov.id_movimientos');
+        $builder->join('resp_responsables  res', 'res.cedula = dt.cedula_resp');
+        $builder->join('mov_motivo  mot', 'mot.id_motivo = mov.motivo');
 
-
-
+        $datos['movimientos'] = $builder->get()->getResultArray();
 
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');

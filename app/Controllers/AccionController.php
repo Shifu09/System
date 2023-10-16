@@ -9,6 +9,7 @@ use App\Models\Condicion;
 use App\Models\Condicion_act;
 use App\Models\Marca;
 use App\Models\Motivo;
+use App\Models\Movimientos;
 use App\Models\Responsables;
 use App\Models\Tipo;
 use App\Models\ubicacion;
@@ -142,6 +143,20 @@ class AccionController extends Controller
         $tipo = new Motivo();
         $tipo->insertar($datos);
         return $this->response->redirect(base_url('motivo'));
+    }
+
+    public function savemovimiento()
+    {
+        $datos = [
+            'codigo_act' => $_POST['codigo'],
+            'zona' => $_POST['zona'],
+            'zona' => $_POST['zona'],
+            'motivo' => $_POST['motivo'],
+            'fecha' => $_POST['fecha'],
+        ];
+        $tipo = new Movimientos();
+        $tipo->insertar($datos);
+        return $this->response->redirect(base_url('movimientos'));
     }
     /*
     ! FIN DE FUNCIONES DE GUARDAR DATOS
