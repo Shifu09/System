@@ -4,7 +4,7 @@
     <div class="card-body">
         <div class="table-responsive">
             <table id="tabla" class="table table-hover">
-                <thead class=" thead-light">
+                <thead class="thead-light">
                     <tr>
                         <th>Codigo</th>
                         <th>Nombre</th>
@@ -13,21 +13,17 @@
                 </thead>
                 <tbody>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Registrar Cargo
+                        Registrar Nuevo Tipo de Activo
                     </button>
-                    <!-- /**
-                    * TODO: Modal (form) de Registro de Cargo
-                    */
-                    -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content" id="modal-content">
                                 <div class="modal-header" style="background-color: #153757;">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRO DE CARGO</h1>
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRO TIPO DE ACTIVO</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="guardar" method="post" enctype="multipart/form-data">
+                                    <form action="guardarTipo" method="post" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <label for="nombre">Nombre</label>
                                             <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="nombre">
@@ -42,42 +38,23 @@
                             </div>
                         </div>
                     </div>
-
-                    <?php foreach ($cargos as $cargo) : ?>
+                    <?php foreach ($tipos as $tipo) : ?>
                         <tr>
-
-                            <td><?= $cargo['id_cargo'] ?></td>
-                            <td><?= $cargo['nombre_cargo'] ?></td>
+                            <td><?= $tipo['id_tipo'] ?></td>
+                            <td><?= $tipo['nombre'] ?></td>
                             <td>
-                                <a href="<?= base_url('editarcargo/' . $cargo['id_cargo']) ?>" class="btn btn-info" type="button" data-bs-target="#modalUpdate">Read/Editar</a>
-                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Borrar</button>
+                                <a href="<?= base_url('borrartipo/' . $tipo['id_tipo']) ?>" class="btn btn-danger" type="button">Borrar</a>
                             </td>
+
                         </tr>
-                        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5>AVISO</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        ¿Seguro que deseas borrar el registro seleccionado?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                        <a href="<?= base_url('borrar/' . $cargo['id_cargo']) ?>" type="button" class="btn btn-danger">Borrar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     <?php endforeach; ?>
                 </tbody>
             </table>
             <script>
-                let table = new DataTable('#tabla', {
+                var tabla = document.querySelector('#tabla');
+                var datable = new DataTable(tabla, {
                     perPage: 5,
-                    perPageSelect: [5, 7, 10, 15],
-
+                    perPageSelect: [5, 7, 10, 15]
                 });
             </script>
             <?= $footer ?>

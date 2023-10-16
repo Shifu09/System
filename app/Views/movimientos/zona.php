@@ -14,7 +14,7 @@
                 </thead>
                 <tbody>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Registrar Cargo
+                        Registrar Zona
                     </button>
                     <!-- /**
                     * TODO: Modal (form) de Registro de Cargo
@@ -24,7 +24,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content" id="modal-content">
                                 <div class="modal-header" style="background-color: #153757;">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRO DE CARGO</h1>
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRO DE ZONA</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">

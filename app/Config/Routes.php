@@ -21,25 +21,27 @@ $routes->get('condicionActivo', 'VistaController::condicion_act');
 $routes->get('zona', 'VistaController::zona_mov');
 $routes->get('ubicacion', 'VistaController::ubicacion');
 $routes->get('ubicacion', 'VistaController::ubicacion_mov');
+$routes->get('tipo', 'VistaController::tipo_act');
+$routes->get('movimientos', 'VistaController::movimiento');
+$routes->get('motivo', 'VistaController::motivo');
 
 
 /**
--------------------------------------------------------------------------
  * TODO: FIN de las Rutas de Vistas
+-----------------------------------------------------------------------------------------
  */
 
-
 /**
---------------------------------------
+------------------------------------------------------------------------------------------
  * TODO: Inicio de las Rutas de Acciones
  */
-$routes->get('borrar/(:num)', 'CargoController::delete/$1');
-$routes->get('borrarcon/(:num)', 'CargoController::deletecon/$1');
-$routes->get('borrarresp/(:num)', 'CargoController::deleteresp/$1');
+$routes->get('borrar/(:num)', 'AccionController::delete/$1');
+$routes->get('borrarcon/(:num)', 'AccionController::deletecon/$1');
+$routes->get('borrarresp/(:num)', 'AccionController::deleteresp/$1');
 $routes->get('editarcargo/(:num)', 'AccionController::cargoupdate/$1');
 
-/**
- * ? TODO:Rutas de Guardars
+/*
+? TODO:Rutas de Guardar
  */
 
 $routes->post('guardarActivo', 'AccionController::saveactivo');
@@ -51,3 +53,5 @@ $routes->post('actualizar', 'AccionController::updatecargo');
 $routes->post('guardarAct', 'AccionController::saveconact');
 $routes->post('guardarzona', 'AccionController::savezona');
 $routes->post('guardarUbicacion', 'AccionController::saveubi');
+$routes->post('guardarTipo', 'AccionController::savetipo');
+$routes->post('guardarmotivo', 'AccionController::savemotivo');

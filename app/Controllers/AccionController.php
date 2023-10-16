@@ -8,7 +8,9 @@ use App\Models\Cargo;
 use App\Models\Condicion;
 use App\Models\Condicion_act;
 use App\Models\Marca;
+use App\Models\Motivo;
 use App\Models\Responsables;
+use App\Models\Tipo;
 use App\Models\ubicacion;
 use App\Models\Zona;
 
@@ -16,7 +18,7 @@ class AccionController extends Controller
 {
     /*
     ------------------------------------------------------------------------------------------
-    ! TODO: INICIO DE FUNCIONES DE GUARDAR DATOS
+    ! INICIO DE FUNCIONES DE GUARDAR DATOS
     */
     public function save()
     {
@@ -123,44 +125,44 @@ class AccionController extends Controller
         $marca->insertar($datos);
         return $this->response->redirect(base_url('ubicacion'));
     }
-
+    public function savetipo()
+    {
+        $datos = [
+            'nombre' => $_POST['nombre'],
+        ];
+        $tipo = new Tipo();
+        $tipo->insertar($datos);
+        return $this->response->redirect(base_url('tipo'));
+    }
+    public function savemotivo()
+    {
+        $datos = [
+            'nombre' => $_POST['nombre'],
+        ];
+        $tipo = new Motivo();
+        $tipo->insertar($datos);
+        return $this->response->redirect(base_url('motivo'));
+    }
+    /*
+    ! FIN DE FUNCIONES DE GUARDAR DATOS
+    ------------------------------------------------------------------------------------------
+  */
 
     /*
-    ! TODO: FIN DE FUNCIONES DE GUARDAR DATOS
-    ------------------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------
+    ! INICIO DE FUNCIONES DE EDITAR DATOS
     */
 
-
-    public function obtenerCargo($id = null)
+    public function cargoupdate($id = null)
     {
-
-        /* $cargo = new Cargo();
-        $dato = ['id_nombre' => $id];
-        $pep = $cargo->obtenerCargo($id);
-        $datos = ['datos' => $cargo];
-        */
         $cargo = new Cargo();
-        $datos['cargos'] = $cargo->where('id_cargo', $id)->first();
+        $datos['cargos'] = $cargo->find($id);
 
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
 
         return view('responsables/editar', $datos);
-    }
-
-    public function cargoupdate($id = null)
-    {
-        $cargo = new Cargo();
-        // $datos = ['id_cargo' => $id];
-        $datos['cargos'] = $cargo->find($id);
-        $datos2['cargos'] = $cargo->orderBy('id_cargo', 'ASC')->findAll();
-        print_r($datos);
-        $datos['header'] = view('templates/header');
-        $datos['footer'] = view('templates/footer');
-        $datos['style'] = view('templates/style');
-
-        return view('responsables/editar', $datos, $datos2);
     }
 
     public function updatecargo()
@@ -170,6 +172,7 @@ class AccionController extends Controller
         $val = $this->validate([
             'nombre' => 'required',
         ]);
+
         if ($_POST && $val) {
             $datos = [
                 'nombre_cargo' => $_POST['nombre']
@@ -183,10 +186,41 @@ class AccionController extends Controller
         echo '<script> 
     alert ("Registro exitoso","aja","sds");
     </script>';
-
-        // $datos = ['id_cargo' => $id];
-        //print_r($_POST);
+    }
 
 
+
+    /*
+    ! FIN DE FUNCIONES DE EDITAR DATOS
+    ------------------------------------------------------------------------------------------
+    */
+
+    /*
+    -----------------------------------------------------------------------------------------
+    ! INICIO DE FUNCIONES DE BORRAR DATOS
+    */
+
+    public function delete($id = null)
+    {
+        $cargo = new Cargo();
+
+        $cargo->where('id_cargo', $id)->delete($id);
+        return $this->response->redirect(site_url('cargo'));
+    }
+
+    public function deletecon($id = null)
+    {
+        $condicion = new condicion();
+
+        $condicion->where('id_condicion', $id)->delete($id);
+        return $this->response->redirect(site_url('condicion'));
+    }
+
+    public function deleteresp($id = null)
+    {
+        $responsable = new Responsables();
+
+        $responsable->where('cedula', $id)->delete($id);
+        return $this->response->redirect(site_url('resp'));
     }
 }

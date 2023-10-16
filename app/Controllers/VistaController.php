@@ -7,8 +7,12 @@ use CodeIgniter\Controller;
 use App\Models\Cargo;
 use App\Models\condicion;
 use App\Models\Condicion_act;
+use App\Models\Detalles;
 use App\Models\Marca;
+use App\Models\Motivo;
+use App\Models\Movimientos;
 use App\Models\Responsables;
+use App\Models\Tipo;
 use App\Models\ubicacion;
 use App\Models\Zona;
 
@@ -85,7 +89,17 @@ class VistaController extends Controller
 
         return view('activos/condicion', $datos);
     }
+    public function tipo_act()
+    {
+        $resp = new Tipo();
+        $datos['tipos'] =  $resp->orderBy('id_tipo', 'ASC')->findAll();
 
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+
+        return view('activos/tipo', $datos);
+    }
     public function zona_mov()
     {
         $resp = new Zona();
@@ -107,5 +121,31 @@ class VistaController extends Controller
         $datos['style'] = view('templates/style');
 
         return view('movimientos/ubicacion', $datos);
+    }
+
+    public function motivo()
+    {
+        $resp = new Motivo();
+        $datos['motivos'] =  $resp->orderBy('id_motivo', 'ASC')->findAll();
+
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+
+        return view('movimientos/motivo', $datos);
+    }
+    public function movimiento()
+    {
+        $resp = new Movimientos();
+        $datos['movimientos'] =  $resp->orderBy('id_movimientos', 'ASC')->findAll();
+
+
+
+
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+
+        return view('movimientos/movimientos', $datos);
     }
 }

@@ -95,12 +95,22 @@
                                                 </div>
                                             </div>
                                             <div class="col-12 col-lg-4">
-
                                                 <div class="form-group">
                                                     <label for="nombre">Tipo de Activo</label>
-                                                    <input type="text" name="tipo" class="form-control" placeholder="Equipos electronicos etc..">
-                                                </div>
+                                                    <select name="tipo" class="form-control" required onChange="selectGerenciasRespCons()" required>
+                                                        <option value="">Seleccione una opción...</option>
+                                                        <?php
 
+                                                        use App\Models\tipo;
+
+                                                        $condicion = new tipo();
+                                                        $datos['tipos'] = $condicion->findAll();
+                                                        foreach ($datos['tipos'] as $dato) {
+
+                                                            echo '<option value=' . $dato['id_tipo'] .  '>' . $dato['nombre'] . '</option>';
+                                                        }
+                                                        ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row">

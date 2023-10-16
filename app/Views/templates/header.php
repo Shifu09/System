@@ -66,6 +66,7 @@
                                     <li><a class="dropdown-item" style="color: #ffffff;" href="activos">Activos</a></li>
                                     <li><a class="dropdown-item" style="color: #ffffff;" href="condicionActivo">Condicion del Activo</a></li>
                                     <li><a class="dropdown-item" style="color: #ffffff;" href="marca">Marca</a></li>
+                                    <li><a class="dropdown-item" style="color: #ffffff;" href="tipo">Tipos de Activo</a></li>
                                 </ul>
                             </li>
 
@@ -94,7 +95,7 @@
                                     <hr>
                                 </a>
                                 <ul class="dropdown-menu" style="background-color: #153757">
-                                    <li><a class="dropdown-item" style="color: #ffffff;" href="#">Movimientos</a></li>
+                                    <li><a class="dropdown-item" style="color: #ffffff;" href="movimientos">Movimientos</a></li>
                                     <li><a class="dropdown-item" style="color: #ffffff;" href="ubicacion">Ubicaciones</a></li>
                                     <li><a class="dropdown-item" style="color: #ffffff;" href="zona">Zonas</a></li>
 
