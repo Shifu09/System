@@ -17,7 +17,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="btn" id="but" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Registrar Activo
                     </button>
                     <!-- /**

@@ -12,6 +12,13 @@
             background-color: #153757;
         }
 
+        #but {
+
+            background-color: rgb(100, 145, 74);
+            color: #ffffff;
+
+        }
+
         #modal-content {
             width: 150%;
             height: 130%;
