@@ -1,0 +1,326 @@
+ERROR - 2023-10-18 13:02:27 --> mysqli_sql_exception: Unknown column 'mot.nombre' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...', Array, false)
+#4 C:\wamp64\www\system\app\Controllers\AccionController.php(248): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('8076639')
+#6 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#7 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-18 13:02:27 --> Unknown column 'mot.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `dt`.`nombre_condicion`, `res`.`nombre`, `res`.`apellido`, `mot`.`nombre` as `nombret`
+FROM `resp_responsables` `mov`
+JOIN `resp_condicion` `dt` ON `dt`.`id_condicion` = `mov`.`id_cedula`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `dt`.`cedula_resp`
+ORDER BY `id_movimientos` ASC', [], false)
+ 2 APPPATH\Controllers\AccionController.php(248): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('8076639')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-18 13:02:45 --> mysqli_sql_exception: Unknown column 'mov.id_cedula' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...', Array, false)
+#4 C:\wamp64\www\system\app\Controllers\AccionController.php(248): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('8076639')
+#6 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#7 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-18 13:02:45 --> Unknown column 'mov.id_cedula' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `dt`.`nombre_condicion`
+FROM `resp_responsables` `mov`
+JOIN `resp_condicion` `dt` ON `dt`.`id_condicion` = `mov`.`id_cedula`
+ORDER BY `id_movimientos` ASC', [], false)
+ 2 APPPATH\Controllers\AccionController.php(248): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('8076639')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-18 13:02:55 --> mysqli_sql_exception: Unknown column 'id_movimientos' in 'order clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...', Array, false)
+#4 C:\wamp64\www\system\app\Controllers\AccionController.php(248): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('8076639')
+#6 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#7 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-18 13:02:55 --> Unknown column 'id_movimientos' in 'order clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `dt`.`nombre_condicion`
+FROM `resp_responsables` `mov`
+JOIN `resp_condicion` `dt` ON `dt`.`id_condicion` = `mov`.`cedula`
+ORDER BY `id_movimientos` ASC', [], false)
+ 2 APPPATH\Controllers\AccionController.php(248): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('8076639')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 13:03:08 --> Undefined array key "cedula"
+in APPPATH\Views\responsables\editarresp.php on line 18.
+ 1 APPPATH\Views\responsables\editarresp.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cedula"', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarresp.php', 18)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarresp.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editarresp', [], true)
+ 5 APPPATH\Controllers\AccionController.php(254): view('responsables/editarresp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('8076639')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 13:03:47 --> Undefined array key "nombre"
+in APPPATH\Views\responsables\editarresp.php on line 23.
+ 1 APPPATH\Views\responsables\editarresp.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarresp.php', 23)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarresp.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editarresp', [], true)
+ 5 APPPATH\Controllers\AccionController.php(254): view('responsables/editarresp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('8076639')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 13:04:11 --> Undefined array key "cedula"
+in APPPATH\Views\responsables\editarresp.php on line 18.
+ 1 APPPATH\Views\responsables\editarresp.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cedula"', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarresp.php', 18)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarresp.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editarresp', [], true)
+ 5 APPPATH\Controllers\AccionController.php(254): view('responsables/editarresp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('8076639')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-18 13:04:43 --> mysqli_sql_exception: Unknown column 'mov.cargo' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...', Array, false)
+#4 C:\wamp64\www\system\app\Controllers\AccionController.php(248): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('8076639')
+#6 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#7 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-18 13:04:43 --> Unknown column 'mov.cargo' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `dt`.`nombre_condicion`
+FROM `resp_responsables` `mov`
+JOIN `resp_condicion` `dt` ON `dt`.`id_condicion` = `mov`.`cargo`', [], false)
+ 2 APPPATH\Controllers\AccionController.php(248): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('8076639')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 13:05:01 --> Undefined array key "cedula"
+in APPPATH\Views\responsables\editarresp.php on line 18.
+ 1 APPPATH\Views\responsables\editarresp.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cedula"', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarresp.php', 18)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarresp.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editarresp', [], true)
+ 5 APPPATH\Controllers\AccionController.php(254): view('responsables/editarresp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('8076639')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-18 13:05:43 --> mysqli_sql_exception: Unknown column 'dt.nombre_condicion' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...', Array, false)
+#4 C:\wamp64\www\system\app\Controllers\AccionController.php(248): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('8076639')
+#6 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#7 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-18 13:05:43 --> Unknown column 'dt.nombre_condicion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `dt`.`nombre_condicion`
+FROM `resp_condicion` `mov`
+JOIN `resp_responsables` `dt` ON `dt`.`id_condicion` = `mov`.`cargo_resp`', [], false)
+ 2 APPPATH\Controllers\AccionController.php(248): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('8076639')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 13:13:50 --> Trying to access array offset on value of type null
+in APPPATH\Views\responsables\editar.php on line 16.
+ 1 APPPATH\Views\responsables\editar.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editar', [], true)
+ 5 APPPATH\Controllers\AccionController.php(180): view('responsables/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->cargoupdate('201000235')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 13:22:12 --> Trying to access array offset on value of type null
+in APPPATH\Views\responsables\editarcon.php on line 16.
+ 1 APPPATH\Views\responsables\editarcon.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarcon.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarcon.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editarcon', [], true)
+ 5 APPPATH\Controllers\AccionController.php(214): view('responsables/editarcon', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->condicionupdate('11')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 13:24:08 --> Trying to access array offset on value of type null
+in APPPATH\Views\responsables\editarcon.php on line 20.
+ 1 APPPATH\Views\responsables\editarcon.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarcon.php', 20)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarcon.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editarcon', [], true)
+ 5 APPPATH\Controllers\AccionController.php(214): view('responsables/editarcon', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->condicionupdate('11')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 13:26:24 --> Trying to access array offset on value of type null
+in APPPATH\Views\responsables\editarcon.php on line 16.
+ 1 APPPATH\Views\responsables\editarcon.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarcon.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarcon.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editarcon', [], true)
+ 5 APPPATH\Controllers\AccionController.php(214): view('responsables/editarcon', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->condicionupdate('11')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 13:27:46 --> Trying to access array offset on value of type null
+in APPPATH\Views\responsables\editarcon.php on line 16.
+ 1 APPPATH\Views\responsables\editarcon.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarcon.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarcon.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editarcon', [], true)
+ 5 APPPATH\Controllers\AccionController.php(214): view('responsables/editarcon', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->condicionupdate('11')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 13:30:06 --> Trying to access array offset on value of type null
+in APPPATH\Views\responsables\editarcon.php on line 16.
+ 1 APPPATH\Views\responsables\editarcon.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarcon.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarcon.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editarcon', [], true)
+ 5 APPPATH\Controllers\AccionController.php(214): view('responsables/editarcon', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->condicionupdate('13')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 13:31:13 --> Trying to access array offset on value of type null
+in APPPATH\Views\responsables\editarcon.php on line 20.
+ 1 APPPATH\Views\responsables\editarcon.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarcon.php', 20)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarcon.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editarcon', [], true)
+ 5 APPPATH\Controllers\AccionController.php(215): view('responsables/editarcon', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->condicionupdate('13')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 13:35:25 --> Trying to access array offset on value of type null
+in APPPATH\Views\responsables\editarcon.php on line 16.
+ 1 APPPATH\Views\responsables\editarcon.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarcon.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarcon.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editarcon', [], true)
+ 5 APPPATH\Controllers\AccionController.php(214): view('responsables/editarcon', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->condicionupdate('11')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 13:35:43 --> Trying to access array offset on value of type null
+in APPPATH\Views\responsables\editarcon.php on line 20.
+ 1 APPPATH\Views\responsables\editarcon.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarcon.php', 20)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarcon.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editarcon', [], true)
+ 5 APPPATH\Controllers\AccionController.php(214): view('responsables/editarcon', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->condicionupdate('11')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 13:37:29 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 930.
+ 1 SYSTEMPATH\BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\AccionController.php(231): CodeIgniter\Model->update('11', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updatecondicion()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 13:53:31 --> Undefined variable $condicion
+in APPPATH\Views\responsables\editarmarca.php on line 16.
+ 1 APPPATH\Views\responsables\editarmarca.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $condicion', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarmarca.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarmarca.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editarmarca', [], true)
+ 5 APPPATH\Controllers\AccionController.php(214): view('responsables/editarmarca', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->marcaupdate('10')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 14:17:21 --> Trying to access array offset on value of type null
+in APPPATH\Views\activos\editarcon.php on line 16.
+ 1 APPPATH\Views\activos\editarcon.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\editarcon.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\editarcon.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editarcon', [], true)
+ 5 APPPATH\Controllers\AccionController.php(248): view('activos/editarcon', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->condicionupdate('16')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 14:23:00 --> Invalid file: "activos/editarcon.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('activos/editarcon.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editarcon', [], true)
+ 3 APPPATH\Controllers\AccionController.php(248): view('activos/editarcon', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->condicionAupdate('11')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 14:28:00 --> Trying to access array offset on value of type null
+in APPPATH\Views\activos\editarcon.php on line 16.
+ 1 APPPATH\Views\activos\editarcon.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\editarcon.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\editarcon.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editarcon', [], true)
+ 5 APPPATH\Controllers\AccionController.php(248): view('activos/editarcon', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->condicionupdate('15')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 14:32:26 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 930.
+ 1 SYSTEMPATH\BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\AccionController.php(299): CodeIgniter\Model->update('15', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updatecondicionrep()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 14:33:32 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 930.
+ 1 SYSTEMPATH\BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\AccionController.php(299): CodeIgniter\Model->update('15', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updatecondicionrep()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

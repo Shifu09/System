@@ -6,13 +6,13 @@
             <table id="tabla" class="table table-hover">
                 <thead class=" thead-light">
                     <tr>
-                        <th>Codigo</th>
-                        <th>Cedula del Activo</th>
+                        <th>Codigo del movimiento</th>
+                        <th>Codigo del Activo</th>
                         <th>Fecha</th>
                         <th>Observaciones</th>
-                        <th>Opciones</th>
+                        <th>Motivo del movimiento</th>
                         <th>Responsable</th>
-                        <th></th>
+                        <th>Opciones</th>
 
                     </tr>
                 </thead>
@@ -165,7 +165,6 @@
                             <td><?= $movimiento['codigo_act'] ?></td>
                             <td><?= $movimiento['fecha'] ?></td>
                             <td><?= $movimiento['observacion'] ?></td>
-                            <td><?= $movimiento['cedula_resp'] ?></td>
                             <td><?= $movimiento['nombret'] ?></td>
                             <td><?= $movimiento['nombre'] . " " . $movimiento['apellido'] ?></td>
 

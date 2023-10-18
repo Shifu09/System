@@ -202,8 +202,186 @@ class AccionController extends Controller
     alert ("Registro exitoso","aja","sds");
     </script>';
     }
+    public function marcaupdate($id = null)
+    {
+        $cargo = new Marca();
+        $datos['marca'] = $cargo->find($id);
 
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
 
+        return view('activos/editarmarca', $datos);
+    }
+
+    public function updatemarca()
+    {
+        $cargo = new Marca();
+        $id = $_POST['id'];
+        $val = $this->validate([
+            'nombre' => 'required',
+        ]);
+
+        if ($_POST && $val) {
+            $datos = [
+                'nombre' => $_POST['nombre']
+
+            ];
+
+            $cargo->update($id, $datos);
+            return redirect()->to(base_url('marca'));
+        }
+
+        echo '<script> 
+    alert ("Registro exitoso","aja","sds");
+    </script>';
+    }
+    public function condicionupdate($id = null)
+    {
+        $cargo = new Condicion_act();
+        $datos['condicion'] = $cargo->find($id);
+
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+
+        return view('activos/editarcon', $datos);
+    }
+
+    public function updatecondicion()
+    {
+        $cargo = new Condicion_act();
+        $id = $_POST['id'];
+        $val = $this->validate([
+            'nombre' => 'required',
+        ]);
+
+        if ($_POST && $val) {
+            $datos = [
+                'nombre' => $_POST['nombre']
+
+            ];
+
+            $cargo->update($id, $datos);
+            return redirect()->to(base_url('condicionActivo'));
+        }
+
+        echo '<script> 
+    alert ("Registro exitoso","aja","sds");
+    </script>';
+    }
+    public function condicionupdaterep($id = null)
+    {
+        $cargo = new Condicion();
+        $datos['condicion'] = $cargo->find($id);
+
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+
+        return view('responsables/editarcon', $datos);
+    }
+
+    public function updatecondicionrep()
+    {
+        $cargo = new Condicion();
+        $id = $_POST['id'];
+        $val = $this->validate([
+            'nombre' => 'required',
+        ]);
+
+        if ($_POST && $val) {
+            $datos = [
+                'nombre_condicion' => $_POST['nombre']
+
+            ];
+
+            $cargo->update($id, $datos);
+            return redirect()->to(base_url('condicion'));
+        }
+
+        echo '<script> 
+    alert ("Registro exitoso","aja","sds");
+    </script>';
+    }
+    public function tipoupdate($id = null)
+    {
+        $cargo = new Tipo();
+        $datos['tipo'] = $cargo->find($id);
+
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+
+        return view('activos/editartipo', $datos);
+    }
+
+    public function updatetipo()
+    {
+        $cargo = new Tipo();
+        $id = $_POST['id'];
+        $val = $this->validate([
+            'nombre' => 'required',
+        ]);
+
+        if ($_POST && $val) {
+            $datos = [
+                'nombre' => $_POST['nombre']
+
+            ];
+
+            $cargo->update($id, $datos);
+            return redirect()->to(base_url('tipo'));
+        }
+
+        echo '<script> 
+    alert ("Registro exitoso","aja","sds");
+    </script>';
+    }
+    public function respupdate($id = null)
+    {
+        $resp = new Responsables();
+        $datos['resp'] = $resp->find($id);
+
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+
+        return view('responsables/editarresp', $datos);
+    }
+
+    public function updateresp()
+    {
+        $resp = new Responsables();
+        $id = $_POST['id'];
+        $val = $this->validate([
+            'nombre' => 'required',
+        ]);
+
+        if ($_POST && $val) {
+            $datos = [
+                'nombre' => $_POST['nombre'],
+                'apellido' => $_POST['apellido'],
+                'telefono' => $_POST['telefono'],
+                'condicion_resp' => $_POST['condicion'],
+                'correo' => $_POST['correo'],
+                'cargo_resp' => $_POST['cargo'],
+                'gerencia' => $_POST['gerencia'],
+                'division' => $_POST['division'],
+
+            ];
+
+            $resp->update(
+                $id,
+                $datos
+            );
+            return redirect()->to(base_url('resp'));
+        }
+
+        echo '<script> 
+    alert ("Registro exitoso","aja","sds");
+    </script>';
+    }
 
     /*
     ! FIN DE FUNCIONES DE EDITAR DATOS

@@ -147,7 +147,7 @@ class VistaController extends Controller
         $builder->join('resp_responsables  res', 'res.cedula = dt.cedula_resp');
         $builder->join('mov_motivo  mot', 'mot.id_motivo = mov.motivo');
 
-        $datos['movimientos'] = $builder->get()->getResultArray();
+        $datos['movimientos'] = $builder->orderBy('id_movimientos', 'ASC')->get()->getResultArray();
 
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
