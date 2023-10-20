@@ -45,6 +45,7 @@ $routes->get('editarresp/(:num)', 'AccionController::respupdate/$1');
 $routes->get('editarmarca/(:num)', 'AccionController::marcaupdate/$1');
 $routes->get('editartipo/(:num)', 'AccionController::tipoupdate/$1');
 
+
 $routes->post('actualizartipo', 'AccionController::updatetipo');
 $routes->post('actualizar', 'AccionController::updatecargo');
 $routes->post('actualizarmarca', 'AccionController::updatemarca');
