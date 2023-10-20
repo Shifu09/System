@@ -1,5 +1,3 @@
-<?= $header ?>
-<?= $style ?>
 <div class="card shadow mt-1 mx-5 border-white" style="width:85%;  left: 5%;">
     <div class="card-body">
         <div class="table-responsive">
