@@ -1,10 +1,10 @@
 <?= $header ?>
 <?= $style ?>
-<div class="card shadow mt-1 mx-5 border-white" style="width:85%;  left: 5%;">
+<div class="card shadow" style=" width:85%; left: 5%;">
     <div class="card-body">
         <div class="table-responsive">
-            <table id="tabla" class="table table-hover">
-                <thead class=" thead-light">
+            <table id="tabla">
+                <thead>
                     <tr>
                         <th>Codigo del movimiento</th>
                         <th>Codigo del Activo</th>
@@ -168,10 +168,7 @@
                             <td><?= $movimiento['nombret'] ?></td>
                             <td><?= $movimiento['nombre'] . " " . $movimiento['apellido'] ?></td>
 
-
-
                             <td>
-                                <a href="<?= base_url('editarmov/' . $movimiento['id_movimientos']) ?>" class="btn btn-info" type="button" data-bs-target="#modalUpdate">Read/Editar</a>
                                 <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Borrar</button>
                             </td>
                         </tr>

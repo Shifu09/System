@@ -1,10 +1,10 @@
 <?= $header ?>
 <?= $style ?>
-<div class="card shadow mt-1 mx-5 border-white" style="width:85%;  left: 5%;">
+<div class="card shadow" style=" width:85%; left: 5%;">
     <div class="card-body">
         <div class="table-responsive">
-            <table id="tabla" class="table table-hover">
-                <thead class=" thead-light">
+            <table id="tabla">
+                <thead>
                     <tr>
                         <th>Codigo</th>
                         <th>Nombre de la zona</th>
@@ -54,7 +54,6 @@
                             <td><?= $ubicacion['sede'] ?></td>
                             <td><?= $ubicacion['direccion'] ?></td>
                             <td>
-                                <a href="<?= base_url('editarcargo/' . $ubicacion['id_ubicacion']) ?>" class="btn btn-info" type="button">Editar</a>
                                 <a href="<?= base_url('borrar/' . $ubicacion['id_ubicacion']) ?>" class="btn btn-danger" type="button">Borrar</a>
                             </td>
                         </tr>

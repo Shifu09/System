@@ -15,7 +15,6 @@ class Cargo extends Model
         $table = $this->table('resp_cargo');
         $table->insert($datos);
     }
-
     public function actualizar($datos)
     {
         $table = $this->table('resp_cargo');
