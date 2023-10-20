@@ -62,7 +62,7 @@
                                     <hr>
 
                                 </a>
-                                <ul class="dropdown-menu" style="background-color: #153757">
+                                <ul class="dropdown-menu" id="menu" style="background-color: #153757">
                                     <li><a class="dropdown-item" style="color: #ffffff;" href="activos">Activos</a></li>
                                     <li><a class="dropdown-item" style="color: #ffffff;" href="condicionActivo">Condicion del Activo</a></li>
                                     <li><a class="dropdown-item" style="color: #ffffff;" href="marca">Marca</a></li>
@@ -107,9 +107,11 @@
             </div>
         </nav>
     </div>
+
     </div>
     <br>
     <br>
     <br>
     <br>
+
 </body>

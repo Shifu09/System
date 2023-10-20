@@ -1,0 +1,78 @@
+ERROR - 2023-10-20 00:36:02 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_2` FOREIGN KEY (`cargo_resp`) REFERENCES `resp_cargo` (`id_cargo`) ON DELETE RESTRICT ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\wamp64\www\system\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\wamp64\www\system\app\Controllers\AccionController.php(405): CodeIgniter\BaseModel->delete(Array)
+#7 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->delete('127')
+#8 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#9 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-20 00:36:02 --> Cannot delete or update a parent row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_2` FOREIGN KEY (`cargo_resp`) REFERENCES `resp_cargo` (`id_cargo`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `resp_cargo`
+WHERE `id_cargo` = :id_cargo:
+AND `id_cargo` IN :id_cargo.1:', [...], false)
+ 2 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\AccionController.php(405): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->delete('127')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-20 00:37:47 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_2` FOREIGN KEY (`cargo_resp`) REFERENCES `resp_cargo` (`id_cargo`) ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\wamp64\www\system\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\wamp64\www\system\app\Controllers\AccionController.php(405): CodeIgniter\BaseModel->delete(Array)
+#7 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->delete('127')
+#8 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#9 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-20 00:37:47 --> Cannot delete or update a parent row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_2` FOREIGN KEY (`cargo_resp`) REFERENCES `resp_cargo` (`id_cargo`) ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `resp_cargo`
+WHERE `id_cargo` = :id_cargo:
+AND `id_cargo` IN :id_cargo.1:', [...], false)
+ 2 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\AccionController.php(405): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->delete('127')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-20 00:38:13 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_2` FOREIGN KEY (`cargo_resp`) REFERENCES `resp_cargo` (`id_cargo`) ON DELETE RESTRICT ON UPDATE RESTRICT) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\wamp64\www\system\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\wamp64\www\system\app\Controllers\AccionController.php(405): CodeIgniter\BaseModel->delete(Array)
+#7 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->delete('127')
+#8 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#9 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-20 00:38:13 --> Cannot delete or update a parent row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_2` FOREIGN KEY (`cargo_resp`) REFERENCES `resp_cargo` (`id_cargo`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `resp_cargo`
+WHERE `id_cargo` = :id_cargo:
+AND `id_cargo` IN :id_cargo.1:', [...], false)
+ 2 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\AccionController.php(405): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->delete('127')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

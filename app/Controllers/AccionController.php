@@ -89,7 +89,6 @@ class AccionController extends Controller
             'n_orden' => $_POST['orden'],
             'garantia_inicio' => $_POST['inicio'],
             'garantia_fin' => $_POST['fin'],
-
         ];
         $activo = new Activos();
         $activo->insertar($datos);
@@ -229,11 +228,17 @@ class AccionController extends Controller
             ];
 
             $cargo->update($id, $datos);
-            return redirect()->to(base_url('marca'));
+            echo '<script> 
+            
+        alert ("Registro exitoso","aja","sds");
+        window.location.href = "marca";
+        </script>';
+            //return redirect()->to(base_url('marca'));
         }
 
         echo '<script> 
     alert ("Registro exitoso","aja","sds");
+    window.location.href = "marca";
     </script>';
     }
     public function condicionupdate($id = null)
@@ -285,6 +290,7 @@ class AccionController extends Controller
     public function updatecondicionrep()
     {
         $cargo = new Condicion();
+        $datoss['condicion'] = $cargo->find();
         $id = $_POST['id'];
         $val = $this->validate([
             'nombre' => 'required',
@@ -293,7 +299,6 @@ class AccionController extends Controller
         if ($_POST && $val) {
             $datos = [
                 'nombre_condicion' => $_POST['nombre']
-
             ];
 
             $cargo->update($id, $datos);
