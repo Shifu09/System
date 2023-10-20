@@ -49,7 +49,7 @@
                             <td><?= $cargo['nombre_cargo'] ?></td>
                             <td>
                                 <a href="<?= base_url('editarcargo/' . $cargo['id_cargo']) ?>" class="btn btn-info" type="button" data-bs-target="#modalUpdate">Editar</a>
-                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Borrar</button>
+
                             </td>
                         </tr>
                         <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
