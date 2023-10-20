@@ -39,18 +39,7 @@ $routes->get('borrar/(:num)', 'AccionController::delete/$1');
 $routes->get('borrarcon/(:num)', 'AccionController::deletecon/$1');
 $routes->get('borrarresp/(:num)', 'AccionController::deleteresp/$1');
 $routes->get('editarcargo/(:num)', 'AccionController::cargoupdate/$1');
-$routes->get('editarcondicion/(:num)', 'AccionController::condicionupdate/$1');
-$routes->get('editarcondicionn/(:num)', 'AccionController::condicionupdaterep/$1');
-$routes->get('editarresp/(:num)', 'AccionController::respupdate/$1');
-$routes->get('editarmarca/(:num)', 'AccionController::marcaupdate/$1');
-$routes->get('editartipo/(:num)', 'AccionController::tipoupdate/$1');
 
-$routes->post('actualizartipo', 'AccionController::updatetipo');
-$routes->post('actualizar', 'AccionController::updatecargo');
-$routes->post('actualizarmarca', 'AccionController::updatemarca');
-$routes->post('actualizarcon', 'AccionController::updatecondicion');
-$routes->post('actualizarconn', 'AccionController::updatecondicionrep');
-$routes->post('actualizaresp', 'AccionController::updateresp');
 /*
 ? TODO:Rutas de Guardar
  */
