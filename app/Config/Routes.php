@@ -39,7 +39,8 @@ $routes->get('borrar/(:num)', 'AccionController::delete/$1');
 $routes->get('borrarcon/(:num)', 'AccionController::deletecon/$1');
 $routes->get('borrarresp/(:num)', 'AccionController::deleteresp/$1');
 $routes->get('editarcargo/(:num)', 'AccionController::cargoupdate/$1');
-
+$routes->get('editarcargo/(:num)', 'AccionController::cargoupdate/$1');
+$routes->post('actualizar', 'AccionController::updatecargo');
 /*
 ? TODO:Rutas de Guardar
  */
