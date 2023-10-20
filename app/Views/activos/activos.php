@@ -1,11 +1,11 @@
 <?= $header ?>
 <?= $style ?>
 
-<div class="card shadow mt-1 mx-5 border-white" style="width:85%;  left: 5%;">
+<div class="card shadow" style=" width:85%; left: 5%;">
     <div class="card-body">
         <div class="table-responsive">
-            <table id="tabla" class="table table-hover">
-                <thead class=" thead-light">
+            <table id="tabla">
+                <thead>
                     <tr>
                         <th>Codigo</th>
                         <th>Serial</th>
@@ -182,7 +182,6 @@
                 }
                 ?>
                 <td>
-                    <a href="<?= base_url('editarcargo/' . $activo['codigo']) ?>" class="btn btn-info" type="button">Editar</a>
                     <a href="<?= base_url('borrar/' . $activo['codigo']) ?>" class="btn btn-danger" type="button">Borrar</a>
                 </td>
             </tr>

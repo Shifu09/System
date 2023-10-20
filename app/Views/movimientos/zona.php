@@ -1,10 +1,10 @@
 <?= $header ?>
 <?= $style ?>
-<div class="card shadow mt-1 mx-5 border-white" style="width:85%;  left: 5%;">
+<div class="card shadow" style=" width:85%; left: 5%;">
     <div class="card-body">
         <div class="table-responsive">
-            <table id="tabla" class="table table-hover">
-                <thead class=" thead-light">
+            <table id="tabla">
+                <thead>
                     <tr>
                         <th>Codigo</th>
                         <th>Nombre de la zona</th>
@@ -53,9 +53,27 @@
                             <td><?= $zona['nombre'] ?></td>
                             <td><?= $zona['direccion'] ?></td>
                             <td>
-                                <a href="<?= base_url('editarcargo/' . $zona['id_zona']) ?>" class="btn btn-info" type="button">Editar</a>
-                                <a href="<?= base_url('borrar/' . $zona['id_zona']) ?>" class="btn btn-danger" type="button">Borrar</a>
+
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Borrar</button>
+
                             </td>
+                            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5>AVISO</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            ¿Seguro que deseas borrar el registro seleccionado?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <a href="<?= base_url('borrar/' . $zona['id_zona']) ?>" class="btn btn-danger" type="button">Borrar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

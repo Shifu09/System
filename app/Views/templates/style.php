@@ -10,7 +10,7 @@
 <body>
     <style>
         body {
-            background-color: #153757;
+            background-color: rgb(5, 54, 133);
         }
 
         #menu:hover {
@@ -39,6 +39,51 @@
             position: relative;
             top: -22px;
             left: 27px;
+        }
+
+        #tabla {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #tabla th,
+        #tabla td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Estilo para la cabecera */
+        #tabla thead {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        #tabla th {
+            font-weight: bold;
+        }
+
+        /* Estilo para las filas impares */
+        #tabla tbody tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        /* Estilo para las filas pares */
+        #tabla tbody tr:nth-child(even) {
+            background-color: #fff;
+        }
+
+        /* Estilo para los botones */
+        .btn {
+            padding: 5px 10px;
+            background-color: #d9534f;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #c9302c;
         }
 
         #img {

@@ -98,3 +98,21 @@ in APPPATH\Views\responsables\condicion.php on line 60.
  7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 13:27:07 --> Undefined variable $cargo
+in APPPATH\Views\activos\condicion.php on line 69.
+ 1 APPPATH\Views\activos\condicion.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cargo', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\condicion.php', 69)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\condicion.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/condicion', [], true)
+ 5 APPPATH\Controllers\VistaController.php(90): view('activos/condicion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->Condicion_act()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 13:29:31 --> Undefined array key "nombre"
+in APPPATH\Controllers\AccionController.php on line 62.
+ 1 APPPATH\Controllers\AccionController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->saveresp()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

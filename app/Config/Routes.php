@@ -32,7 +32,7 @@ $routes->get('motivo', 'VistaController::motivo');
  */
 
 /**
-------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
  * TODO: Inicio de las Rutas de Acciones
  */
 $routes->get('borrar/(:num)', 'AccionController::delete/$1');

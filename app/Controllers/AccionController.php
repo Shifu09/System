@@ -403,7 +403,7 @@ class AccionController extends Controller
         $cargo = new Cargo();
 
         $cargo->where('id_cargo', $id)->delete($id);
-        return $this->response->redirect(site_url('cargo'));
+        return $this->response->redirect(base_url('cargo'));
     }
 
     public function deletecon($id = null)

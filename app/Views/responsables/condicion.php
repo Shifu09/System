@@ -1,10 +1,10 @@
 <?= $header ?>
 <?= $style ?>
-<div class="card shadow mt-1 mx-5 border-white" style="width:85%;  left: 5%;">
+<div class="card shadow" style=" width:85%; left: 5%;">
     <div class="card-body">
         <div class="table-responsive">
-            <table id="tabla" class="table table-hover" class="table-responsive">
-                <thead class="thead-light">
+            <table id="tabla">
+                <thead>
                     <tr>
                         <th>Codigo</th>
                         <th>Nombre</th>
