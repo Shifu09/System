@@ -23,139 +23,267 @@ class AccionController extends Controller
     */
     public function save()
     {
-        $datos = [
-            'nombre_cargo' => $_POST['nombre']
+        $validation = $this->validate([
+            'nombre' => 'alpha_space|is_unique[resp_cargo.nombre_cargo]',
+        ]);
 
-        ];
-        $cargo = new Cargo();
-        $respuesta = $cargo->insertar($datos);
+        if ($_POST && $validation) {
+            $datos = [
+                'nombre_cargo' => $_POST['nombre']
 
-
-
-        return $this->response->redirect(base_url('cargo'));
+            ];
+            $cargo = new Cargo();
+            $cargo->insertar($datos);
+            return $this->response->redirect(base_url('cargo'));
+        } else {
+            echo '<script> 
+            alert ("Registross exitoso","aja","sds");
+            window.location="cargo";
+            </script>';
+        }
     }
 
     public function savecon()
     {
-        $datos = [
-            'nombre_condicion' => $_POST['nombre']
-        ];
-        $condicion = new Condicion();
-        $condicion->insertar($datos);
-        return $this->response->redirect(base_url('condicion'));
+        $validation = $this->validate([
+            'nombre' => 'alpha_space|is_unique[resp_condicion.nombre_condicion]',
+        ]);
+
+        if ($_POST && $validation) {
+            $datos = [
+                'nombre_condicion' => $_POST['nombre']
+            ];
+            $condicion = new Condicion();
+            $condicion->insertar($datos);
+            return $this->response->redirect(base_url('condicion'));
+        } else {
+            echo '<script> 
+            alert ("Registross exitoso","aja","sds");
+            window.location="condicion";
+            </script>';
+        }
     }
 
     public function saveconact()
     {
-        $datos = [
-            'nombre' => $_POST['nombre']
-        ];
-        $condicion = new Condicion_act();
-        $condicion->insertar($datos);
-        return $this->response->redirect(base_url('condicionActivo'));
+        $validation = $this->validate([
+            'nombre' => 'alpha_space|is_unique[resp_condicion.nombre_condicion]',
+        ]);
+
+        if ($_POST && $validation) {
+            $datos = [
+                'nombre' => $_POST['nombre']
+            ];
+            $condicion = new Condicion_act();
+            $condicion->insertar($datos);
+            return $this->response->redirect(base_url('condicionActivo'));
+        } else {
+            echo '<script> 
+            alert ("Registross exitoso","aja","sds");
+            window.location="condicionActivo";
+            </script>';
+        }
     }
 
     public function saveresp()
     {
-        $datos = [
-            'cedula' => $_POST['cedula'],
-            'nombre' => $_POST['nombre'],
-            'apellido' => $_POST['apellido'],
-            'telefono' => $_POST['telefono'],
-            'condicion_resp' => $_POST['condicion'],
-            'correo' => $_POST['correo'],
-            'cargo_resp' => $_POST['cargo'],
-            'gerencia' => $_POST['gerencia'],
-            'division' => $_POST['division'],
-        ];
-        $responsable = new Responsables();
-        $responsable->insertar($datos);
-        return $this->response->redirect(base_url('/resp'));
+        $validation = $this->validate([
+            'cedula' => 'integer|is_unique[resp_responsables.cedula]',
+            'nombre' => 'alpha_space',
+            'apellido' => 'alpha_space',
+            'telefono' => 'integer',
+            'correo' => 'valid_email',
+        ]);
+
+        if ($_POST && $validation) {
+            $datos = [
+                'cedula' => $_POST['cedula'],
+                'nombre' => $_POST['nombre'],
+                'apellido' => $_POST['apellido'],
+                'telefono' => $_POST['telefono'],
+                'condicion_resp' => $_POST['condicion'],
+                'correo' => $_POST['correo'],
+                'cargo_resp' => $_POST['cargo'],
+                'gerencia' => $_POST['gerencia'],
+                'division' => $_POST['division'],
+            ];
+            $responsable = new Responsables();
+            $responsable->insertar($datos);
+            return $this->response->redirect(base_url('resp'));
+        } else {
+            echo '<script> 
+            alert ("Registross exitoso","aja","sds");
+            window.location="resp";
+            </script>';
+        }
     }
     public function saveactivo()
     {
-        $datos = [
-            'codigo' => $_POST['codigo'],
-            'marca' => $_POST['marca'],
-            'modelo' => $_POST['modelo'],
-            'serial' => $_POST['seria'],
-            'condicion_act' => $_POST['condicion'],
-            'tipo' => $_POST['tipo'],
-            'descripcion' => $_POST['descripcion'],
-            'observacion' => $_POST['observaciones'],
-            'proveedor' => $_POST['proveedor'],
-            'n_factura' => $_POST['factura'],
-            'costo' => $_POST['costo'],
-            'n_orden' => $_POST['orden'],
-            'garantia_inicio' => $_POST['inicio'],
-            'garantia_fin' => $_POST['fin'],
-        ];
-        $activo = new Activos();
-        $activo->insertar($datos);
-        return $this->response->redirect(base_url('activos'));
+        $validation = $this->validate([
+            'codigo' => 'integer|is_unique[act_activo.codigo]',
+            'modelo' => 'alpha_space',
+            'proveedor' => 'alpha_space',
+            'n_factura' => 'integer',
+            'costo' => 'integer'
+        ]);
+
+        if ($_POST && $validation) {
+            $datos = [
+                'codigo' => $_POST['codigo'],
+                'marca' => $_POST['marca'],
+                'modelo' => $_POST['modelo'],
+                'serial' => $_POST['seria'],
+                'condicion_act' => $_POST['condicion'],
+                'tipo' => $_POST['tipo'],
+                'descripcion' => $_POST['descripcion'],
+                'observacion' => $_POST['observaciones'],
+                'proveedor' => $_POST['proveedor'],
+                'n_factura' => $_POST['factura'],
+                'costo' => $_POST['costo'],
+                'n_orden' => $_POST['orden'],
+                'garantia_inicio' => $_POST['inicio'],
+                'garantia_fin' => $_POST['fin'],
+            ];
+            $activo = new Activos();
+            $activo->insertar($datos);
+            return $this->response->redirect(base_url('activos'));
+        } else {
+            echo '<script> 
+            alert ("Registross exitoso","aja","sds");
+            window.location="activos";
+            </script>';
+        }
     }
     public function savemarca()
     {
-        $datos = [
-            'nombre' => $_POST['nombre']
-        ];
-        $marca = new Marca();
-        $marca->insertar($datos);
-        return $this->response->redirect(base_url('/marca'));
+        $validation = $this->validate([
+            'nombre' => 'alpha_space|is_unique[mov_marca.nombre]',
+        ]);
+        if ($_POST && $validation) {
+            $datos = [
+                'nombre' => $_POST['nombre']
+            ];
+            $marca = new Marca();
+            $marca->insertar($datos);
+            return $this->response->redirect(base_url('marca'));
+        } else {
+            echo '<script> 
+            alert ("Registross exitoso","aja","sds");
+            window.location="marca";
+            </script>';
+        }
     }
 
     public function savezona()
     {
-        $datos = [
-            'nombre' => $_POST['nombre'],
-            'direccion' => $_POST['direccion']
-        ];
-        $marca = new Zona();
-        $marca->insertar($datos);
-        return $this->response->redirect(base_url('zona'));
+        $validation = $this->validate([
+            'nombre' => 'alpha_space|is_unique[mov_zona.nombre]',
+            'direccion' => 'alpha_space',
+        ]);
+        if ($_POST && $validation) {
+            $datos = [
+                'nombre' => $_POST['nombre'],
+                'direccion' => $_POST['direccion']
+            ];
+            $marca = new Zona();
+            $marca->insertar($datos);
+            return $this->response->redirect(base_url('zona'));
+        } else {
+            echo '<script> 
+            alert ("Registross exitoso","aja","sds");
+            window.location="zona";
+            </script>';
+        }
     }
 
     public function saveubi()
     {
-        $datos = [
-            'sede' => $_POST['nombre'],
-            'direccion' => $_POST['direccion']
-        ];
-        $marca = new ubicacion();
-        $marca->insertar($datos);
-        return $this->response->redirect(base_url('ubicacion'));
+
+        $validation = $this->validate([
+            'nombre' => 'alpha_space|is_unique[mov_ubicacion.sede]',
+            'direccion' => 'alpha_space',
+        ]);
+        if ($_POST && $validation) {
+            $datos = [
+                'sede' => $_POST['nombre'],
+                'direccion' => $_POST['direccion']
+            ];
+            $marca = new ubicacion();
+            $marca->insertar($datos);
+            return $this->response->redirect(base_url('ubicacion'));
+        } else {
+            echo '<script> 
+            alert ("Registross exitoso","aja","sds");
+            window.location="ubicacion";
+            </script>';
+        }
     }
     public function savetipo()
     {
-        $datos = [
-            'nombre' => $_POST['nombre'],
-        ];
-        $tipo = new Tipo();
-        $tipo->insertar($datos);
-        return $this->response->redirect(base_url('tipo'));
+        $validation = $this->validate([
+            'nombre' => 'alpha_space|is_unique[act_tipo.nombre]',
+
+        ]);
+        if ($_POST && $validation) {
+            $datos = [
+                'nombre' => $_POST['nombre'],
+            ];
+            $tipo = new Tipo();
+            $tipo->insertar($datos);
+            return $this->response->redirect(base_url('tipo'));
+        } else {
+            echo '<script> 
+            alert ("Registross exitoso","aja","sds");
+            window.location="tipo";
+            </script>';
+        }
     }
     public function savemotivo()
     {
-        $datos = [
-            'nombre' => $_POST['nombre'],
-        ];
-        $tipo = new Motivo();
-        $tipo->insertar($datos);
-        return $this->response->redirect(base_url('motivo'));
+        $validation = $this->validate([
+            'nombre' => 'alpha_space|is_unique[mov_motivo.nombre]',
+
+        ]);
+        if ($_POST && $validation) {
+            $datos = [
+                'nombre' => $_POST['nombre'],
+            ];
+            $tipo = new Motivo();
+            $tipo->insertar($datos);
+            return $this->response->redirect(base_url('motivo'));
+        } else {
+            echo '<script> 
+            alert ("Registross exitoso","aja","sds");
+            window.location="motivo";
+            </script>';
+        }
     }
 
+    /**
+     * TODO ARREGLAR MOVIMIENTOS!!!!!!!
+     */
     public function savemovimiento()
     {
-        $datos = [
-            'codigo_act' => $_POST['codigo'],
-            'zona' => $_POST['zona'],
-            'zona' => $_POST['zona'],
-            'motivo' => $_POST['motivo'],
-            'fecha' => $_POST['fecha'],
-        ];
-        $tipo = new Movimientos();
-        $tipo->insertar($datos);
-        return $this->response->redirect(base_url('movimientos'));
+        $validation = $this->validate([
+            'codigo' => 'integer|is_unique[mov_movimientos.codigo_act]',
+        ]);
+        if ($_POST && $validation) {
+            $datos = [
+                'codigo_act' => $_POST['codigo'],
+                'zona' => $_POST['zona'],
+                'zona' => $_POST['zona'],
+                'motivo' => $_POST['motivo'],
+                'fecha' => $_POST['fecha'],
+            ];
+            $tipo = new Movimientos();
+            $tipo->insertar($datos);
+            return $this->response->redirect(base_url('movimientos'));
+        } else {
+            echo '<script> 
+            alert ("Registross exitoso","aja","sds");
+            window.location="condicionActivo";
+            </script>';
+        }
     }
     /*
     ! FIN DE FUNCIONES DE GUARDAR DATOS
@@ -184,7 +312,7 @@ class AccionController extends Controller
         $cargo = new Cargo();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'required',
+            'nombre' => 'alpha_space|is_unique[resp_cargo.nombre_cargo]',
         ]);
 
         if ($_POST && $val) {
@@ -195,11 +323,12 @@ class AccionController extends Controller
 
             $cargo->update($id, $datos);
             return redirect()->to(base_url('cargo'));
+        } else {
+            echo '<script> 
+            alert ("Registro exitoso","aja","sds");
+            window.location="cargo";
+            </script>';
         }
-
-        echo '<script> 
-    alert ("Registro exitoso","aja","sds");
-    </script>';
     }
     public function marcaupdate($id = null)
     {
@@ -218,7 +347,7 @@ class AccionController extends Controller
         $cargo = new Marca();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'required',
+            'nombre' => 'alpha_space|is_unique[act_marca.nombre]',
         ]);
 
         if ($_POST && $val) {
@@ -228,14 +357,8 @@ class AccionController extends Controller
             ];
 
             $cargo->update($id, $datos);
-            echo '<script> 
-            
-        alert ("Registro exitoso","aja","sds");
-        window.location.href = "marca";
-        </script>';
-            //return redirect()->to(base_url('marca'));
+            return redirect()->to(base_url('marca'));
         }
-
         echo '<script> 
     alert ("Registro exitoso","aja","sds");
     window.location.href = "marca";
@@ -258,7 +381,7 @@ class AccionController extends Controller
         $cargo = new Condicion_act();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'required',
+            'nombre' => 'alpha_space|is_unique[act_condicion.nombre]',
         ]);
 
         if ($_POST && $val) {
@@ -273,6 +396,7 @@ class AccionController extends Controller
 
         echo '<script> 
     alert ("Registro exitoso","aja","sds");
+        window.location.href = "condicionActivo";
     </script>';
     }
     public function condicionupdaterep($id = null)
@@ -298,7 +422,7 @@ class AccionController extends Controller
 
         if ($_POST && $val) {
             $datos = [
-                'nombre_condicion' => $_POST['nombre']
+                'nombre' => 'alpha_space|is_unique[resp_condicion.nombre_condicion]',
             ];
 
             $cargo->update($id, $datos);
@@ -307,6 +431,7 @@ class AccionController extends Controller
 
         echo '<script> 
     alert ("Registro exitoso","aja","sds");
+        window.location.href = "condicion";
     </script>';
     }
     public function tipoupdate($id = null)
@@ -326,7 +451,7 @@ class AccionController extends Controller
         $cargo = new Tipo();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'required',
+            'nombre' => 'alpha_space',
         ]);
 
         if ($_POST && $val) {
@@ -341,6 +466,7 @@ class AccionController extends Controller
 
         echo '<script> 
     alert ("Registro exitoso","aja","sds");
+        window.location.href = "tipo";
     </script>';
     }
     public function respupdate($id = null)
@@ -360,7 +486,7 @@ class AccionController extends Controller
         $resp = new Responsables();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'required',
+            'nombre' => 'alpha_space',
         ]);
 
         if ($_POST && $val) {
@@ -385,9 +511,119 @@ class AccionController extends Controller
 
         echo '<script> 
     alert ("Registro exitoso","aja","sds");
+        window.location.href = "tipo";
     </script>';
     }
+    public function zonaupdate($id = null)
+    {
+        $cargo = new Zona();
+        $datos['zona'] = $cargo->find($id);
 
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+
+        return view('movimientos/editarzona', $datos);
+    }
+
+    public function updatezona()
+    {
+        $cargo = new Zona();
+        $id = $_POST['id'];
+        $val = $this->validate([
+            'nombre' => 'alpha_space',
+            'direccion' => 'alpha_space',
+        ]);
+
+        if ($_POST && $val) {
+            $datos = [
+                'nombre' => $_POST['nombre'],
+                'direccion' => $_POST['direccion']
+
+            ];
+
+            $cargo->update($id, $datos);
+            return redirect()->to(base_url('zona'));
+        }
+        echo '<script> 
+    alert ("Registro exitoso","aja","sds");
+        window.location.href = "zona";
+    </script>';
+    }
+    public function ubicacionupdate($id = null)
+    {
+        $cargo = new ubicacion();
+        $datos['ubicacion'] = $cargo->find($id);
+
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+
+        return view('movimientos/editarubicacion', $datos);
+    }
+
+    public function updateubicacion()
+    {
+        $cargo = new ubicacion();
+        $id = $_POST['id'];
+        $val = $this->validate([
+            'sede' =>
+            'alpha_space',
+            'direccion' =>
+            'alpha_space',
+        ]);
+
+        if ($_POST && $val) {
+            $datos = [
+                'sede' => $_POST['sede'],
+                'direccion' => $_POST['direccion']
+            ];
+
+            $cargo->update($id, $datos);
+            return redirect()->to(base_url('ubicacion'));
+        }
+        echo '<script> 
+    alert ("Registro exitoso","aja","sds");
+        window.location.href = "ubicacion";
+    </script>';
+    }
+    public function activoupdate($id = null)
+    {
+        $cargo = new Activos();
+        $datos['activo'] = $cargo->find($id);
+
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+
+        return view('activos/editaractivo', $datos);
+    }
+
+    public function updateactivo()
+    {
+        $cargo = new Activos();
+        $id = $_POST['id'];
+
+        $datos = [
+            'codigo' => $_POST['id'],
+            //'marca' => $_POST['marca'],
+            'modelo' => $_POST['modelo'],
+            'serial' => $_POST['seria'],
+            'condicion_act' => $_POST['condicion'],
+            'tipo' => $_POST['tipo'],
+            'descripcion' => $_POST['descripcion'],
+            //  'observacion' => $_POST['observaciones'],
+            'proveedor' => $_POST['proveedor'],
+            'n_factura' => $_POST['factura'],
+            'costo' => $_POST['costo'],
+            'n_orden' => $_POST['orden'],
+            'garantia_inicio' => $_POST['inicio'],
+            'garantia_fin' => $_POST['fin'],
+        ];
+
+        $cargo->update($id, $datos);
+        return redirect()->to(base_url('activos'));
+    }
     /*
     ! FIN DE FUNCIONES DE EDITAR DATOS
     ------------------------------------------------------------------------------------------
@@ -403,7 +639,7 @@ class AccionController extends Controller
         $cargo = new Cargo();
 
         $cargo->where('id_cargo', $id)->delete($id);
-        return $this->response->redirect(site_url('cargo'));
+        return $this->response->redirect(base_url('cargo'));
     }
 
     public function deletecon($id = null)
@@ -411,7 +647,7 @@ class AccionController extends Controller
         $condicion = new condicion();
 
         $condicion->where('id_condicion', $id)->delete($id);
-        return $this->response->redirect(site_url('condicion'));
+        return $this->response->redirect(base_url('condicion'));
     }
 
     public function deleteresp($id = null)
@@ -419,6 +655,6 @@ class AccionController extends Controller
         $responsable = new Responsables();
 
         $responsable->where('cedula', $id)->delete($id);
-        return $this->response->redirect(site_url('resp'));
+        return $this->response->redirect(base_url('resp'));
     }
 }

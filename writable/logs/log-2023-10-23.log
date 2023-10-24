@@ -1,0 +1,449 @@
+ERROR - 2023-10-23 13:07:04 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_1` FOREIGN KEY (`condicion_resp`) REFERENCES `resp_condicion` (`id_condicion`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Responsables.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(72): App\Models\Responsables->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->saveresp()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-10-23 13:07:04 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_1` FOREIGN KEY (`condicion_resp`) REFERENCES `resp_condicion` (`id_condicion`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `resp_responsables` (`cedula`, `nombre`, `apellido`, `telefono`, `condicion_resp`, `correo`, `cargo_resp`, `gerencia`, `division`) VALUES (:cedula:, :nombre:, :apellido:, :telefono:, :condicion_resp:, :correo:, :cargo_resp:, :gerencia:, :division:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Responsables.php(18): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(72): App\Models\Responsables->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->saveresp()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-23 13:10:24 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_1` FOREIGN KEY (`condicion_resp`) REFERENCES `resp_condicion` (`id_condicion`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Responsables.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(72): App\Models\Responsables->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->saveresp()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-10-23 13:10:24 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_1` FOREIGN KEY (`condicion_resp`) REFERENCES `resp_condicion` (`id_condicion`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `resp_responsables` (`cedula`, `nombre`, `apellido`, `telefono`, `condicion_resp`, `correo`, `cargo_resp`, `gerencia`, `division`) VALUES (:cedula:, :nombre:, :apellido:, :telefono:, :condicion_resp:, :correo:, :cargo_resp:, :gerencia:, :division:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Responsables.php(18): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(72): App\Models\Responsables->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->saveresp()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-23 13:12:23 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_1` FOREIGN KEY (`condicion_resp`) REFERENCES `resp_condicion` (`id_condicion`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Responsables.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(72): App\Models\Responsables->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->saveresp()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-10-23 13:12:23 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_1` FOREIGN KEY (`condicion_resp`) REFERENCES `resp_condicion` (`id_condicion`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `resp_responsables` (`cedula`, `nombre`, `apellido`, `telefono`, `condicion_resp`, `correo`, `cargo_resp`, `gerencia`, `division`) VALUES (:cedula:, :nombre:, :apellido:, :telefono:, :condicion_resp:, :correo:, :cargo_resp:, :gerencia:, :division:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Responsables.php(18): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(72): App\Models\Responsables->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->saveresp()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-23 13:15:12 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_1` FOREIGN KEY (`condicion_resp`) REFERENCES `resp_condicion` (`id_condicion`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Responsables.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(72): App\Models\Responsables->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->saveresp()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-10-23 13:15:12 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_1` FOREIGN KEY (`condicion_resp`) REFERENCES `resp_condicion` (`id_condicion`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `resp_responsables` (`cedula`, `nombre`, `apellido`, `telefono`, `condicion_resp`, `correo`, `cargo_resp`, `gerencia`, `division`) VALUES (:cedula:, :nombre:, :apellido:, :telefono:, :condicion_resp:, :correo:, :cargo_resp:, :gerencia:, :division:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Responsables.php(18): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(72): App\Models\Responsables->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->saveresp()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-23 13:16:28 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_1` FOREIGN KEY (`condicion_resp`) REFERENCES `resp_condicion` (`id_condicion`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Responsables.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(72): App\Models\Responsables->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->saveresp()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-10-23 13:16:28 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_1` FOREIGN KEY (`condicion_resp`) REFERENCES `resp_condicion` (`id_condicion`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `resp_responsables` (`cedula`, `nombre`, `apellido`, `telefono`, `condicion_resp`, `correo`, `cargo_resp`, `gerencia`, `division`) VALUES (:cedula:, :nombre:, :apellido:, :telefono:, :condicion_resp:, :correo:, :cargo_resp:, :gerencia:, :division:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Responsables.php(18): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(72): App\Models\Responsables->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->saveresp()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-23 13:18:32 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_1` FOREIGN KEY (`condicion_resp`) REFERENCES `resp_condicion` (`id_condicion`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Responsables.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(72): App\Models\Responsables->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->saveresp()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-10-23 13:18:32 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_1` FOREIGN KEY (`condicion_resp`) REFERENCES `resp_condicion` (`id_condicion`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `resp_responsables` (`cedula`, `nombre`, `apellido`, `telefono`, `condicion_resp`, `correo`, `cargo_resp`, `gerencia`, `division`) VALUES (:cedula:, :nombre:, :apellido:, :telefono:, :condicion_resp:, :correo:, :cargo_resp:, :gerencia:, :division:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Responsables.php(18): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(72): App\Models\Responsables->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->saveresp()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-23 13:34:02 --> mysqli_sql_exception: Table 'patrimonioprueba.nombre' doesn't exist in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\wamp64\www\system\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\system\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('Analista de bas...', 'nombre', Array, NULL, 'nombre')
+#6 C:\wamp64\www\system\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('nombre', 'nombre', 'Analista de bas...', Array, Array)
+#7 C:\wamp64\www\system\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(188): CodeIgniter\Controller->validate(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->updatecargo()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-10-23 13:34:02 --> Table 'patrimonioprueba.nombre' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `nombre`
+WHERE `nombre` = :nombre:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('Analista de base de datos', 'nombre', [...], null, 'nombre')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('nombre', 'nombre', 'Analista de base de datos', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\AccionController.php(188): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updatecargo()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-23 13:34:51 --> mysqli_sql_exception: Unknown column 'patrimonioprueba' in 'where clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\wamp64\www\system\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\system\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('Analista de bas...', 'patrimonioprueb...', Array, NULL, 'nombre')
+#6 C:\wamp64\www\system\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('nombre', 'nombre', 'Analista de bas...', Array, Array)
+#7 C:\wamp64\www\system\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(188): CodeIgniter\Controller->validate(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->updatecargo()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-10-23 13:34:51 --> Unknown column 'patrimonioprueba' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `resp_cargo`
+WHERE `patrimonioprueba` = :patrimonioprueba:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('Analista de base de datos', 'patrimonioprueba', [...], null, 'nombre')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('nombre', 'nombre', 'Analista de base de datos', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\AccionController.php(188): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updatecargo()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 17:52:57 --> Trying to access array offset on value of type null
+in APPPATH\Views\responsables\editar.php on line 16.
+ 1 APPPATH\Views\responsables\editar.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editar', [], true)
+ 5 APPPATH\Controllers\AccionController.php(179): view('responsables/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->cargoupdate('201000235')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 17:53:24 --> Trying to access array offset on value of type null
+in APPPATH\Views\responsables\editar.php on line 16.
+ 1 APPPATH\Views\responsables\editar.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editar', [], true)
+ 5 APPPATH\Controllers\AccionController.php(179): view('responsables/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->cargoupdate('201000235')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 18:19:33 --> Trying to access array offset on value of type null
+in APPPATH\Views\responsables\editar.php on line 16.
+ 1 APPPATH\Views\responsables\editar.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editar', [], true)
+ 5 APPPATH\Controllers\AccionController.php(179): view('responsables/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->cargoupdate('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 18:35:04 --> Invalid file: "activos/editarzona.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('activos/editarzona.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editarzona', [], true)
+ 3 APPPATH\Controllers\AccionController.php(396): view('activos/editarzona', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->zonaupdate('2')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 18:36:04 --> Undefined array key "direccion"
+in APPPATH\Controllers\AccionController.php on line 410.
+ 1 APPPATH\Controllers\AccionController.php(410): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "direccion"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 410)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updatezona()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 18:36:35 --> Undefined array key "direccion"
+in APPPATH\Controllers\AccionController.php on line 410.
+ 1 APPPATH\Controllers\AccionController.php(410): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "direccion"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 410)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updatezona()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 18:44:05 --> Undefined variable $ubicacion
+in APPPATH\Views\movimientos\editarubicacion.php on line 16.
+ 1 APPPATH\Views\movimientos\editarubicacion.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ubicacion', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarubicacion.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarubicacion.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarubicacion', [], true)
+ 5 APPPATH\Controllers\AccionController.php(427): view('movimientos/editarubicacion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->ubicacionupdate('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 19:09:41 --> Trying to access array offset on value of type null
+in APPPATH\Views\responsables\editar.php on line 16.
+ 1 APPPATH\Views\responsables\editar.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editar', [], true)
+ 5 APPPATH\Controllers\AccionController.php(179): view('responsables/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->cargoupdate('201000235')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 19:10:03 --> Invalid file: "movimientos/editaractivo.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('movimientos/editaractivo.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editaractivo', [], true)
+ 3 APPPATH\Controllers\AccionController.php(457): view('movimientos/editaractivo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000235')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 19:10:23 --> Invalid file: "activos/editaractivo.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('activos/editaractivo.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editaractivo', [], true)
+ 3 APPPATH\Controllers\AccionController.php(457): view('activos/editaractivo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000235')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 19:10:36 --> Invalid file: "activos/editaractivo.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('activos/editaractivo.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editaractivo', [], true)
+ 3 APPPATH\Controllers\AccionController.php(457): view('activos/editaractivo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000235')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 19:10:52 --> Invalid file: "activos/editaractivo.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('activos/editaractivo.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editaractivo', [], true)
+ 3 APPPATH\Controllers\AccionController.php(457): view('activos/editaractivo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000235')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 19:10:55 --> Invalid file: "activos/editaractivo.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('activos/editaractivo.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editaractivo', [], true)
+ 3 APPPATH\Controllers\AccionController.php(457): view('activos/editaractivo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000235')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 19:11:54 --> Invalid file: "activos/editaractivo.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('activos/editaractivo.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editaractivo', [], true)
+ 3 APPPATH\Controllers\AccionController.php(457): view('activos/editaractivo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000235')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 19:12:27 --> Undefined variable $activo
+in APPPATH\Views\activos\editaractivo.php on line 16.
+ 1 APPPATH\Views\activos\editaractivo.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activo', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\editaractivo.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\editaractivo.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editaractivo', [], true)
+ 5 APPPATH\Controllers\AccionController.php(457): view('activos/editaractivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000235')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 19:23:32 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 463.
+ 1 APPPATH\Controllers\AccionController.php(463): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 463)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updateactivo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 19:23:47 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 463.
+ 1 APPPATH\Controllers\AccionController.php(463): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 463)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updateactivo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 19:31:49 --> Undefined array key "codigo"
+in APPPATH\Controllers\AccionController.php on line 468.
+ 1 APPPATH\Controllers\AccionController.php(468): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 468)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updateactivo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 19:32:12 --> Undefined array key "codigo"
+in APPPATH\Controllers\AccionController.php on line 468.
+ 1 APPPATH\Controllers\AccionController.php(468): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 468)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updateactivo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 19:32:34 --> Undefined array key "codigo"
+in APPPATH\Controllers\AccionController.php on line 468.
+ 1 APPPATH\Controllers\AccionController.php(468): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 468)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updateactivo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 19:32:43 --> Undefined array key "codigo"
+in APPPATH\Controllers\AccionController.php on line 468.
+ 1 APPPATH\Controllers\AccionController.php(468): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 468)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updateactivo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 19:33:09 --> Undefined array key "observaciones"
+in APPPATH\Controllers\AccionController.php on line 475.
+ 1 APPPATH\Controllers\AccionController.php(475): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "observaciones"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 475)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updateactivo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-23 19:33:28 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`act_activos`, CONSTRAINT `marcaact` FOREIGN KEY (`marca`) REFERENCES `act_marca` (`id_marca`) ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `act_act...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `act_act...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `act_act...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `act_act...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\system\system\BaseModel.php(949): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\wamp64\www\system\system\Model.php(776): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\wamp64\www\system\app\Controllers\AccionController.php(484): CodeIgniter\Model->update('201000235', Array)
+#8 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->updateactivo()
+#9 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#10 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-23 19:33:28 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`act_activos`, CONSTRAINT `marcaact` FOREIGN KEY (`marca`) REFERENCES `act_marca` (`id_marca`) ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `act_activos` SET `codigo` = :codigo:, `marca` = :marca:, `modelo` = :modelo:, `serial` = :serial:, `condicion_act` = :condicion_act:, `tipo` = :tipo:, `descripcion` = :descripcion:, `proveedor` = :proveedor:, `n_factura` = :n_factura:, `costo` = :costo:, `n_orden` = :n_orden:, `garantia_inicio` = :garantia_inicio:, `garantia_fin` = :garantia_fin:
+WHERE `act_activos`.`codigo` IN :act_activos.codigo:', [...], false)
+ 2 SYSTEMPATH\Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(949): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\AccionController.php(484): CodeIgniter\Model->update('201000235', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updateactivo()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

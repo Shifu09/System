@@ -7,21 +7,25 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header" data-bs-target="#exampleModal" style="background-color: #153757;">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">MODIFICAR CARGO</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">MODIFICAR ZONA</h1>
                 </div>
                 <div class="modal-body">
-                    <form action="<?= base_url('actualizar'); ?>" method="post" enctype="multipart/form-data">
+                    <form action="<?= base_url('actualizarzona'); ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="nombre">Codigo</label>
-                            <input type="text" name="id" readonly class="form-control" value="<?= $cargos['id_cargo'] ?>">
+                            <input type="text" name="id" readonly class="form-control" value="<?= $zona['id_zona'] ?>">
                         </div>
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" class="form-control" value="<?= $cargos['nombre_cargo'] ?>">
+                            <input type="text" name="nombre" class="form-control" value="<?= $zona['nombre'] ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre">Direccion</label>
+                            <input type="text" name="direccion" class="form-control" value="<?= $zona['direccion'] ?>">
                         </div>
                 </div>
                 <div class="modal-footer">
-                    <a type="button" class="btn btn-secondary" href="<?= base_url('cargo'); ?>">Cerrar</a>
+                    <a type="button" class="btn btn-secondary" href="<?= base_url('zona'); ?>">Cerrar</a>
                     <button type="submit" style="background-color: #66944c; color:#ffff" class="btn">Guardar</button>
                     </form>
                 </div>

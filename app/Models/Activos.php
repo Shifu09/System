@@ -21,4 +21,11 @@ class Activos extends Model
         $table = $this->table('act_activos');
         $table->insert($datos);
     }
+    public function actualizar($datos)
+    {
+        $table = $this->table('act_activos');
+        $table->set($datos);
+        $table->where('codigo');
+        return $table->update($datos);
+    }
 }

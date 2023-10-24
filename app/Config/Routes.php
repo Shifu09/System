@@ -44,14 +44,22 @@ $routes->get('editarcondicionn/(:num)', 'AccionController::condicionupdaterep/$1
 $routes->get('editarresp/(:num)', 'AccionController::respupdate/$1');
 $routes->get('editarmarca/(:num)', 'AccionController::marcaupdate/$1');
 $routes->get('editartipo/(:num)', 'AccionController::tipoupdate/$1');
+$routes->get('editarzona/(:num)', 'AccionController::zonaupdate/$1');
+$routes->get('editarubicacion/(:num)', 'AccionController::ubicacionupdate/$1');
+$routes->get('editaractivo/(:num)', 'AccionController::activoupdate/$1');
 
 
+// RUTAS DE ACTUALIZAR DATOS
+$routes->post('actualizaractivo', 'AccionController::updateactivo');
 $routes->post('actualizartipo', 'AccionController::updatetipo');
 $routes->post('actualizar', 'AccionController::updatecargo');
 $routes->post('actualizarmarca', 'AccionController::updatemarca');
 $routes->post('actualizarcon', 'AccionController::updatecondicion');
 $routes->post('actualizarconn', 'AccionController::updatecondicionrep');
 $routes->post('actualizaresp', 'AccionController::updateresp');
+$routes->post('actualizarzona', 'AccionController::updatezona');
+$routes->post('actualizarubi', 'AccionController::updateubicacion');
+
 /*
 ? TODO:Rutas de Guardar
  */
