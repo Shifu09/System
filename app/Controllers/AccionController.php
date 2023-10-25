@@ -25,6 +25,7 @@ class AccionController extends Controller
     {
         $validation = $this->validate([
             'nombre' => 'alpha_space|is_unique[resp_cargo.nombre_cargo]',
+
         ]);
 
         if ($_POST && $validation) {
@@ -107,6 +108,7 @@ class AccionController extends Controller
                 'gerencia' => $_POST['gerencia'],
                 'division' => $_POST['division'],
             ];
+
             $responsable = new Responsables();
             $responsable->insertar($datos);
             return $this->response->redirect(base_url('resp'));
@@ -120,10 +122,9 @@ class AccionController extends Controller
     public function saveactivo()
     {
         $validation = $this->validate([
-            'codigo' => 'integer|is_unique[act_activo.codigo]',
-            'modelo' => 'alpha_space',
+            'codigo' => 'integer|is_unique[act_activos.codigo]',
             'proveedor' => 'alpha_space',
-            'n_factura' => 'integer',
+            'factura' => 'integer',
             'costo' => 'integer'
         ]);
 
@@ -143,6 +144,7 @@ class AccionController extends Controller
                 'n_orden' => $_POST['orden'],
                 'garantia_inicio' => $_POST['inicio'],
                 'garantia_fin' => $_POST['fin'],
+                'asignado' => 1,
             ];
             $activo = new Activos();
             $activo->insertar($datos);

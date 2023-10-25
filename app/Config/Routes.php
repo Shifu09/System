@@ -48,7 +48,6 @@ $routes->get('editarzona/(:num)', 'AccionController::zonaupdate/$1');
 $routes->get('editarubicacion/(:num)', 'AccionController::ubicacionupdate/$1');
 $routes->get('editaractivo/(:num)', 'AccionController::activoupdate/$1');
 
-
 // RUTAS DE ACTUALIZAR DATOS
 $routes->post('actualizaractivo', 'AccionController::updateactivo');
 $routes->post('actualizartipo', 'AccionController::updatetipo');
@@ -59,6 +58,9 @@ $routes->post('actualizarconn', 'AccionController::updatecondicionrep');
 $routes->post('actualizaresp', 'AccionController::updateresp');
 $routes->post('actualizarzona', 'AccionController::updatezona');
 $routes->post('actualizarubi', 'AccionController::updateubicacion');
+
+// DESHABILITAR Y DESINCORPORAR
+
 
 /*
 ? TODO:Rutas de Guardar

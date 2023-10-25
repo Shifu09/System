@@ -14,6 +14,7 @@
     <link href="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js">
     <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
     <script src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="<?= base_url('libs/dist/sweetalert2.min.css') ?>">
     <!-- /**
     * TODO: JS by Bootstrap
     */
