@@ -151,7 +151,7 @@ class AccionController extends Controller
             return $this->response->redirect(base_url('activos'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Registross exitoso");
             window.location="activos";
             </script>';
         }
