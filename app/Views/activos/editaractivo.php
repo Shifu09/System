@@ -134,7 +134,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <a type="button" class="btn btn-secondary" href="<?= base_url('activo'); ?>">Cerrar</a>
+                <a type="button" class="btn btn-secondary" href="<?= base_url('activos'); ?>">Cerrar</a>
                 <button type="submit" style="background-color: #66944c; color:#ffff" class="btn">Guardar</button>
                 </form>
             </div>

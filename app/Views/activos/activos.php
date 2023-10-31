@@ -200,25 +200,5 @@
                 perPageSelect: [5, 7, 10, 15],
             });
         </script>
-        <script>
-            $('#dele').click(function() {
-                Swal.fire({
-                    title: 'Seguro que quieres eliminar el resgistro?',
-                    text: "El registro quedara eliminado",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Eliminar'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        Swal.fire(
-                            'Eliminado',
-                            '',
-                            'success'
-                        )
-                    }
-                })
-            });
-        </script>
+
         <?= $footer ?>

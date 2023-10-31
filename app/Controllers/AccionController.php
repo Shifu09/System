@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Activos;
 use CodeIgniter\Controller;
-use App\Models\Cargo;
+use App\Models\cargo;
 use App\Models\Condicion;
 use App\Models\Condicion_act;
 use App\Models\Marca;
@@ -18,7 +18,7 @@ use App\Models\Zona;
 class AccionController extends Controller
 {
     /*
-    ------------------------------------------------------------------------------------------
+    /////////////////////////////////////////////////////////////////////////////////////////
     ! INICIO DE FUNCIONES DE GUARDAR DATOS
     */
     public function save()
@@ -89,10 +89,10 @@ class AccionController extends Controller
     public function saveresp()
     {
         $validation = $this->validate([
-            'cedula' => 'integer|is_unique[resp_responsables.cedula]',
+            'cedula' => 'numeric|is_unique[resp_responsables.cedula]',
             'nombre' => 'alpha_space',
             'apellido' => 'alpha_space',
-            'telefono' => 'integer',
+            'telefono' => 'is_natural',
             'correo' => 'valid_email',
         ]);
 
@@ -122,9 +122,9 @@ class AccionController extends Controller
     public function saveactivo()
     {
         $validation = $this->validate([
-            'codigo' => 'integer|is_unique[act_activos.codigo]',
+            'codigo' => 'numeric|is_unique[act_activos.codigo]',
             'proveedor' => 'alpha_space',
-            'factura' => 'integer',
+            'factura' => 'is_natural',
             'costo' => 'integer'
         ]);
 
@@ -144,7 +144,6 @@ class AccionController extends Controller
                 'n_orden' => $_POST['orden'],
                 'garantia_inicio' => $_POST['inicio'],
                 'garantia_fin' => $_POST['fin'],
-                'asignado' => 1,
             ];
             $activo = new Activos();
             $activo->insertar($datos);
@@ -159,7 +158,7 @@ class AccionController extends Controller
     public function savemarca()
     {
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[mov_marca.nombre]',
+            'nombre' => 'alpha_space|is_unique[act_marca.nombre]',
         ]);
         if ($_POST && $validation) {
             $datos = [
@@ -289,11 +288,11 @@ class AccionController extends Controller
     }
     /*
     ! FIN DE FUNCIONES DE GUARDAR DATOS
-    ------------------------------------------------------------------------------------------
+    //////////////////////////////////////////////////////////////////////////////////////////
   */
 
     /*
-    -----------------------------------------------------------------------------------------
+    //////////////////////////////////////////////////////////////////////////////////////////
     ! INICIO DE FUNCIONES DE EDITAR DATOS
     */
 

@@ -1,0 +1,11 @@
+CRITICAL - 2023-10-29 17:54:26 --> Attempt to read property "id" on array
+in APPPATH\Views\responsables\condicion.php on line 50.
+ 1 APPPATH\Views\responsables\condicion.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\condicion.php', 50)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\condicion.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/condicion', [], true)
+ 5 APPPATH\Controllers\VistaController.php(44): view('responsables/condicion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->condicion()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
