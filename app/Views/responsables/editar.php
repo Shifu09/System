@@ -21,7 +21,7 @@
                         </div>
                 </div>
                 <div class="modal-footer">
-                    <a type="button" class="btn btn-secondary" href="<?= base_url('cargo'); ?>">Cerrar</a>
+                    <a type="button" class="btn btn-secondary" href="<?= site_url('cargo'); ?>">Cerrar</a>
                     <button type="submit" style="background-color: #66944c; color:#ffff" class="btn">Guardar</button>
                     </form>
                 </div>

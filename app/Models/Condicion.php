@@ -16,4 +16,12 @@ class Condicion extends Model
         $table = $this->table('resp_condicion');
         $table->insert($datos);
     }
+
+    public function actualizar($datos)
+    {
+        $table = $this->table('resp_condicion');
+        $table->set($datos);
+        $table->where('id_condicion');
+        return $table->update($datos);
+    }
 }

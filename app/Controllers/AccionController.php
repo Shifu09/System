@@ -35,7 +35,7 @@ class AccionController extends Controller
             ];
             $cargo = new Cargo();
             $cargo->insertar($datos);
-            return $this->response->redirect(base_url('cargo'));
+            return $this->response->redirect(site_url('cargo'));
         } else {
             echo '<script> 
             alert ("Registross exitoso","aja","sds");
@@ -56,7 +56,7 @@ class AccionController extends Controller
             ];
             $condicion = new Condicion();
             $condicion->insertar($datos);
-            return $this->response->redirect(base_url('condicion'));
+            return $this->response->redirect(site_url('condicion'));
         } else {
             echo '<script> 
             alert ("Registross exitoso","aja","sds");
@@ -77,7 +77,7 @@ class AccionController extends Controller
             ];
             $condicion = new Condicion_act();
             $condicion->insertar($datos);
-            return $this->response->redirect(base_url('condicionActivo'));
+            return $this->response->redirect(site_url('condicionActivo'));
         } else {
             echo '<script> 
             alert ("Registross exitoso","aja","sds");
@@ -111,7 +111,7 @@ class AccionController extends Controller
 
             $responsable = new Responsables();
             $responsable->insertar($datos);
-            return $this->response->redirect(base_url('resp'));
+            return $this->response->redirect(site_url('resp'));
         } else {
             echo '<script> 
             alert ("Registross exitoso","aja","sds");
@@ -147,7 +147,7 @@ class AccionController extends Controller
             ];
             $activo = new Activos();
             $activo->insertar($datos);
-            return $this->response->redirect(base_url('activos'));
+            return $this->response->redirect(site_url('activos'));
         } else {
             echo '<script> 
             alert ("Registross exitoso");
@@ -166,7 +166,7 @@ class AccionController extends Controller
             ];
             $marca = new Marca();
             $marca->insertar($datos);
-            return $this->response->redirect(base_url('marca'));
+            return $this->response->redirect(site_url('marca'));
         } else {
             echo '<script> 
             alert ("Registross exitoso","aja","sds");
@@ -188,7 +188,7 @@ class AccionController extends Controller
             ];
             $marca = new Zona();
             $marca->insertar($datos);
-            return $this->response->redirect(base_url('zona'));
+            return $this->response->redirect(site_url('zona'));
         } else {
             echo '<script> 
             alert ("Registross exitoso","aja","sds");
@@ -211,7 +211,7 @@ class AccionController extends Controller
             ];
             $marca = new ubicacion();
             $marca->insertar($datos);
-            return $this->response->redirect(base_url('ubicacion'));
+            return $this->response->redirect(site_url('ubicacion'));
         } else {
             echo '<script> 
             alert ("Registross exitoso","aja","sds");
@@ -231,7 +231,7 @@ class AccionController extends Controller
             ];
             $tipo = new Tipo();
             $tipo->insertar($datos);
-            return $this->response->redirect(base_url('tipo'));
+            return $this->response->redirect(site_url('tipo'));
         } else {
             echo '<script> 
             alert ("Registross exitoso","aja","sds");
@@ -251,7 +251,7 @@ class AccionController extends Controller
             ];
             $tipo = new Motivo();
             $tipo->insertar($datos);
-            return $this->response->redirect(base_url('motivo'));
+            return $this->response->redirect(site_url('motivo'));
         } else {
             echo '<script> 
             alert ("Registross exitoso","aja","sds");
@@ -278,7 +278,7 @@ class AccionController extends Controller
             ];
             $tipo = new Movimientos();
             $tipo->insertar($datos);
-            return $this->response->redirect(base_url('movimientos'));
+            return $this->response->redirect(site_url('movimientos'));
         } else {
             echo '<script> 
             alert ("Registross exitoso","aja","sds");
@@ -323,7 +323,7 @@ class AccionController extends Controller
             ];
 
             $cargo->update($id, $datos);
-            return redirect()->to(base_url('cargo'));
+            return redirect()->to(site_url('cargo'));
         } else {
             echo '<script> 
             alert ("Registro exitoso","aja","sds");
@@ -358,7 +358,7 @@ class AccionController extends Controller
             ];
 
             $cargo->update($id, $datos);
-            return redirect()->to(base_url('marca'));
+            return redirect()->to(site_url('marca'));
         }
         echo '<script> 
     alert ("Registro exitoso","aja","sds");
@@ -392,7 +392,7 @@ class AccionController extends Controller
             ];
 
             $cargo->update($id, $datos);
-            return redirect()->to(base_url('condicionActivo'));
+            return redirect()->to(site_url('condicionActivo'));
         }
 
         echo '<script> 
@@ -415,19 +415,18 @@ class AccionController extends Controller
     public function updatecondicionrep()
     {
         $cargo = new Condicion();
-        $datoss['condicion'] = $cargo->find();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'required',
+            'nombre' => 'alpha_space|is_unique[resp_condicion.nombre_condicion]',
         ]);
 
         if ($_POST && $val) {
             $datos = [
-                'nombre' => 'alpha_space|is_unique[resp_condicion.nombre_condicion]',
+                'nombre_condicion' => $_POST['nombre'],
             ];
 
             $cargo->update($id, $datos);
-            return redirect()->to(base_url('condicion'));
+            return redirect()->to(site_url('condicion'));
         }
 
         echo '<script> 
@@ -462,7 +461,7 @@ class AccionController extends Controller
             ];
 
             $cargo->update($id, $datos);
-            return redirect()->to(base_url('tipo'));
+            return redirect()->to(site_url('tipo'));
         }
 
         echo '<script> 
@@ -507,7 +506,7 @@ class AccionController extends Controller
                 $id,
                 $datos
             );
-            return redirect()->to(base_url('resp'));
+            return redirect()->to(site_url('resp'));
         }
 
         echo '<script> 
@@ -544,7 +543,7 @@ class AccionController extends Controller
             ];
 
             $cargo->update($id, $datos);
-            return redirect()->to(base_url('zona'));
+            return redirect()->to(site_url('zona'));
         }
         echo '<script> 
     alert ("Registro exitoso","aja","sds");
@@ -581,7 +580,7 @@ class AccionController extends Controller
             ];
 
             $cargo->update($id, $datos);
-            return redirect()->to(base_url('ubicacion'));
+            return redirect()->to(site_url('ubicacion'));
         }
         echo '<script> 
     alert ("Registro exitoso","aja","sds");
@@ -623,7 +622,7 @@ class AccionController extends Controller
         ];
 
         $cargo->update($id, $datos);
-        return redirect()->to(base_url('activos'));
+        return redirect()->to(site_url('activos'));
     }
     /*
     ! FIN DE FUNCIONES DE EDITAR DATOS
@@ -640,7 +639,7 @@ class AccionController extends Controller
         $cargo = new Cargo();
 
         $cargo->where('id_cargo', $id)->delete($id);
-        return $this->response->redirect(base_url('cargo'));
+        return $this->response->redirect(site_url('cargo'));
     }
 
     public function deletecon($id = null)
@@ -648,7 +647,7 @@ class AccionController extends Controller
         $condicion = new condicion();
 
         $condicion->where('id_condicion', $id)->delete($id);
-        return $this->response->redirect(base_url('condicion'));
+        return $this->response->redirect(site_url('condicion'));
     }
 
     public function deleteresp($id = null)
@@ -656,6 +655,6 @@ class AccionController extends Controller
         $responsable = new Responsables();
 
         $responsable->where('cedula', $id)->delete($id);
-        return $this->response->redirect(base_url('resp'));
+        return $this->response->redirect(site_url('resp'));
     }
 }

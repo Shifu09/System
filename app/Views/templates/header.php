@@ -64,10 +64,10 @@
 
                                 </a>
                                 <ul class="dropdown-menu" id="menu" style="background-color: #153757">
-                                    <li><a class="dropdown-item" style="color: #ffffff;" href="activos">Activos</a></li>
-                                    <li><a class="dropdown-item" style="color: #ffffff;" href="condicionActivo">Condicion del Activo</a></li>
-                                    <li><a class="dropdown-item" style="color: #ffffff;" href="marca">Marca</a></li>
-                                    <li><a class="dropdown-item" style="color: #ffffff;" href="tipo">Tipos de Activo</a></li>
+                                    <li><a class="dropdown-item" style="color: #ffffff;" href="<?= url_to('activos') ?>">Activos</a></li>
+                                    <li><a class="dropdown-item" style="color: #ffffff;" href="<?= url_to('condicionActivo') ?>">Condicion del Activo</a></li>
+                                    <li><a class="dropdown-item" style="color: #ffffff;" href="<?= url_to('marca') ?>">Marca</a></li>
+                                    <li><a class="dropdown-item" style="color: #ffffff;" href="<?= url_to('tipo') ?>">Tipos de Activo</a></li>
                                 </ul>
                             </li>
 
@@ -82,8 +82,8 @@
 
                                 <ul class="dropdown-menu" style="background-color: #153757">
                                     <li><a class="dropdown-item" style="color: #ffffff;" href="<?= url_to('cargo') ?>">Cargo</a></li>
-                                    <li><a class="dropdown-item" style="color: #ffffff;" href="condicion">Condicion</a></li>
-                                    <li><a class="dropdown-item" style="color: #ffffff;" href="resp">Reponsables</a></li>
+                                    <li><a class="dropdown-item" style="color: #ffffff;" href="<?= url_to('condicion') ?>">Condicion</a></li>
+                                    <li><a class="dropdown-item" style="color: #ffffff;" href="<?= url_to('resp') ?>">Reponsables</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown" style="color: #153757;">
@@ -96,9 +96,9 @@
                                     <hr>
                                 </a>
                                 <ul class="dropdown-menu" style="background-color: #153757">
-                                    <li><a class="dropdown-item" style="color: #ffffff;" href="movimientos">Movimientos</a></li>
-                                    <li><a class="dropdown-item" style="color: #ffffff;" href="ubicacion">Ubicaciones</a></li>
-                                    <li><a class="dropdown-item" style="color: #ffffff;" href="zona">Zonas</a></li>
+                                    <li><a class="dropdown-item" style="color: #ffffff;" href="<?= url_to('movimientos') ?>">Movimientos</a></li>
+                                    <li><a class="dropdown-item" style="color: #ffffff;" href="<?= url_to('ubicacion') ?>">Ubicaciones</a></li>
+                                    <li><a class="dropdown-item" style="color: #ffffff;" href="<?= url_to('zona') ?>">Zonas</a></li>
 
                                 </ul>
                             </li>

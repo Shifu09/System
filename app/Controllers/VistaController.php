@@ -151,9 +151,9 @@ class VistaController extends Controller
          *!  INN JOIN DE LA TABLA MOVIMIENTO
          */
         $builder = $db->table('mov_movimientos  mov');
-        $builder->select('mov.*, dt.cedula_resp, res.nombre, res.apellido, mot.nombre as nombret');
+        $builder->select('mov.*, dt.cedula, res.nombre, res.apellido, mot.nombre as nombret');
         $builder->join('mov_detalles  dt', 'dt.id = mov.id_movimientos');
-        $builder->join('resp_responsables  res', 'res.cedula = dt.cedula_resp');
+        $builder->join('resp_responsables  res', 'res.cedula = dt.cedula');
         $builder->join('mov_motivo  mot', 'mot.id_motivo = mov.motivo');
 
         $datos['movimientos'] = $builder->orderBy('id_movimientos', 'ASC')->get()->getResultArray();

@@ -7,38 +7,38 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 /**
--------------------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////////////////////
  * TODO: Inicio de las Rutas de Vistas
  */
 $routes->get('/', 'VistaController::indexx', ['as' => 'index']);
 $routes->get('cargo', 'VistaController::index', ['as' => 'cargo']);
-$routes->get('condicion', 'VistaController::condicion');
+$routes->get('condicion', 'VistaController::condicion', ['as' => 'condicion']);
 $routes->get('crear', 'VistaController::CrearCargo');
-$routes->get('activos', 'VistaController::activo');
-$routes->get('marca', 'VistaController::marca');
-$routes->get('resp', 'VistaController::resp');
-$routes->get('condicionActivo', 'VistaController::condicion_act');
-$routes->get('zona', 'VistaController::zona_mov');
+$routes->get('activos', 'VistaController::activo', ['as' => 'activos']);
+$routes->get('marca', 'VistaController::marca', ['as' => 'marca']);
+$routes->get('resp', 'VistaController::resp', ['as' => 'resp']);
+$routes->get('condicionActivo', 'VistaController::condicion_act', ['as' => 'condicionActivo']);
+$routes->get('zona', 'VistaController::zona_mov', ['as' => 'zona']);
 $routes->get('ubicacion', 'VistaController::ubicacion');
 $routes->get('ubicacion', 'VistaController::ubicacion_mov');
-$routes->get('tipo', 'VistaController::tipo_act');
-$routes->get('movimientos', 'VistaController::movimiento');
-$routes->get('motivo', 'VistaController::motivo');
+$routes->get('tipo', 'VistaController::tipo_act', ['as' => 'tipo']);
+$routes->get('movimientos', 'VistaController::movimiento', ['as' => 'movimientos']);
+$routes->get('motivo', 'VistaController::motivo', ['as' => 'motivo']);
 
 
 /**
  * TODO: FIN de las Rutas de Vistas
------------------------------------------------------------------------------------------
+/////////////////////////////////////////////////////////////////////////////////////////////
  */
 
 /**
-------------------------------------------------------------------------------------------
+/////////////////////////////////////////////////////////////////////////////////////////////
  * TODO: Inicio de las Rutas de Acciones
  */
 $routes->get('borrar/(:num)', 'AccionController::delete/$1');
 $routes->get('borrarcon/(:num)', 'AccionController::deletecon/$1');
 $routes->get('borrarresp/(:num)', 'AccionController::deleteresp/$1');
-$routes->get('editarcargo/(:num)', 'AccionController::cargoupdate/$1');
+$routes->get('editarcargo/(:num)', 'AccionController::cargoupdate/$1', ['as' => 'editarcargo']);
 $routes->get('editarcondicion/(:num)', 'AccionController::condicionupdate/$1');
 $routes->get('editarcondicionn/(:num)', 'AccionController::condicionupdaterep/$1');
 $routes->get('editarresp/(:num)', 'AccionController::respupdate/$1');
@@ -62,6 +62,8 @@ $routes->post('actualizarubi', 'AccionController::updateubicacion');
 // DESHABILITAR Y DESINCORPORAR
 
 
+
+///////////////////////////////////////////////////////////////////////////////////////////
 /*
 ? TODO:Rutas de Guardar
  */
