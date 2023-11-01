@@ -18,6 +18,15 @@ use App\Models\Zona;
 
 class VistaController extends Controller
 {
+
+    public function indexx()
+    {
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+
+        return view('templates/index', $datos);
+    }
     public function index()
     {
         $cargo = new Cargo();

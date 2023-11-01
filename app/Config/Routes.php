@@ -10,8 +10,8 @@ use CodeIgniter\Router\RouteCollection;
 -------------------------------------------------------------------------
  * TODO: Inicio de las Rutas de Vistas
  */
-$routes->get('/', 'VistaController::index');
-$routes->get('cargo', 'VistaController::index');
+$routes->get('/', 'VistaController::indexx', ['as' => 'index']);
+$routes->get('cargo', 'VistaController::index', ['as' => 'cargo']);
 $routes->get('condicion', 'VistaController::condicion');
 $routes->get('crear', 'VistaController::CrearCargo');
 $routes->get('activos', 'VistaController::activo');
