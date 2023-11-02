@@ -1,6 +1,6 @@
 <?= $header ?>
 <?= $style ?>
-<div class="card shadow mt-1 mx-5 border-white" style="width:85%;  left: 5%;">
+<div class="card shadow mt-1 mx-5 border-white" id="table">
     <div class="card-body">
         <div class="table-responsive">
             <table id="tabla" class="table table-hover" class="table-responsive">
@@ -18,7 +18,7 @@
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content" id="modal-content">
-                                <div class="modal-header" style="background-color: #153757;">
+                                <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRO DE CONDICION</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
@@ -55,8 +55,7 @@
         </tbody>
         </table>
         <script>
-            var tabla = document.querySelector('#tabla');
-            var datable = new DataTable(tabla, {
+            var datable = new DataTable('#tabla', {
                 perPage: 5,
                 perPageSelect: [5, 7, 10, 15]
             });

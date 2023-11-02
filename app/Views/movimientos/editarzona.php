@@ -10,7 +10,7 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">MODIFICAR ZONA</h1>
                 </div>
                 <div class="modal-body">
-                    <form action="<?= base_url('actualizarzona'); ?>" method="post" enctype="multipart/form-data">
+                    <form action="<?= site_url('actualizarzona'); ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="nombre">Codigo</label>
                             <input type="text" name="id" readonly class="form-control" value="<?= $zona['id_zona'] ?>">
@@ -25,7 +25,7 @@
                         </div>
                 </div>
                 <div class="modal-footer">
-                    <a type="button" class="btn btn-secondary" href="<?= base_url('zona'); ?>">Cerrar</a>
+                    <a type="button" class="btn btn-secondary" href="<?= site_url('zona'); ?>">Cerrar</a>
                     <button type="submit" style="background-color: #66944c; color:#ffff" class="btn">Guardar</button>
                     </form>
                 </div>

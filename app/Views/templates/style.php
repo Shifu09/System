@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
 <body>
     <style>
+        .modal-header {
+            background-color: #153757;
+        }
+
         body {
             background-color: #153757;
         }
@@ -58,6 +60,18 @@
 
         #offcanvasNavbar {
             width: 20%;
+
+        }
+
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #dedede !important;
+            color: #153757 !important;
+        }
+
+        #table {
+            width: 85%;
+            left: 5%;
+
 
         }
     </style>

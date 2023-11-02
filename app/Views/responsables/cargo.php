@@ -1,6 +1,6 @@
 <?= $header ?>
 <?= $style ?>
-<div class="card shadow mt-1 mx-5 border-white" style="width:85%;  left: 5%;">
+<div class="card shadow mt-1 mx-5 border-white" id="table">
     <div class="card-body">
         <div class="table-responsive">
             <table id="tabla" class="table table-hover">
@@ -15,10 +15,7 @@
                     <button type="button" class="btn" id="but" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Registrar Cargo
                     </button>
-                    <!-- /**
-                    * TODO: Modal (form) de Registro de Cargo
-                    */
-                    -->
+
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content" id="modal-content">

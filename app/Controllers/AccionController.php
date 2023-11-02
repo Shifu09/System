@@ -531,8 +531,8 @@ class AccionController extends Controller
         $cargo = new Zona();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'alpha_space',
-            'direccion' => 'alpha_space',
+            'nombre' => 'string|is_unique[mov_zona.nombre]',
+            'direccion' => 'string'
         ]);
 
         if ($_POST && $val) {
@@ -547,7 +547,7 @@ class AccionController extends Controller
         }
         echo '<script> 
     alert ("Registro exitoso","aja","sds");
-        window.location.href = "zona";
+     window.location.href = "zona";
     </script>';
     }
     public function ubicacionupdate($id = null)
@@ -567,10 +567,8 @@ class AccionController extends Controller
         $cargo = new ubicacion();
         $id = $_POST['id'];
         $val = $this->validate([
-            'sede' =>
-            'alpha_space',
-            'direccion' =>
-            'alpha_space',
+            'sede' => 'string',
+            'direccion' => 'string',
         ]);
 
         if ($_POST && $val) {
