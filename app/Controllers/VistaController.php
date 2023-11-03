@@ -32,12 +32,9 @@ class VistaController extends Controller
         $cargo = new Cargo();
         $datos['cargos'] = $cargo->orderBy('id_cargo', 'ASC')->findAll();
 
-
-
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
-
 
         return view('responsables/cargo', $datos);
     }
@@ -150,8 +147,8 @@ class VistaController extends Controller
         /**
          *!  INN JOIN DE LA TABLA MOVIMIENTO
          */
-        $builder = $db->table('mov_movimientos  mov');
-        $builder->select('mov.*, dt.cedula, res.nombre, res.apellido, mot.nombre as nombret');
+        $builder = $db->table('resp_responsables  resp');
+        $builder->select('res.*, dt.cedula, res.nombre, res.apellido, mot.nombre as nombret');
         $builder->join('mov_detalles  dt', 'dt.id = mov.id_movimientos');
         $builder->join('resp_responsables  res', 'res.cedula = dt.cedula');
         $builder->join('mov_motivo  mot', 'mot.id_motivo = mov.motivo');

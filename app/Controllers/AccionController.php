@@ -90,8 +90,8 @@ class AccionController extends Controller
     {
         $validation = $this->validate([
             'cedula' => 'numeric|is_unique[resp_responsables.cedula]',
-            'nombre' => 'alpha_space',
-            'apellido' => 'alpha_space',
+            'nombre' => 'string',
+            'apellido' => 'string',
             'telefono' => 'is_natural',
             'correo' => 'valid_email',
         ]);
@@ -471,12 +471,28 @@ class AccionController extends Controller
     }
     public function respupdate($id = null)
     {
+        $db      = \Config\Database::connect();
         $resp = new Responsables();
-        $datos['resp'] = $resp->find($id);
+        // $builder = $db->table('resp_responsables');
+        $builder = $db->table('resp_responsables resp');
+        $data = $builder->where('cedula', $id);
+        $builder->join('resp_condicion c', 'c.id_condicion = resp.condicion_resp');
+        $builder->join('resp_cargo ca', 'ca.id_cargo = resp.cargo_resp');
+        $builder->join('gerencias g', 'g.id = resp.gerencia');
+        $builder->join('divisiones d', 'd.id_div = resp.division', 'right');
+        $builder->select('resp.*, c.nombre_condicion, g.nombre as nombre_gerencia , ca.nombre_cargo, d.nombre_div');
+        //$data = $builder->getCompiledSelect();
+        $data = $db->query($builder->getCompiledSelect())->getRow();
 
+        // $builder->select('resp', 'c.nombre_condicion as con, g.nombre as gen, ca.nombre_cargo as cargo, d.nombre_div as division');
+
+        //$datos['responsables'] = $builder->orderBy('cedula')->get()->getResultArray();
+
+        //  $datos['responsables'] = $data;
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
+        $datos['x'] = $data;
 
         return view('responsables/editarresp', $datos);
     }
