@@ -450,6 +450,7 @@ class AccionController extends Controller
     {
         $cargo = new Tipo();
         $id = $_POST['id'];
+
         $val = $this->validate([
             'nombre' => 'alpha_space',
         ]);
@@ -472,8 +473,7 @@ class AccionController extends Controller
     public function respupdate($id = null)
     {
         $db      = \Config\Database::connect();
-        $resp = new Responsables();
-        // $builder = $db->table('resp_responsables');
+
         $builder = $db->table('resp_responsables resp');
         $data = $builder->where('cedula', $id);
         $builder->join('resp_condicion c', 'c.id_condicion = resp.condicion_resp');
@@ -484,11 +484,6 @@ class AccionController extends Controller
         //$data = $builder->getCompiledSelect();
         $data = $db->query($builder->getCompiledSelect())->getRow();
 
-        // $builder->select('resp', 'c.nombre_condicion as con, g.nombre as gen, ca.nombre_cargo as cargo, d.nombre_div as division');
-
-        //$datos['responsables'] = $builder->orderBy('cedula')->get()->getResultArray();
-
-        //  $datos['responsables'] = $data;
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
@@ -515,7 +510,6 @@ class AccionController extends Controller
                 'cargo_resp' => $_POST['cargo'],
                 'gerencia' => $_POST['gerencia'],
                 'division' => $_POST['division'],
-
             ];
 
             $resp->update(
@@ -603,12 +597,21 @@ class AccionController extends Controller
     }
     public function activoupdate($id = null)
     {
-        $cargo = new Activos();
-        $datos['activo'] = $cargo->find($id);
+        $db      = \Config\Database::connect();
+
+        $builder = $db->table('act_activos act');
+        $data = $builder->where('codigo', $id);
+        $builder->join('act_marca m', 'm.id_marca = act.marca');
+        $builder->join('act_condicion c', 'c.id_activo_condicion = act.condicion_act');
+        $builder->join('act_tipo t', 't.id_tipo = act.tipo');
+        $builder->select('act.*, m.nombre as nombre_marca, c.nombre as nombre_condicion , t.nombre as nombre_tipo');
+        //$data = $builder->getCompiledSelect();
+        $data = $db->query($builder->getCompiledSelect())->getRow();
 
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
+        $datos['x'] = $data;
 
         return view('activos/editaractivo', $datos);
     }

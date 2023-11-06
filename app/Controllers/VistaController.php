@@ -144,9 +144,6 @@ class VistaController extends Controller
     public function movimiento()
     {
         $db      = \Config\Database::connect();
-        /**
-         *!  INN JOIN DE LA TABLA MOVIMIENTO
-         */
         $builder = $db->table('resp_responsables  resp');
         $builder->select('res.*, dt.cedula, res.nombre, res.apellido, mot.nombre as nombret');
         $builder->join('mov_detalles  dt', 'dt.id = mov.id_movimientos');

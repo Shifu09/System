@@ -1,0 +1,127 @@
+ERROR - 2023-11-06 01:15:00 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_1` FOREIGN KEY (`condicion_resp`) REFERENCES `resp_condicion` (`id_condicion`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `resp_re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `resp_re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `resp_re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `resp_re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\system\system\BaseModel.php(949): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\wamp64\www\system\system\Model.php(776): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\wamp64\www\system\app\Controllers\AccionController.php(515): CodeIgniter\Model->update('11466018', Array)
+#8 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->updateresp()
+#9 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#10 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-06 01:15:00 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_responsables`, CONSTRAINT `resp_responsables_ibfk_1` FOREIGN KEY (`condicion_resp`) REFERENCES `resp_condicion` (`id_condicion`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `resp_responsables` SET `nombre` = :nombre:, `apellido` = :apellido:, `telefono` = :telefono:, `condicion_resp` = :condicion_resp:, `correo` = :correo:, `cargo_resp` = :cargo_resp:, `gerencia` = :gerencia:, `division` = :division:
+WHERE `resp_responsables`.`cedula` IN :resp_responsables.cedula:', [...], false)
+ 2 SYSTEMPATH\Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(949): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\AccionController.php(515): CodeIgniter\Model->update('11466018', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updateresp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-06 01:56:18 --> mysqli_sql_exception: Unknown column 'codicgo' in 'where clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `act`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `act`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `act`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(608): CodeIgniter\Database\BaseConnection->query('SELECT `act`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000222')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-06 01:56:18 --> Unknown column 'codicgo' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(608): CodeIgniter\Database\BaseConnection->query('SELECT `act`.*, `m`.`nombre` as `nombre_marca`, `c`.`nombre` as `nombre_condicion`, `t`.`nombre` as `nombre_tipo`
+FROM `act_activos` `act`
+JOIN `act_marca` `m` ON `m`.`id_marca` = `act`.`marca`
+JOIN `act_condicion` `c` ON `c`.`id_activo_condicion` = `act`.`condicion_act`
+JOIN `act_tipo` `t` ON `t`.`id_tipo` = `act`.`tipo`
+WHERE `codicgo` = \'201000222\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000222')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-06 01:56:35 --> Undefined variable $activo
+in APPPATH\Views\activos\editaractivo.php on line 15.
+ 1 APPPATH\Views\activos\editaractivo.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activo', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\editaractivo.php', 15)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\editaractivo.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editaractivo', [], true)
+ 5 APPPATH\Controllers\AccionController.php(615): view('activos/editaractivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000222')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-06 01:57:11 --> Undefined variable $activo
+in APPPATH\Views\activos\editaractivo.php on line 40.
+ 1 APPPATH\Views\activos\editaractivo.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activo', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\editaractivo.php', 40)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\editaractivo.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editaractivo', [], true)
+ 5 APPPATH\Controllers\AccionController.php(615): view('activos/editaractivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000222')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-06 01:57:47 --> Undefined variable $activo
+in APPPATH\Views\activos\editaractivo.php on line 47.
+ 1 APPPATH\Views\activos\editaractivo.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activo', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\editaractivo.php', 47)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\editaractivo.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editaractivo', [], true)
+ 5 APPPATH\Controllers\AccionController.php(615): view('activos/editaractivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000222')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-06 02:00:10 --> Undefined variable $activo
+in APPPATH\Views\activos\editaractivo.php on line 131.
+ 1 APPPATH\Views\activos\editaractivo.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activo', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\editaractivo.php', 131)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\editaractivo.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editaractivo', [], true)
+ 5 APPPATH\Controllers\AccionController.php(615): view('activos/editaractivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000222')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-06 02:00:41 --> Undefined variable $activo
+in APPPATH\Views\activos\editaractivo.php on line 180.
+ 1 APPPATH\Views\activos\editaractivo.php(180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activo', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\editaractivo.php', 180)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\editaractivo.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editaractivo', [], true)
+ 5 APPPATH\Controllers\AccionController.php(615): view('activos/editaractivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000222')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-06 02:00:53 --> Undefined variable $activo
+in APPPATH\Views\activos\editaractivo.php on line 180.
+ 1 APPPATH\Views\activos\editaractivo.php(180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activo', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\editaractivo.php', 180)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\editaractivo.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editaractivo', [], true)
+ 5 APPPATH\Controllers\AccionController.php(615): view('activos/editaractivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000222')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-06 02:00:56 --> Undefined variable $activo
+in APPPATH\Views\activos\editaractivo.php on line 180.
+ 1 APPPATH\Views\activos\editaractivo.php(180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activo', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\editaractivo.php', 180)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\editaractivo.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editaractivo', [], true)
+ 5 APPPATH\Controllers\AccionController.php(615): view('activos/editaractivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000222')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

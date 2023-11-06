@@ -1,0 +1,25 @@
+ERROR - 2023-11-05 20:50:01 --> mysqli_sql_exception: Unknown column 'mov.motivo' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `res`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `res`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `res`.*,...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `res`.*,...', Array, false)
+#4 C:\wamp64\www\system\app\Controllers\VistaController.php(156): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+#6 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+#7 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-05 20:50:01 --> Unknown column 'mov.motivo' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `res`.*, `dt`.`cedula`, `res`.`nombre`, `res`.`apellido`, `mot`.`nombre` as `nombret`
+FROM `resp_responsables` `resp`
+JOIN `mov_detalles` `dt` ON `dt`.`id` = `mov`.`id_movimientos`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `dt`.`cedula`
+JOIN `mov_motivo` `mot` ON `mot`.`id_motivo` = `mov`.`motivo`
+ORDER BY `id_movimientos` ASC', [], false)
+ 2 APPPATH\Controllers\VistaController.php(156): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
