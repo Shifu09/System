@@ -1,0 +1,212 @@
+CRITICAL - 2023-11-08 01:48:53 --> Undefined array key "cedula"
+in APPPATH\Views\responsables\responsable.php on line 158.
+ 1 APPPATH\Views\responsables\responsable.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cedula"', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 158)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(67): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 01:55:56 --> Undefined variable $responsables
+in APPPATH\Views\responsables\responsable.php on line 156.
+ 1 APPPATH\Views\responsables\responsable.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $responsables', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 156)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(72): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 01:56:11 --> Undefined array key "cedula"
+in APPPATH\Views\responsables\responsable.php on line 158.
+ 1 APPPATH\Views\responsables\responsable.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cedula"', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 158)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(72): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 01:56:41 --> Attempt to read property "cedula" on array
+in APPPATH\Views\responsables\responsable.php on line 158.
+ 1 APPPATH\Views\responsables\responsable.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cedula" on array', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 158)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(72): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 01:57:25 --> syntax error, unexpected token "endforeach", expecting end of file
+in APPPATH\Views\responsables\responsable.php on line 176.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 3 APPPATH\Controllers\VistaController.php(72): view('responsables/responsable', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 01:57:35 --> Undefined property: CodeIgniter\Database\MySQLi\Builder::$cedula
+in APPPATH\Views\responsables\responsable.php on line 158.
+ 1 APPPATH\Views\responsables\responsable.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Builder::$cedula', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 158)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(72): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 01:58:34 --> Undefined variable $responsables
+in APPPATH\Views\responsables\responsable.php on line 156.
+ 1 APPPATH\Views\responsables\responsable.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $responsables', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 156)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(72): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 01:58:52 --> Undefined variable $responsables
+in APPPATH\Views\responsables\responsable.php on line 156.
+ 1 APPPATH\Views\responsables\responsable.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $responsables', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 156)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(72): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 01:58:57 --> Cannot access offset of type string on string
+in APPPATH\Views\responsables\responsable.php on line 159.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 4 APPPATH\Controllers\VistaController.php(72): view('responsables/responsable', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 01:59:16 --> Attempt to read property "cedula" on string
+in APPPATH\Views\responsables\responsable.php on line 158.
+ 1 APPPATH\Views\responsables\responsable.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cedula" on string', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 158)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(72): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 01:59:23 --> Cannot use object of type stdClass as array
+in APPPATH\Views\responsables\responsable.php on line 159.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 4 APPPATH\Controllers\VistaController.php(72): view('responsables/responsable', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 01:59:38 --> Cannot access offset of type string on string
+in APPPATH\Views\responsables\responsable.php on line 160.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 4 APPPATH\Controllers\VistaController.php(72): view('responsables/responsable', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 01:59:48 --> Cannot access offset of type string on string
+in APPPATH\Views\responsables\responsable.php on line 162.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 4 APPPATH\Controllers\VistaController.php(72): view('responsables/responsable', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 02:00:08 --> Cannot use object of type stdClass as array
+in APPPATH\Views\responsables\responsable.php on line 162.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 4 APPPATH\Controllers\VistaController.php(72): view('responsables/responsable', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 02:01:05 --> Undefined property: CodeIgniter\Database\MySQLi\Builder::$cedula
+in APPPATH\Views\responsables\responsable.php on line 158.
+ 1 APPPATH\Views\responsables\responsable.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Builder::$cedula', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 158)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(72): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 02:03:33 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\responsables\responsable.php on line 156.
+ 1 APPPATH\Views\responsables\responsable.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 156)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(72): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-08 02:04:09 --> mysqli_sql_exception: Unknown column 'codigo' in 'order clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `resp`.*...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `resp`.*...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `resp`.*...')
+#3 C:\wamp64\www\system\app\Controllers\VistaController.php(62): CodeIgniter\Database\BaseConnection->query('SELECT `resp`.*...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-08 02:04:09 --> Unknown column 'codigo' in 'order clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\VistaController.php(62): CodeIgniter\Database\BaseConnection->query('SELECT `resp`.*
+FROM `resp_responsables` `resp`
+WHERE `cedula` = 1
+ORDER BY `codigo` ASC')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 02:04:51 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\responsables\responsable.php on line 156.
+ 1 APPPATH\Views\responsables\responsable.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 156)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(71): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 02:06:45 --> Attempt to read property "cedula" on array
+in APPPATH\Views\responsables\responsable.php on line 158.
+ 1 APPPATH\Views\responsables\responsable.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cedula" on array', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 158)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(62): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

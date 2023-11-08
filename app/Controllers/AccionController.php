@@ -7,6 +7,7 @@ use CodeIgniter\Controller;
 use App\Models\cargo;
 use App\Models\Condicion;
 use App\Models\Condicion_act;
+use App\Models\Deshabilitaresp;
 use App\Models\Marca;
 use App\Models\Motivo;
 use App\Models\Movimientos;
@@ -14,6 +15,7 @@ use App\Models\Responsables;
 use App\Models\Tipo;
 use App\Models\ubicacion;
 use App\Models\Zona;
+use DateTime;
 
 class AccionController extends Controller
 {
@@ -223,9 +225,8 @@ class AccionController extends Controller
     {
         $validation = $this->validate([
             'nombre' => 'alpha_space|is_unique[act_tipo.nombre]',
-
         ]);
-        if ($_POST && $validation) {
+        if ($_POST && $validation == true) {
             $datos = [
                 'nombre' => $_POST['nombre'],
             ];
@@ -285,6 +286,45 @@ class AccionController extends Controller
             window.location="condicionActivo";
             </script>';
         }
+    }
+    public function desresp($id = null)
+    {
+
+        $db      = \Config\Database::connect();
+
+        $builder = $db->table('resp_responsables resp');
+        $data = $builder->where('cedula', $id);
+        $builder->select('resp.*');
+        $data = $db->query($builder->getCompiledSelect())->getRow();
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+        $datos['x'] = $data;
+
+        return view('responsables/deshabilitar', $datos);
+    }
+    public function disableresp()
+    {
+        $id = $_POST['id'];
+        $db      = \Config\Database::connect();
+        $builder = $db->table('resp_responsables resp');
+        $datos = $builder->where('cedula', $id);
+        $builder->set('estado', 0);
+        $builder->update();
+
+        $datos = [
+            'cedula_resp' => $_POST['id'],
+            'motivo' => $_POST['motivo'],
+        ];
+
+        $cargo = new Deshabilitaresp();
+        $cargo->insertar($datos);
+        return $this->response->redirect(site_url('resp'));
+
+        echo '<script> 
+            alert ("Registro exitoso","aja","sds");
+            window.location="resp";
+            </script>';
     }
     /*
     ! FIN DE FUNCIONES DE GUARDAR DATOS
@@ -457,7 +497,8 @@ class AccionController extends Controller
 
         if ($_POST && $val) {
             $datos = [
-                'nombre' => $_POST['nombre']
+                'nombre' => $_POST['nombre'],
+                'id_tipo' => $_POST['id'],
 
             ];
 

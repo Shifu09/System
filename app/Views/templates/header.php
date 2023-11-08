@@ -27,6 +27,38 @@
 </head>
 
 <body>
+    <!--
+    <section class="container">
+        <div class="sidebar">
+            <div class="side-hide">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+
+            <img src="logo.png" width="120" alt="Logo" />
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Galeria</a></li>
+            </ul>
+        </div>
+
+        <button id="button">Mostrar Sidebar</button>
+    </section>
+-->
+    <!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <script>
+        // Muestra SideBar
+        $("button").on("click", function() {
+            $(".container").toggleClass("show");
+        });
+
+        // Oculta SideBar
+        $(".side-hide").on("click", function() {
+            $(".container").toggleClass("show");
+        });
+    </script>
+ -->
+
     <div class="list-group list-group-flush">
         <nav class="navbar bg-body-tertiary fixed-top">
             <div class="container-fluid ">

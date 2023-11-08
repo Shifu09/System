@@ -1,7 +1,7 @@
 <?= $header ?>
 <?= $style ?>
 
-<div class="card shadow mt-1 mx-5 border-white" id="table" style="width:85%;  left: 5%;">
+<div class="card shadow mt-1 mx-5 border-white table-responsive" id="table" style="width:85%;  left: 5%;">
     <div class="card-body">
         <div class="table-responsive">
             <table id="tabla" class="table table-hover">

@@ -1,0 +1,705 @@
+CRITICAL - 2023-11-07 13:16:17 --> preg_match(): Argument #2 ($subject) must be of type string, array given
+in SYSTEMPATH\Validation\Validation.php on line 284.
+ 1 SYSTEMPATH\Validation\Validation.php(284): preg_match('/(.*?)\\[(.*)\\]/', [...], null)
+ 2 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('0', '0', null, [...], [...])
+ 3 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\AccionController.php(225): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->savetipo()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 13:20:18 --> "The username field must be unique." is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 317.
+ 1 SYSTEMPATH\Validation\Validation.php(317): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('The username field must be unique.')
+ 2 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('0', '0', null, [...], [...])
+ 3 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\AccionController.php(227): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->savetipo()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 13:39:16 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\AccionController.php on line 227.
+ 1 APPPATH\Controllers\AccionController.php(227): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type bool', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 227)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->savetipo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 13:39:38 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\AccionController.php on line 227.
+ 1 APPPATH\Controllers\AccionController.php(227): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type bool', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 227)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->savetipo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 13:40:19 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\AccionController.php on line 227.
+ 1 APPPATH\Controllers\AccionController.php(227): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type bool', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 227)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->savetipo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 13:40:41 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\AccionController.php on line 227.
+ 1 APPPATH\Controllers\AccionController.php(227): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type bool', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 227)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->savetipo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 13:41:50 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\AccionController.php on line 227.
+ 1 APPPATH\Controllers\AccionController.php(227): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type bool', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 227)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->savetipo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 13:47:52 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\AccionController.php on line 227.
+ 1 APPPATH\Controllers\AccionController.php(227): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type bool', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 227)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->savetipo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 14:23:45 --> Undefined variable $x
+in APPPATH\Views\responsables\responsable.php on line 34.
+ 1 APPPATH\Views\responsables\responsable.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $x', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 34)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(62): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 14:57:57 --> Undefined variable $marca
+in APPPATH\Views\activos\editarmarca.php on line 16.
+ 1 APPPATH\Views\activos\editarmarca.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $marca', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\editarmarca.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\editarmarca.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editarmarca', [], true)
+ 5 APPPATH\Controllers\AccionController.php(307): view('activos/editarmarca', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 14:58:07 --> Undefined variable $marca
+in APPPATH\Views\activos\editarmarca.php on line 16.
+ 1 APPPATH\Views\activos\editarmarca.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $marca', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\editarmarca.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\editarmarca.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editarmarca', [], true)
+ 5 APPPATH\Controllers\AccionController.php(307): view('activos/editarmarca', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 14:58:57 --> Undefined variable $marca
+in APPPATH\Views\activos\editarmarca.php on line 16.
+ 1 APPPATH\Views\activos\editarmarca.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $marca', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\editarmarca.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\editarmarca.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editarmarca', [], true)
+ 5 APPPATH\Controllers\AccionController.php(307): view('activos/editarmarca', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 15:01:02 --> Undefined variable $marca
+in APPPATH\Views\activos\editarmarca.php on line 16.
+ 1 APPPATH\Views\activos\editarmarca.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $marca', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\editarmarca.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\editarmarca.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editarmarca', [], true)
+ 5 APPPATH\Controllers\AccionController.php(307): view('activos/editarmarca', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 15:01:24 --> Undefined variable $marca
+in APPPATH\Views\activos\editarmarca.php on line 16.
+ 1 APPPATH\Views\activos\editarmarca.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $marca', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\editarmarca.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\editarmarca.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editarmarca', [], true)
+ 5 APPPATH\Controllers\AccionController.php(307): view('activos/editarmarca', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp('11466018')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 15:01:27 --> Undefined variable $marca
+in APPPATH\Views\activos\editarmarca.php on line 16.
+ 1 APPPATH\Views\activos\editarmarca.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $marca', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\editarmarca.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\editarmarca.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/editarmarca', [], true)
+ 5 APPPATH\Controllers\AccionController.php(307): view('activos/editarmarca', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp('11466018')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-07 15:38:39 --> mysqli_sql_exception: Unknown column 'c.nombre_condicion' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `resp`.*...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `resp`.*...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `resp`.*...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(296): CodeIgniter\Database\BaseConnection->query('SELECT `resp`.*...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->desresp('11466018')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-07 15:38:39 --> Unknown column 'c.nombre_condicion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(296): CodeIgniter\Database\BaseConnection->query('SELECT `resp`.*, `c`.`nombre_condicion`, `g`.`nombre` as `nombre_gerencia`, `ca`.`nombre_cargo`, `d`.`nombre_div`
+FROM `resp_responsables` `resp`
+WHERE `cedula` = \'11466018\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp('11466018')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 15:55:11 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 310.
+ 1 APPPATH\Controllers\AccionController.php(310): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 310)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 15:55:44 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 310.
+ 1 APPPATH\Controllers\AccionController.php(310): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 310)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-07 15:56:00 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_deshabilitacion`, CONSTRAINT `resp_deshabilitacion_ibfk_1` FOREIGN KEY (`cedula_resp`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Deshabilitaresp.php(16): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(316): App\Models\Deshabilitaresp->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-07 15:56:00 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_deshabilitacion`, CONSTRAINT `resp_deshabilitacion_ibfk_1` FOREIGN KEY (`cedula_resp`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `resp_deshabilitacion` (`motivo`) VALUES (:motivo:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Deshabilitaresp.php(16): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(316): App\Models\Deshabilitaresp->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-07 15:57:22 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_deshabilitacion`, CONSTRAINT `resp_deshabilitacion_ibfk_1` FOREIGN KEY (`cedula_resp`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Deshabilitaresp.php(16): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(316): App\Models\Deshabilitaresp->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-07 15:57:22 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_deshabilitacion`, CONSTRAINT `resp_deshabilitacion_ibfk_1` FOREIGN KEY (`cedula_resp`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `resp_deshabilitacion` (`motivo`) VALUES (:motivo:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Deshabilitaresp.php(16): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(316): App\Models\Deshabilitaresp->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 15:59:08 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 310.
+ 1 APPPATH\Controllers\AccionController.php(310): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 310)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 16:00:59 --> Undefined array key "idc"
+in APPPATH\Controllers\AccionController.php on line 310.
+ 1 APPPATH\Controllers\AccionController.php(310): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idc"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 310)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 16:01:45 --> Undefined array key "idd"
+in APPPATH\Controllers\AccionController.php on line 310.
+ 1 APPPATH\Controllers\AccionController.php(310): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idd"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 310)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 16:06:15 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 309.
+ 1 APPPATH\Controllers\AccionController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 19:06:44 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 309.
+ 1 APPPATH\Controllers\AccionController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 19:07:11 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 309.
+ 1 APPPATH\Controllers\AccionController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 19:08:39 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 309.
+ 1 APPPATH\Controllers\AccionController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-07 19:16:13 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_deshabilitacion`, CONSTRAINT `resp_deshabilitacion_ibfk_1` FOREIGN KEY (`cedula_resp`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Deshabilitaresp.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(317): App\Models\Deshabilitaresp->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-07 19:16:13 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_deshabilitacion`, CONSTRAINT `resp_deshabilitacion_ibfk_1` FOREIGN KEY (`cedula_resp`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `resp_deshabilitacion` (`motivo`) VALUES (:motivo:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Deshabilitaresp.php(19): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(317): App\Models\Deshabilitaresp->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-07 19:17:42 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_deshabilitacion`, CONSTRAINT `resp_deshabilitacion_ibfk_1` FOREIGN KEY (`cedula_resp`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Deshabilitaresp.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(317): App\Models\Deshabilitaresp->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-07 19:17:42 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_deshabilitacion`, CONSTRAINT `resp_deshabilitacion_ibfk_1` FOREIGN KEY (`cedula_resp`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `resp_deshabilitacion` (`motivo`) VALUES (:motivo:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Deshabilitaresp.php(19): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(317): App\Models\Deshabilitaresp->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-07 19:19:45 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Deshabilitaresp.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(317): App\Models\Deshabilitaresp->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-07 19:19:45 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `resp_deshabilitacion` (`cedula_resp`, `motivo`, `fecha`, `updated_at`) VALUES (:cedula_resp:, :motivo:, :fecha:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Deshabilitaresp.php(19): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(317): App\Models\Deshabilitaresp->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-07 19:19:50 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Deshabilitaresp.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(317): App\Models\Deshabilitaresp->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-07 19:19:50 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `resp_deshabilitacion` (`cedula_resp`, `motivo`, `fecha`, `updated_at`) VALUES (:cedula_resp:, :motivo:, :fecha:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Deshabilitaresp.php(19): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(317): App\Models\Deshabilitaresp->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-07 19:20:07 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Deshabilitaresp.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(317): App\Models\Deshabilitaresp->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-07 19:20:07 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `resp_deshabilitacion` (`cedula_resp`, `motivo`, `fecha`, `updated_at`) VALUES (:cedula_resp:, :motivo:, :fecha:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Deshabilitaresp.php(19): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(317): App\Models\Deshabilitaresp->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 19:37:23 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 768.
+ 1 SYSTEMPATH\BaseModel.php(768): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Models\Responsables.php(18): CodeIgniter\Model->insert([...])
+ 4 APPPATH\Controllers\AccionController.php(315): App\Models\Responsables->insertar([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 19:37:47 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1724.
+ 1 SYSTEMPATH\BaseModel.php(1724): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(916): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\AccionController.php(320): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 19:38:03 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 768.
+ 1 SYSTEMPATH\BaseModel.php(768): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Models\Responsables.php(18): CodeIgniter\Model->insert([...])
+ 4 APPPATH\Controllers\AccionController.php(320): App\Models\Responsables->insertar([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 19:38:35 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 768.
+ 1 SYSTEMPATH\BaseModel.php(768): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Models\Responsables.php(18): CodeIgniter\Model->insert([...])
+ 4 APPPATH\Controllers\AccionController.php(320): App\Models\Responsables->insertar([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 19:38:39 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 768.
+ 1 SYSTEMPATH\BaseModel.php(768): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Models\Responsables.php(18): CodeIgniter\Model->insert([...])
+ 4 APPPATH\Controllers\AccionController.php(320): App\Models\Responsables->insertar([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 19:39:01 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1724.
+ 1 SYSTEMPATH\BaseModel.php(1724): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(916): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\AccionController.php(320): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 19:43:41 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 311.
+ 1 APPPATH\Controllers\AccionController.php(311): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 311)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableresp()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 22:22:01 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 303.
+ 1 APPPATH\Controllers\AccionController.php(303): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 303)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp('3003485')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 22:24:07 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 303.
+ 1 APPPATH\Controllers\AccionController.php(303): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 303)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp('3003485')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 22:25:02 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 303.
+ 1 APPPATH\Controllers\AccionController.php(303): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 303)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp('3003485')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 22:25:13 --> Undefined array key "motivo"
+in APPPATH\Controllers\AccionController.php on line 304.
+ 1 APPPATH\Controllers\AccionController.php(304): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "motivo"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 304)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp('3003485')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 22:35:37 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 303.
+ 1 APPPATH\Controllers\AccionController.php(303): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 303)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp('3003485')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 22:36:07 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 294.
+ 1 APPPATH\Controllers\AccionController.php(294): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 294)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp('3003485')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 22:36:27 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 302.
+ 1 APPPATH\Controllers\AccionController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp('3003485')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 22:37:05 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 302.
+ 1 APPPATH\Controllers\AccionController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp('3003485')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 22:37:23 --> Undefined array key "motivo"
+in APPPATH\Controllers\AccionController.php on line 305.
+ 1 APPPATH\Controllers\AccionController.php(305): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "motivo"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 305)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp('3003485')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 22:38:24 --> Undefined array key "id"
+in APPPATH\Controllers\AccionController.php on line 294.
+ 1 APPPATH\Controllers\AccionController.php(294): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 294)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desresp('3003485')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-07 23:05:30 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':1:
+ORDER BY `cedula` ASC' at line 3 in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\system\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\system\app\Controllers\VistaController.php(56): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+#8 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+#9 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-11-07 23:05:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':1:
+ORDER BY `cedula` ASC' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `resp_responsables`
+WHERE 1 = :1:
+ORDER BY `cedula` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\VistaController.php(56): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 23:22:48 --> Undefined variable $responsables
+in APPPATH\Views\responsables\responsable.php on line 156.
+ 1 APPPATH\Views\responsables\responsable.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $responsables', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 156)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(67): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 23:23:23 --> Undefined array key "cedula"
+in APPPATH\Views\responsables\responsable.php on line 158.
+ 1 APPPATH\Views\responsables\responsable.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cedula"', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 158)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(67): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 23:23:40 --> Undefined array key "cedula"
+in APPPATH\Views\responsables\responsable.php on line 158.
+ 1 APPPATH\Views\responsables\responsable.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cedula"', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 158)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(67): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 23:24:22 --> Attempt to read property "cedula" on array
+in APPPATH\Views\responsables\responsable.php on line 158.
+ 1 APPPATH\Views\responsables\responsable.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cedula" on array', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 158)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(67): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 23:24:41 --> syntax error, unexpected single-quoted string "cedula", expecting identifier or variable or "{" or "$"
+in APPPATH\Views\responsables\responsable.php on line 158.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 3 APPPATH\Controllers\VistaController.php(67): view('responsables/responsable', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 23:25:44 --> Attempt to read property "cedula" on array
+in APPPATH\Views\responsables\responsable.php on line 158.
+ 1 APPPATH\Views\responsables\responsable.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cedula" on array', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 158)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(68): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 23:26:43 --> Undefined array key "cedula"
+in APPPATH\Views\responsables\responsable.php on line 158.
+ 1 APPPATH\Views\responsables\responsable.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cedula"', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 158)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(68): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 23:27:52 --> Undefined array key "cedula"
+in APPPATH\Views\responsables\responsable.php on line 158.
+ 1 APPPATH\Views\responsables\responsable.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cedula"', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 158)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(68): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 23:28:03 --> Undefined array key "nombre"
+in APPPATH\Views\responsables\responsable.php on line 159.
+ 1 APPPATH\Views\responsables\responsable.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 159)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(68): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 23:29:01 --> Undefined variable $data
+in APPPATH\Controllers\VistaController.php on line 58.
+ 1 APPPATH\Controllers\VistaController.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\system\\app\\Controllers\\VistaController.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 23:29:30 --> Undefined array key "cedula"
+in APPPATH\Views\responsables\responsable.php on line 158.
+ 1 APPPATH\Views\responsables\responsable.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cedula"', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php', 158)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\responsable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/responsable', [], true)
+ 5 APPPATH\Controllers\VistaController.php(69): view('responsables/responsable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 23:30:02 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+in APPPATH\Controllers\VistaController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->resp()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

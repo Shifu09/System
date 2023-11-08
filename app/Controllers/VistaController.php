@@ -53,7 +53,7 @@ class VistaController extends Controller
     public function resp()
     {
         $resp = new Responsables();
-        $datos['responsables'] =  $resp->orderBy('cedula', 'ASC')->findAll();
+        $datos['responsables'] =  $resp->where('estado', 1)->findAll();
 
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');

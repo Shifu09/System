@@ -205,7 +205,6 @@
                             <a type="button" class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal">Volver a la consulta</a>
                             <a type="button" class="btn btn-secondary" href="<?= site_url('resp'); ?>">Cerrar</a>
                             <button type="submit" style="background-color: #66944c; color:#ffff" class="btn">Guardar</button>
-
                         </div>
                     </div>
                 </form>
