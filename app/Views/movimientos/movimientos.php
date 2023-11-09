@@ -157,7 +157,7 @@
                     <?php foreach ($movimientos as $movimiento) : ?>
                         <tr>
 
-                            <td><?= $movimiento['id_movimientos'] ?></td>
+                            <th><?= $movimiento['id_movimientos'] ?></th>
                             <td><?= $movimiento['codigo_act'] ?></td>
                             <td><?= $movimiento['fecha'] ?></td>
                             <td><?= $movimiento['observacion'] ?></td>

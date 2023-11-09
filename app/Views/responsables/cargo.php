@@ -42,7 +42,7 @@
 
                     <?php foreach ($cargos as $cargo) : ?>
                         <tr>
-                            <td><?= $cargo['id_cargo'] ?></td>
+                            <th><?= $cargo['id_cargo'] ?></th>
                             <td><?= $cargo['nombre_cargo'] ?></td>
                             <td>
                                 <a href="<?= site_url('editarcargo/' . $cargo['id_cargo']) ?>" class="btn btn-info" type="button" data-bs-target="#modalUpdate" style="background-color: rgb(100, 145, 74);"><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil-square text-light' viewBox='0 0 16 16'>

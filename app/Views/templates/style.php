@@ -75,20 +75,19 @@
             width: 85%;
             height: 50%;
             left: 5%;
-
         }
 
         #card_index {
             width: 550px;
-            height: 400px;
+            height: 450px;
             background: white;
             border-radius: 10px;
-            top: 50px;
-            left: 32%;
+            top: 55px;
+            left: 30%;
             text-align: center;
             transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             -webkit-box-shadow: 1px 1px 12px #000;
-            box-shadow: 1px 1px 12px #000;
+            box-shadow: 1px 1px 20px #000;
         }
 
         .h4 {
@@ -104,13 +103,13 @@
         }
 
         #img_index {
+            border-radius: 160px;
             position: relative;
             align-self: center;
-            height: 100px;
+            height: 105px;
             width: 105px;
             color: #ffffff;
-            border-radius: 50%;
-            box-shadow: 0px 0px 20px 0px #a1a1a1;
+            box-shadow: 0px 0px 30px 0px #a1a1a1;
             margin-top: 5%;
         }
 
@@ -202,6 +201,12 @@
 
         .show {
             left: 0;
+        }
+
+        #login {
+            width: 90%;
+            align-self: center;
+
         }
     </style>
 </body>

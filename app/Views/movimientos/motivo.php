@@ -46,7 +46,7 @@
                     <?php foreach ($motivos as $motivo) : ?>
                         <tr>
 
-                            <td><?= $motivo['id_motivo'] ?></td>
+                            <th><?= $motivo['id_motivo'] ?></th>
                             <td><?= $motivo['nombre'] ?></td>
                             <td>
                                 <a href="<?= base_url('editarcargo/' . $motivo['id_motivo']) ?>" class="btn btn-info" type="button" data-bs-target="#modalUpdate" style="background-color: rgb(100, 145, 74);"><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil-square text-light' viewBox='0 0 16 16'>

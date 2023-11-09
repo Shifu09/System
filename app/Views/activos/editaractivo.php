@@ -12,7 +12,11 @@
                 <form action="<?= base_url('actualizaractivo'); ?>" method="post" enctype="multipart/form-data">
                     <div class=" form-group">
                         <label for="nombre">Codigo</label>
-                        <input type="text" class="form-control" placeholder="Codigo" name="id" value="<?= $x->codigo ?>">
+                        <input type="text" class="form-control" readonly placeholder="Codigo" name="id" value="<?= $x->codigo ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción</label>
+                        <textarea name="descripcion" id="descripcion" cols="3" rows="3" class="form-control"></textarea  value="<?= $x->descripcion ?>">
                     </div>
                     <div class="row">
                         <div class="col-12 col-lg-6">
@@ -128,32 +132,36 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="descripcion">Descripción</label>
-                            <textarea name="descripcion" id="descripcion" cols="3" rows="3" class="form-control"></textarea  value="<?= $x->descripcion ?>">
-                        </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                 <a type="button" class="btn btn-primary" data-bs-target="#modalUpdate2" data-bs-toggle="modal">Volver a la consulta</a>
-                <a type="button" class="btn btn-secondary" href="<?= site_url('activos'); ?>">Cerrar</a>
-                 <button type="submit" style="background-color: #66944c; color:#ffff" class="btn">Guardar</button>
-                </form>
+                            <label>Observaciones</label>
+                            <textarea name="observacion" cols="3" rows="3" class="form-control"></textarea>
+                    </div>
             </div>
         </div>
+        <div class="modal-footer">
+            <a type="button" class="btn btn-primary" data-bs-target="#modalUpdate2" data-bs-toggle="modal">Volver a la consulta</a>
+            <a type="button" class="btn btn-secondary" href="<?= site_url('activos'); ?>">Cerrar</a>
+            <button type="submit" style="background-color: #66944c; color:#ffff" class="btn">Guardar</button>
+            </form>
+        </div>
     </div>
-    </div>
+</div>
+</div>
 
-    <div class="modal fade" id="modalUpdate2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header" data-bs-target="#exampleModal" style="background-color: #153757;">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">CONSULTA ACTIVO</h1>
-                </div>
-                <div class="modal-body">
+<div class="modal fade" id="modalUpdate2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" data-bs-target="#exampleModal" style="background-color: #153757;">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">CONSULTA ACTIVO</h1>
+            </div>
+            <div class="modal-body">
                 <form method="post" enctype="multipart/form-data">
                     <div class=" form-group">
                         <label for="nombre">Codigo</label>
                         <input type="text" class="form-control" value="<?= $x->codigo ?>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción</label>
+                        <input type="text" name="descripcion" class="form-control" value="<?= $x->descripcion ?>">
                     </div>
                     <div class="row">
                         <div class="col-12 col-lg-6">
@@ -172,19 +180,19 @@
                             <div class="col-12 col-lg-4">
                                 <div class="form-group">
                                     <label>Serial</label>
-                                    <input type="text" class="form-control"  value="<?= $x->serial ?>" readonly>
+                                    <input type="text" class="form-control" value="<?= $x->serial ?>" readonly>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-4">
                                 <div class="form-group">
                                     <label for="nombre">Condicion del Activo</label>
-                                   <input type="text" class="form-control" value="<?= $x->nombre_condicion ?>" readonly>
+                                    <input type="text" class="form-control" value="<?= $x->nombre_condicion ?>" readonly>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-4">
                                 <div class="form-group">
                                     <label for="nombre">Tipo de Activo</label>
-                                    <input type="text" class="form-control"  value="<?= $x->nombre_tipo ?>" readonly>
+                                    <input type="text" class="form-control" value="<?= $x->nombre_tipo ?>" readonly>
                                 </div>
                             </div>
                         </div>
@@ -229,11 +237,10 @@
                             </div>
                         </div>
                         <div class="form-group" aria-disabled="">
-                            <label for="descripcion">Descripción</label>
-                            <textarea cols="3" rows="3" class="form-control" readonly>
-                            </textarea  value="<?= $x->descripcion ?>">
+                            <label for="descripcion">Observaciones</label>
+                            <input value="<?= $x->observacion ?>" cols="5" rows="5" class="form-control" readonly>
                         </div>
-                </div>
+                    </div>
             </div>
             <div class="modal-footer">
                 <a type="button" class="btn btn-secondary" href="<?= site_url('activos'); ?>">Cerrar</a>
@@ -242,10 +249,10 @@
             </div>
         </div>
     </div>
-    </div>
+</div>
 
-    <script>
-        $(document).ready(function() {
-            $('#modalUpdate2').modal('show');
-        });
-    </script>
+<script>
+    $(document).ready(function() {
+        $('#modalUpdate2').modal('show');
+    });
+</script>

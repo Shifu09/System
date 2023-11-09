@@ -155,7 +155,7 @@
         </div>
         <?php foreach ($responsables as $responsable) : ?>
             <tr>
-                <td><?= $responsable['cedula'] ?></td>
+                <th><?= $responsable['cedula'] ?></th>
                 <td><?= $responsable['nombre'] ?></td>
                 <td><?= $responsable['apellido'] ?></td>
                 <td><?= $responsable['correo'] ?></td>

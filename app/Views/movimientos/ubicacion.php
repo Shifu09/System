@@ -50,7 +50,7 @@
 
                     <?php foreach ($ubicaciones as $ubicacion) : ?>
                         <tr>
-                            <td><?= $ubicacion['id_ubicacion'] ?></td>
+                            <th><?= $ubicacion['id_ubicacion'] ?></th>
                             <td><?= $ubicacion['sede'] ?></td>
                             <td><?= $ubicacion['direccion'] ?></td>
                             <td>

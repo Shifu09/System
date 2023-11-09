@@ -1,0 +1,214 @@
+CRITICAL - 2023-11-09 00:03:59 --> Undefined property: stdClass::$nombre
+in APPPATH\Views\activos\desincorporar.php on line 21.
+ 1 APPPATH\Views\activos\desincorporar.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombre', 'C:\\wamp64\\www\\system\\app\\Views\\activos\\desincorporar.php', 21)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\activos\\desincorporar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('activos/desincorporar', [], true)
+ 5 APPPATH\Controllers\AccionController.php(343): view('activos/desincorporar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->desact('201000225')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-09 00:25:08 --> mysqli_sql_exception: Unknown column 'estado' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `act_act...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `act_act...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `act_act...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `act_act...', Array, false)
+#4 C:\wamp64\www\system\app\Controllers\AccionController.php(352): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->disableact()
+#6 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#7 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-09 00:25:08 --> Unknown column 'estado' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `act_activos` `act` SET `estado` = :estado:
+WHERE `codigo` = :codigo:', [...], false)
+ 2 APPPATH\Controllers\AccionController.php(352): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableact()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-09 00:26:21 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_deshabilitacion`, CONSTRAINT `resp_deshabilitacion_ibfk_1` FOREIGN KEY (`cedula_resp`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Deshabilitaresp.php(23): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(360): App\Models\Deshabilitaresp->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->disableact()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-09 00:26:21 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_deshabilitacion`, CONSTRAINT `resp_deshabilitacion_ibfk_1` FOREIGN KEY (`cedula_resp`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `resp_deshabilitacion` (`motivo`, `fecha`) VALUES (:motivo:, :fecha:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Deshabilitaresp.php(23): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(360): App\Models\Deshabilitaresp->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableact()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-09 00:26:54 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_deshabilitacion`, CONSTRAINT `resp_deshabilitacion_ibfk_1` FOREIGN KEY (`cedula_resp`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Deshabilitaresp.php(23): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(360): App\Models\Deshabilitaresp->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->disableact()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-09 00:26:54 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_deshabilitacion`, CONSTRAINT `resp_deshabilitacion_ibfk_1` FOREIGN KEY (`cedula_resp`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `resp_deshabilitacion` (`motivo`, `fecha`) VALUES (:motivo:, :fecha:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Deshabilitaresp.php(23): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(360): App\Models\Deshabilitaresp->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableact()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-09 00:28:25 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_deshabilitacion`, CONSTRAINT `resp_deshabilitacion_ibfk_1` FOREIGN KEY (`cedula_resp`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Deshabilitaresp.php(23): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(360): App\Models\Deshabilitaresp->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->disableact()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-09 00:28:25 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`resp_deshabilitacion`, CONSTRAINT `resp_deshabilitacion_ibfk_1` FOREIGN KEY (`cedula_resp`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `resp_deshabilitacion` (`motivo`, `fecha`) VALUES (:motivo:, :fecha:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Deshabilitaresp.php(23): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(360): App\Models\Deshabilitaresp->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableact()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-09 00:31:19 --> Call to undefined method App\Models\Desincorporacion::insertar
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\AccionController.php(361): CodeIgniter\Model->__call('insertar', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableact()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-09 00:33:12 --> mysqli_sql_exception: Duplicate entry '0' for key 'act_desincorporacion.PRIMARY' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ac...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ac...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ac...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ac...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Desincorporacion.php(22): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(361): App\Models\Desincorporacion->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->disableact()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-09 00:33:12 --> Duplicate entry '0' for key 'act_desincorporacion.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `act_desincorporacion` (`codigo_activo`, `motivo`, `fecha_des`) VALUES (:codigo_activo:, :motivo:, :fecha_des:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Desincorporacion.php(22): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(361): App\Models\Desincorporacion->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableact()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-09 00:36:08 --> mysqli_sql_exception: Duplicate entry '0' for key 'act_desincorporacion.PRIMARY' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ac...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ac...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ac...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ac...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Desincorporacion.php(23): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(361): App\Models\Desincorporacion->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->disableact()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-09 00:36:08 --> Duplicate entry '0' for key 'act_desincorporacion.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `act_desincorporacion` (`codigo_activo`, `motivo`, `fecha_des`) VALUES (:codigo_activo:, :motivo:, :fecha_des:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Desincorporacion.php(23): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(361): App\Models\Desincorporacion->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->disableact()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-09 15:19:11 --> Undefined array key "observaciones"
+in APPPATH\Controllers\AccionController.php on line 711.
+ 1 APPPATH\Controllers\AccionController.php(711): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "observaciones"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 711)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updateactivo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-09 15:32:58 --> Undefined array key "observaciones"
+in APPPATH\Controllers\AccionController.php on line 713.
+ 1 APPPATH\Controllers\AccionController.php(713): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "observaciones"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 713)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updateactivo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-09 15:33:25 --> Undefined array key "observacion"
+in APPPATH\Controllers\AccionController.php on line 713.
+ 1 APPPATH\Controllers\AccionController.php(713): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "observacion"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 713)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updateactivo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-09 15:34:01 --> Undefined array key "observacion"
+in APPPATH\Controllers\AccionController.php on line 713.
+ 1 APPPATH\Controllers\AccionController.php(713): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "observacion"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 713)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updateactivo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-09 15:34:31 --> Undefined array key "observacion"
+in APPPATH\Controllers\AccionController.php on line 713.
+ 1 APPPATH\Controllers\AccionController.php(713): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "observacion"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 713)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->updateactivo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -49,7 +49,7 @@
                     </div>
                     <?php foreach ($zonas as $zona) : ?>
                         <tr>
-                            <td><?= $zona['id_zona'] ?></td>
+                            <th><?= $zona['id_zona'] ?></th>
                             <td><?= $zona['nombre'] ?></td>
                             <td><?= $zona['direccion'] ?></td>
                             <td>

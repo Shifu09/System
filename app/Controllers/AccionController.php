@@ -8,6 +8,7 @@ use App\Models\cargo;
 use App\Models\Condicion;
 use App\Models\Condicion_act;
 use App\Models\Deshabilitaresp;
+use App\Models\Desincorporacion;
 use App\Models\Marca;
 use App\Models\Motivo;
 use App\Models\Movimientos;
@@ -320,6 +321,45 @@ class AccionController extends Controller
         $cargo = new Deshabilitaresp();
         $cargo->insertar($datos);
         return $this->response->redirect(site_url('resp'));
+
+        echo '<script> 
+            alert ("Registro exitoso","aja","sds");
+            window.location="resp";
+            </script>';
+    }
+    public function desact($id = null)
+    {
+
+        $db      = \Config\Database::connect();
+
+        $builder = $db->table('act_activos act');
+        $data = $builder->where('codigo', $id);
+        $builder->select('act.*');
+        $data = $db->query($builder->getCompiledSelect())->getRow();
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+        $datos['x'] = $data;
+
+        return view('activos/desincorporar', $datos);
+    }
+    public function disableact()
+    {
+        $id = $_POST['id'];
+        $db      = \Config\Database::connect();
+        $builder = $db->table('act_activos act');
+        $datos = $builder->where('codigo', $id);
+        $builder->set('estado', 0);
+        $builder->update();
+
+        $datos = [
+            'codigo_activo' => $_POST['id'],
+            'motivo' => $_POST['motivo'],
+        ];
+
+        $cargo = new Desincorporacion();
+        $cargo->insertar($datos);
+        return $this->response->redirect(site_url('activos'));
 
         echo '<script> 
             alert ("Registro exitoso","aja","sds");
@@ -640,19 +680,19 @@ class AccionController extends Controller
     {
         $db      = \Config\Database::connect();
 
-        $builder = $db->table('act_activos act');
-        $data = $builder->where('codigo', $id);
+        $builder = $db->table('act_activos act')->where('codigo', $id);
         $builder->join('act_marca m', 'm.id_marca = act.marca');
         $builder->join('act_condicion c', 'c.id_activo_condicion = act.condicion_act');
         $builder->join('act_tipo t', 't.id_tipo = act.tipo');
         $builder->select('act.*, m.nombre as nombre_marca, c.nombre as nombre_condicion , t.nombre as nombre_tipo');
-        //$data = $builder->getCompiledSelect();
-        $data = $db->query($builder->getCompiledSelect())->getRow();
 
+        $builder = $db->query($builder->getCompiledSelect())->getRow();
+        //  var_dump($builder);
+        //  die;
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
-        $datos['x'] = $data;
+        $datos['x'] = $builder;
 
         return view('activos/editaractivo', $datos);
     }
@@ -664,13 +704,13 @@ class AccionController extends Controller
 
         $datos = [
             'codigo' => $_POST['id'],
-            //'marca' => $_POST['marca'],
+            'marca' => $_POST['marca'],
             'modelo' => $_POST['modelo'],
             'serial' => $_POST['seria'],
             'condicion_act' => $_POST['condicion'],
             'tipo' => $_POST['tipo'],
             'descripcion' => $_POST['descripcion'],
-            //  'observacion' => $_POST['observaciones'],
+            'observacion' => $_POST['observacion'],
             'proveedor' => $_POST['proveedor'],
             'n_factura' => $_POST['factura'],
             'costo' => $_POST['costo'],
@@ -714,5 +754,17 @@ class AccionController extends Controller
 
         $responsable->where('cedula', $id)->delete($id);
         return $this->response->redirect(site_url('resp'));
+    }
+    public function login()
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('usuarios')->where('username' and 'password');
+        if ($builder > 0) {
+            $_SESSION['usuario'] = 'username';
+            echo '<script> 
+             alert ("Registro exitoso","aja","sds");
+            window.location.href = "marca";
+            </script>';
+        }
     }
 }
