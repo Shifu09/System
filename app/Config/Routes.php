@@ -51,6 +51,7 @@ $routes->get('editaractivo/(:num)', 'AccionController::activoupdate/$1');
 
 // RUTAS DE ACTUALIZAR DATOS
 $routes->post('actualizaractivo', 'AccionController::updateactivo');
+$routes->post('actualizaractivo2', 'AccionController::updateactivo2');
 $routes->post('actualizartipo', 'AccionController::updatetipo');
 $routes->post('actualizar', 'AccionController::updatecargo');
 $routes->post('actualizarmarca', 'AccionController::updatemarca');
