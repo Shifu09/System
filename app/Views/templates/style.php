@@ -32,6 +32,7 @@
         #modal-content {
             width: 150%;
             height: 130%;
+
             left: -25%;
             top: 100%;
         }
@@ -66,15 +67,31 @@
 
         }
 
+        .dropdown-menu {
+
+            color: #ffffff !important;
+            border: solid;
+            border-color: #153757;
+        }
+
+
         .dropdown-menu .dropdown-item:hover {
-            background-color: #dedede !important;
-            color: #153757 !important;
+            background-color: rgb(100, 145, 74) !important;
+            width: 100%;
+            color: #ffffff !important;
+            border: solid;
+            border-color: #153757;
         }
 
         #table {
             width: 85%;
             height: 50%;
             left: 5%;
+            position: relative;
+        }
+
+        .input-group {
+            margin: 0px auto;
         }
 
         #card_index {
@@ -82,9 +99,13 @@
             height: 450px;
             background: white;
             border-radius: 10px;
-            top: 55px;
-            left: 30%;
-            text-align: center;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
             transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             -webkit-box-shadow: 1px 1px 12px #000;
             box-shadow: 1px 1px 20px #000;

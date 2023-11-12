@@ -26,8 +26,9 @@ class AccionController extends Controller
     */
     public function save()
     {
+
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[resp_cargo.nombre_cargo]',
+            'nombre' => 'alpha_space|string',
 
         ]);
 
@@ -50,7 +51,7 @@ class AccionController extends Controller
     public function savecon()
     {
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[resp_condicion.nombre_condicion]',
+            'nombre' => 'alpha_space|string',
         ]);
 
         if ($_POST && $validation) {
@@ -71,7 +72,7 @@ class AccionController extends Controller
     public function saveconact()
     {
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[resp_condicion.nombre_condicion]',
+            'nombre' => 'alpha_space|string'
         ]);
 
         if ($_POST && $validation) {
@@ -93,8 +94,8 @@ class AccionController extends Controller
     {
         $validation = $this->validate([
             'cedula' => 'numeric|is_unique[resp_responsables.cedula]',
-            'nombre' => 'string',
-            'apellido' => 'string',
+            'nombre' => 'alpha_space|string',
+            'apellido' => 'alpha_space|string',
             'telefono' => 'is_natural',
             'correo' => 'valid_email',
         ]);
@@ -161,7 +162,7 @@ class AccionController extends Controller
     public function savemarca()
     {
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[act_marca.nombre]',
+            'nombre' => 'alpha_space|string',
         ]);
         if ($_POST && $validation) {
             $datos = [
@@ -181,8 +182,8 @@ class AccionController extends Controller
     public function savezona()
     {
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[mov_zona.nombre]',
-            'direccion' => 'alpha_space',
+            'nombre' => 'alpha_space|string',
+            'direccion' => 'alpha_space|string',
         ]);
         if ($_POST && $validation) {
             $datos = [
@@ -204,8 +205,8 @@ class AccionController extends Controller
     {
 
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[mov_ubicacion.sede]',
-            'direccion' => 'alpha_space',
+            'nombre' => 'alpha_space|string',
+            'direccion' => 'alpha_space|string',
         ]);
         if ($_POST && $validation) {
             $datos = [
@@ -225,7 +226,7 @@ class AccionController extends Controller
     public function savetipo()
     {
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[act_tipo.nombre]',
+            'nombre' => 'alpha_space|string',
         ]);
         if ($_POST && $validation == true) {
             $datos = [
@@ -244,7 +245,7 @@ class AccionController extends Controller
     public function savemotivo()
     {
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[mov_motivo.nombre]',
+            'nombre' => 'alpha_space|string',
 
         ]);
         if ($_POST && $validation) {
@@ -268,7 +269,7 @@ class AccionController extends Controller
     public function savemovimiento()
     {
         $validation = $this->validate([
-            'codigo' => 'integer|is_unique[mov_movimientos.codigo_act]',
+            'codigo' => 'numeric|is_unique[mov_movimientos.codigo_act]',
         ]);
         if ($_POST && $validation) {
             $datos = [
@@ -293,14 +294,14 @@ class AccionController extends Controller
 
         $db      = \Config\Database::connect();
 
-        $builder = $db->table('resp_responsables resp');
-        $data = $builder->where('cedula', $id);
+        $builder = $db->table('resp_responsables resp')->where('cedula', $id);
         $builder->select('resp.*');
-        $data = $db->query($builder->getCompiledSelect())->getRow();
+        $builder = $db->query($builder->getCompiledSelect())->getRow();
+
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
-        $datos['x'] = $data;
+        $datos['x'] = $builder;
 
         return view('responsables/deshabilitar', $datos);
     }
@@ -308,8 +309,7 @@ class AccionController extends Controller
     {
         $id = $_POST['id'];
         $db      = \Config\Database::connect();
-        $builder = $db->table('resp_responsables resp');
-        $datos = $builder->where('cedula', $id);
+        $builder = $db->table('resp_responsables resp')->where('cedula', $id);
         $builder->set('estado', 0);
         $builder->update();
 
@@ -332,14 +332,13 @@ class AccionController extends Controller
 
         $db      = \Config\Database::connect();
 
-        $builder = $db->table('act_activos act');
-        $data = $builder->where('codigo', $id);
+        $builder = $db->table('act_activos act')->where('codigo', $id);
         $builder->select('act.*');
-        $data = $db->query($builder->getCompiledSelect())->getRow();
+        $builder = $db->query($builder->getCompiledSelect())->getRow();
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
-        $datos['x'] = $data;
+        $datos['x'] = $builder;
 
         return view('activos/desincorporar', $datos);
     }
@@ -349,7 +348,7 @@ class AccionController extends Controller
         $db      = \Config\Database::connect();
         $builder = $db->table('act_activos act');
         $datos = $builder->where('codigo', $id);
-        $builder->set('estado', 0);
+        $builder->set('estado', 0)->set('asignado', 0);
         $builder->update();
 
         $datos = [
@@ -393,7 +392,7 @@ class AccionController extends Controller
         $cargo = new Cargo();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'alpha_space|is_unique[resp_cargo.nombre_cargo]',
+            'nombre' => 'alpha_space|string',
         ]);
 
         if ($_POST && $val) {
@@ -428,7 +427,7 @@ class AccionController extends Controller
         $cargo = new Marca();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'alpha_space|is_unique[act_marca.nombre]',
+            'nombre' => 'alpha_space|string',
         ]);
 
         if ($_POST && $val) {
@@ -462,7 +461,7 @@ class AccionController extends Controller
         $cargo = new Condicion_act();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'alpha_space|is_unique[act_condicion.nombre]',
+            'nombre' => 'alpha_space|string',
         ]);
 
         if ($_POST && $val) {
@@ -497,7 +496,7 @@ class AccionController extends Controller
         $cargo = new Condicion();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'alpha_space|is_unique[resp_condicion.nombre_condicion]',
+            'nombre' => 'alpha_space|string',
         ]);
 
         if ($_POST && $val) {
@@ -555,20 +554,20 @@ class AccionController extends Controller
     {
         $db      = \Config\Database::connect();
 
-        $builder = $db->table('resp_responsables resp');
-        $data = $builder->where('cedula', $id);
+        $builder = $db->table('resp_responsables resp')->where('cedula', $id);
+
         $builder->join('resp_condicion c', 'c.id_condicion = resp.condicion_resp');
         $builder->join('resp_cargo ca', 'ca.id_cargo = resp.cargo_resp');
         $builder->join('gerencias g', 'g.id = resp.gerencia');
         $builder->join('divisiones d', 'd.id_div = resp.division', 'right');
         $builder->select('resp.*, c.nombre_condicion, g.nombre as nombre_gerencia , ca.nombre_cargo, d.nombre_div');
         //$data = $builder->getCompiledSelect();
-        $data = $db->query($builder->getCompiledSelect())->getRow();
+        $builder = $db->query($builder->getCompiledSelect())->getRow();
 
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
-        $datos['x'] = $data;
+        $datos['x'] = $builder;
 
         return view('responsables/editarresp', $datos);
     }
@@ -622,8 +621,8 @@ class AccionController extends Controller
         $cargo = new Zona();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'string|is_unique[mov_zona.nombre]',
-            'direccion' => 'string'
+            'nombre' => 'alpha_space|string',
+            'direccion' => 'alpha_space|string',
         ]);
 
         if ($_POST && $val) {
@@ -638,7 +637,7 @@ class AccionController extends Controller
         }
         echo '<script> 
     alert ("Registro exitoso","aja","sds");
-     window.location.href = "zona";
+        window.location.href = "zona";
     </script>';
     }
     public function ubicacionupdate($id = null)
@@ -658,8 +657,8 @@ class AccionController extends Controller
         $cargo = new ubicacion();
         $id = $_POST['id'];
         $val = $this->validate([
-            'sede' => 'string',
-            'direccion' => 'string',
+            'sede' => 'alpha_space|string',
+            'direccion' => 'alpha_space|string',
         ]);
 
         if ($_POST && $val) {
@@ -676,6 +675,22 @@ class AccionController extends Controller
         window.location.href = "ubicacion";
     </script>';
     }
+    public function activoupdate2($id = null)
+    {
+        $db      = \Config\Database::connect();
+
+        $builder = $db->table('act_activos act')->where('codigo', $id);
+        $builder->select('act.*');
+        $builder = $db->query($builder->getCompiledSelect())->getRow();
+        var_dump($builder);
+        die;
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+        $datos['x'] = $builder;
+
+        return view('movimientos/movimientos', $datos);
+    }
     public function activoupdate($id = null)
     {
         $db      = \Config\Database::connect();
@@ -687,8 +702,7 @@ class AccionController extends Controller
         $builder->select('act.*, m.nombre as nombre_marca, c.nombre as nombre_condicion , t.nombre as nombre_tipo');
 
         $builder = $db->query($builder->getCompiledSelect())->getRow();
-        //  var_dump($builder);
-        //  die;
+
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');

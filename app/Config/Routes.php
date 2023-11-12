@@ -10,8 +10,9 @@ use CodeIgniter\Router\RouteCollection;
 ///////////////////////////////////////////////////////////////////////////////////////////
  * TODO: Inicio de las Rutas de Vistas
  */
-$routes->get('/', 'VistaController::indexx', ['as' => 'index']);
-$routes->get('cargo', 'VistaController::index', ['as' => 'cargo']);
+$routes->get('/', 'VistaController::login', ['as' => 'login']);
+$routes->get('index', 'VistaController::index', ['as' => 'index']);
+$routes->get('cargo', 'VistaController::cargo', ['as' => 'cargo']);
 $routes->get('condicion', 'VistaController::condicion', ['as' => 'condicion']);
 $routes->get('crear', 'VistaController::CrearCargo');
 $routes->get('activos', 'VistaController::activo', ['as' => 'activos']);
@@ -47,6 +48,7 @@ $routes->get('editartipo/(:num)', 'AccionController::tipoupdate/$1');
 $routes->get('editarzona/(:num)', 'AccionController::zonaupdate/$1');
 $routes->get('editarubicacion/(:num)', 'AccionController::ubicacionupdate/$1');
 $routes->get('editaractivo/(:num)', 'AccionController::activoupdate/$1');
+$routes->post('editaractivoo', 'AccionController::activoupdatee/$1');
 
 
 // RUTAS DE ACTUALIZAR DATOS

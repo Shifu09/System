@@ -13,142 +13,94 @@
                         <th>Motivo del movimiento</th>
                         <th>Responsable</th>
                         <th>Opciones</th>
-
                     </tr>
                 </thead>
                 <tbody>
                     <button type="button" class="btn" id="but" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Registrar movimiento
+                        Registrar Movimiento
                     </button>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content" id="modal-content">
-                                <div class="modal-header" style="background-color: #153757;">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRO DE MOVIMIENTOS</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal fade" id="exampleModal" data-bs-backdrop=" static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header" data-bs-target="#exampleModal" style="background-color: #153757;">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRAR MOVIMIENTO</h1>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="guardarResp" method="post" enctype="multipart/form-data">
-                                        <div class=" row">
-                                            <div class="col-12 col-md-4">
-                                                <div class=" form-group">
-                                                    <label for="nombre">Codigo del activo</label>
-                                                    <select name="codigo" class="form-control" required>
-                                                        <option value="">Seleccione una opción...</option>
-                                                        <?php
-
-
-                                                        use App\Models\Activos;
-
-                                                        $condicion = new Activos();
-                                                        $datos['activos'] =  $condicion->orderBy('codigo')->findAll();
-                                                        foreach ($datos['activos'] as $dato) {
-
-                                                            echo '<option value=' . $dato['codigo'] .  '>' . $dato['codigo'] . '</option>';
-                                                        }
-                                                        ?>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-4">
-                                                <div class=" form-group">
-                                                    <label for="nombre">Nombre</label>
-                                                    <select name="cedula" class="form-control" required>
-                                                        <option value="">Seleccione una opción...</option>
-                                                        <?php
-
-                                                        use App\Models\Responsables;
-
-
-                                                        $condicion = new Responsables();
-                                                        $datos['responsables'] =  $condicion->orderBy('cedula')->findAll();
-                                                        foreach ($datos['responsables'] as $dato) {
-
-                                                            echo '<option value=' . $dato['cedula'] .  '>' . $dato['nombre'] . " " . $dato['apellido'] . '</option>';
-                                                        }
-                                                        ?>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-4">
-                                                <div class="form-group">
-                                                    <label for="descripcion">Motivo</label>
-                                                    <select name="motivo" class="form-control" required>
-                                                        <option value="">Seleccione una opción...</option>
-                                                        <?php
-
-                                                        use App\Models\Motivo;
-
-
-                                                        $condicion = new Motivo();
-                                                        $datos['motivos'] =  $condicion->orderBy('id_motivo')->findAll();
-                                                        foreach ($datos['motivos'] as $dato) {
-
-                                                            echo '<option value=' . $dato['id_motivo'] .  '>' . $dato['nombre'] . '</option>';
-                                                        }
-                                                        ?>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                    <form action="editaractivoo" method="post" enctype="multipart/form-data">
+                                        <div class="col-12 col-md-8">
+                                            <label for="nombre">Codigo</label>
+                                            <input type="text" name="id" class="form-control">
+                                            <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Buscar</button>
                                         </div>
-                                        <div class="col-12 col-lg-4">
-                                            <div class="form-group">
-                                                <label for="descripcion">Zona</label>
-                                                <select name="zona" class="form-control" required>
-                                                    <option value="">Seleccione una opción...</option>
-                                                    <?php
-
-                                                    use App\Models\Zona;
-
-                                                    $condicion = new Zona();
-                                                    $datos['zonas'] =  $condicion->orderBy('id_zona')->findAll();
-                                                    foreach ($datos['zonas'] as $dato) {
-
-                                                        echo '<option value=' . $dato['id_zona'] .  '>' . $dato['nombre'] . '</option>';
-                                                    }
-                                                    ?>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-lg-4">
-                                        <div class="form-group">
-                                            <label for="descripcion">Ubicacion</label>
-                                            <select name="ubicacion" class="form-control" required>
-                                                <option value="">Seleccione una opción...</option>
-                                                <?php
-
-                                                use App\Models\ubicacion;
-
-                                                $condicion = new ubicacion();
-                                                $datos['ubicaciones'] =  $condicion->orderBy('id_ubicacion')->findAll();
-                                                foreach ($datos['ubicaciones'] as $dato) {
-
-                                                    echo '<option value=' . $dato['id_ubicacion'] .  '>' . $dato['sede'] . '</option>';
-                                                }
-                                                ?>
-                                            </select>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-12 col-lg-4">
-                                        <div class="form-group">
-                                            <label for="periodo">Fecha del Movimiento</label>
-                                            <input type="date" name="fecha" id="periodo" class="form-control">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12 col-lg-16">
-                                        <label for="periodo">Observaciones</label>
-                                        <textarea name="observaciones" id="observaciones" cols="3" rows=3" class="form-control" placeholder="Observaciones  "></textarea>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                            <button type="submit" style="background-color: #66944c; color:#ffff" class="btn">Guardar</button>
-                                        </div>
-                                    </div>
                                     </form>
+                                    <form method="post" enctype="multipart/form-data">
+
+                                        <div class="form-group">
+                                            <div class=" row">
+                                                <div class="col-12 col-md-4">
+                                                    <label for="nombre"></label>
+                                                    <input type="text" name="id" class="form-control">
+                                                </div>
+                                                <div class="col-12 col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="nombre"></label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="nombre"></label>
+                                                        <input type="text" class="form-control" ">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class=" row">
+                                                        <div class="col-12 col-md-8">
+                                                            <div class="form-group">
+                                                                <label for="nombre"></label>
+                                                                <input type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="nombre"></label>
+                                                                <input type="text" class="form-control" v>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-12 col-md-6">
+
+                                                        <label for="nombre"></label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="idcondicion_x"></label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 col-md-6">
+                                                        <label for="idcondicion_x"></label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="idcondicion_x"></label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                    </form>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -163,9 +115,6 @@
                             <td><?= $movimiento['observacion'] ?></td>
                             <td><?= $movimiento['nombret'] ?></td>
                             <td><?= $movimiento['nombre'] . " " . $movimiento['apellido'] ?></td>
-
-
-
                             <td>
                                 <a href="<?= base_url('editarmov/' . $movimiento['id_movimientos']) ?>" class="btn btn-info" type="button" data-bs-target="#modalUpdate" style="background-color: rgb(100, 145, 74);"><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil-square text-light' viewBox='0 0 16 16'>
                                         <path d='M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z' />

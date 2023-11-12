@@ -18,8 +18,7 @@ use App\Models\Zona;
 
 class VistaController extends Controller
 {
-
-    public function indexx()
+    public function index()
     {
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
@@ -27,7 +26,15 @@ class VistaController extends Controller
 
         return view('templates/index', $datos);
     }
-    public function index()
+    public function login()
+    {
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+
+        return view('templates/login', $datos);
+    }
+    public function cargo()
     {
         $cargo = new Cargo();
         $datos['cargos'] = $cargo->orderBy('id_cargo', 'ASC')->findAll();
@@ -66,6 +73,7 @@ class VistaController extends Controller
     {
         $resp = new Activos();
         $datos['activos'] =  $resp->where('estado', 1)->findAll();
+
 
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
