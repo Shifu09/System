@@ -67,7 +67,7 @@ $routes->get('deshabilitaresp/(:num)', 'AccionController::desresp/$1');
 $routes->get('deshabilitaract/(:num)', 'AccionController::desact/$1');
 $routes->post('disableresp', 'AccionController::disableresp');
 $routes->post('disableact', 'AccionController::disableact');
-$routes->post('login', 'AccionController::login');
+$routes->post('loginn', 'AccionController::loginn');
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////

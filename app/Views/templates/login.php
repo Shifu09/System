@@ -17,7 +17,7 @@
         <br>
         <h1 class="h2">AGUAS DE MÉRIDA, C.A</h1>
         <p class="mb-4 lead">Gerencia de Protección al Patrimonio</p>
-        <form method="post" id="login" action="login" novalidate class="col-12 needs-validation">
+        <form method="post" id="login" action="loginn" novalidate class="col-12 needs-validation">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text">
@@ -26,7 +26,7 @@
                         </svg>
                         <span>
                 </div>
-                <input type="text" class="form-control" placeholder="Usuario" name="usuario" required autofocus>
+                <input type="text" class="form-control" placeholder="Usuario" name="username" required autofocus>
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">

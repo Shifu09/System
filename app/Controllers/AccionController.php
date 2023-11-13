@@ -37,6 +37,7 @@ class AccionController extends Controller
                 'nombre_cargo' => $_POST['nombre']
 
             ];
+
             $cargo = new Cargo();
             $cargo->insertar($datos);
             return $this->response->redirect(site_url('cargo'));
@@ -118,7 +119,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('resp'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Registross exitoso");
             window.location="resp";
             </script>';
         }
@@ -769,16 +770,7 @@ class AccionController extends Controller
         $responsable->where('cedula', $id)->delete($id);
         return $this->response->redirect(site_url('resp'));
     }
-    public function login()
+    public function loginn()
     {
-        $db      = \Config\Database::connect();
-        $builder = $db->table('usuarios')->where('username' and 'password');
-        if ($builder > 0) {
-            $_SESSION['usuario'] = 'username';
-            echo '<script> 
-             alert ("Registro exitoso","aja","sds");
-            window.location.href = "marca";
-            </script>';
-        }
     }
 }

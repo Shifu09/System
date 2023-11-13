@@ -20,11 +20,11 @@ class VistaController extends Controller
 {
     public function index()
     {
-        $datos['header'] = view('templates/header');
-        $datos['footer'] = view('templates/footer');
-        $datos['style'] = view('templates/style');
+        echo  view('templates/footer');
+        echo  view('templates/header');
+        echo  view('templates/style');
 
-        return view('templates/index', $datos);
+        return view('templates/index');
     }
     public function login()
     {
