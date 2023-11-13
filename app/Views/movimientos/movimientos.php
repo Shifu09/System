@@ -1,5 +1,8 @@
-<?= $header ?>
+<?php
+echo view('templates/header')
+?>
 <?= $style ?>
+
 <div class="card shadow mt-1 mx-5 border-white" id="table">
     <div class="card-body">
         <div class="table-responsive">
@@ -29,8 +32,8 @@
                                     <form action="editaractivoo" method="post" enctype="multipart/form-data">
                                         <div class="col-12 col-md-8">
                                             <label for="nombre">Codigo</label>
-                                            <input type="text" name="id" class="form-control">
-                                            <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Buscar</button>
+                                            <input type="text" name="codigo" class="form-control">
+                                            <ul id="lista"></ul>
                                         </div>
                                     </form>
                                     <form method="post" enctype="multipart/form-data">
@@ -110,7 +113,7 @@
                         <tr>
 
                             <th><?= $movimiento['id_movimientos'] ?></th>
-                            <td><?= $movimiento['codigo_act'] ?></td>
+                            <td><?= $movimiento['codigo'] ?></td>
                             <td><?= $movimiento['fecha'] ?></td>
                             <td><?= $movimiento['observacion'] ?></td>
                             <td><?= $movimiento['nombret'] ?></td>
@@ -127,6 +130,29 @@
 
                 </tbody>
             </table>
+            <script>
+                document.getElementById("codigo").addEventListener("keyup", getcodigo)
+
+                function getcodigo() {
+                    let inputCP = document.getElementById("campo").value
+                    let lista = document.getElementById("lista").value
+
+                    let url = "movimientos/c.php"
+                    let formData = new FormData()
+                    formData.append("codigo", inputCP)
+
+                    fetch(url, {
+                            method: "post",
+                            body: formData,
+                            mode: "cors"
+                        }).then(response => response.json())
+                        .then(data => {
+                            lista.style.display = 'block'
+                            lista.innerHTML = data
+                        })
+                        .catch(err => console.log(err))
+                }
+            </script>
             <script>
                 let table = new DataTable('#tabla', {
                     perPage: 5,

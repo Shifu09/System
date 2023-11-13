@@ -152,10 +152,11 @@ class VistaController extends Controller
     public function movimiento()
     {
         $db      = \Config\Database::connect();
+
         $builder = $db->table('mov_movimientos  mov');
 
-        $builder->select('mov.*, dt.cedula, res.nombre, res.apellido, mot.nombre as nombret');
-        $builder->join('mov_detalles  dt', 'dt.id = mov.id_movimientos');
+        $builder->select('mov.*, dt.cedula, res.nombre, res.apellido,mot.nombre as nombret');
+        $builder->join('mov_detalles  dt', 'dt.id_mov = mov.id_movimientos');
         $builder->join('resp_responsables  res', 'res.cedula = dt.cedula');
         $builder->join('mov_motivo  mot', 'mot.id_motivo = mov.motivo');
 

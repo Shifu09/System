@@ -28,7 +28,7 @@ class Language
      *
      * @var array
      */
-    protected $language = [];
+    protected $language = ['en'];
 
     /**
      * The current language/locale to work with.
@@ -131,7 +131,7 @@ class Language
         }
 
         foreach (explode('.', $parsedLine) as $row) {
-            if (! isset($current)) {
+            if (!isset($current)) {
                 $current = $this->language[$locale][$file] ?? null;
             }
 
@@ -160,7 +160,7 @@ class Language
         $file = substr($line, 0, strpos($line, '.'));
         $line = substr($line, strlen($file) + 1);
 
-        if (! isset($this->language[$locale][$file]) || ! array_key_exists($line, $this->language[$locale][$file])) {
+        if (!isset($this->language[$locale][$file]) || !array_key_exists($line, $this->language[$locale][$file])) {
             $this->load($file, $locale);
         }
 
@@ -177,7 +177,7 @@ class Language
      */
     protected function formatMessage($message, array $args = [])
     {
-        if (! $this->intlSupport || $args === []) {
+        if (!$this->intlSupport || $args === []) {
             return $message;
         }
 
@@ -201,7 +201,7 @@ class Language
      */
     protected function load(string $file, string $locale, bool $return = false)
     {
-        if (! array_key_exists($locale, $this->loadedFiles)) {
+        if (!array_key_exists($locale, $this->loadedFiles)) {
             $this->loadedFiles[$locale] = [];
         }
 
@@ -210,11 +210,11 @@ class Language
             return [];
         }
 
-        if (! array_key_exists($locale, $this->language)) {
+        if (!array_key_exists($locale, $this->language)) {
             $this->language[$locale] = [];
         }
 
-        if (! array_key_exists($file, $this->language[$locale])) {
+        if (!array_key_exists($file, $this->language[$locale])) {
             $this->language[$locale][$file] = [];
         }
 

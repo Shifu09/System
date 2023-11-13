@@ -118,3 +118,214 @@ in SYSTEMPATH\Validation\StrictRules\Rules.php on line 251.
  6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-12 19:44:43 --> foreach() argument must be of type array|object, bool given
+in SYSTEMPATH\Database\BaseBuilder.php on line 411.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(411): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, bool given', 'C:\\wamp64\\www\\system\\system\\Database\\BaseBuilder.php', 411)
+ 2 APPPATH\Controllers\AccionController.php(700): CodeIgniter\Database\BaseBuilder->select(true)
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000225')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-12 19:45:14 --> mysqli_sql_exception: Unknown column 'act_activos' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `act_act...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `act_act...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `act_act...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(701): CodeIgniter\Database\BaseConnection->query('SELECT `act_act...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000225')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-12 19:45:14 --> Unknown column 'act_activos' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(701): CodeIgniter\Database\BaseConnection->query('SELECT `act_activos`
+FROM `act_activos`
+WHERE `codigo` = \'201000225\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000225')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-12 19:47:04 --> foreach() argument must be of type array|object, bool given
+in SYSTEMPATH\Database\BaseBuilder.php on line 411.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(411): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, bool given', 'C:\\wamp64\\www\\system\\system\\Database\\BaseBuilder.php', 411)
+ 2 APPPATH\Controllers\AccionController.php(700): CodeIgniter\Database\BaseBuilder->select(true)
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000225')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-12 19:48:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `act_activos`
+WHERE `codigo` = '201000225'' at line 2 in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `act_act...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `act_act...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `act_act...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(701): CodeIgniter\Database\BaseConnection->query('SELECT `act_act...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000225')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-12 19:48:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `act_activos`
+WHERE `codigo` = '201000225'' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(701): CodeIgniter\Database\BaseConnection->query('SELECT `act_activos*`.
+FROM `act_activos`
+WHERE `codigo` = \'201000225\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000225')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-12 19:48:10 --> mysqli_sql_exception: Unknown column 'act_activos' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `act_act...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `act_act...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `act_act...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(701): CodeIgniter\Database\BaseConnection->query('SELECT `act_act...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000225')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-12 19:48:10 --> Unknown column 'act_activos' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(701): CodeIgniter\Database\BaseConnection->query('SELECT `act_activos`
+FROM `act_activos`
+WHERE `codigo` = \'201000225\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->activoupdate('201000225')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-12 20:17:36 --> Undefined array key "codigo"
+in APPPATH\Views\movimientos\movimientos.php on line 37.
+ 1 APPPATH\Views\movimientos\movimientos.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo"', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 37)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(168): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-12 20:18:02 --> Undefined array key "codigo_act"
+in APPPATH\Views\movimientos\movimientos.php on line 37.
+ 1 APPPATH\Views\movimientos\movimientos.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo_act"', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 37)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(168): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-12 21:35:22 --> Undefined variable $movimientos
+in APPPATH\Views\movimientos\movimientos.php on line 112.
+ 1 APPPATH\Views\movimientos\movimientos.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $movimientos', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 112)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(169): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-12 22:30:03 --> mysqli_sql_exception: Unknown column 'dt.cedula' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...', Array, false)
+#4 C:\wamp64\www\system\app\Controllers\VistaController.php(160): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+#6 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+#7 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-12 22:30:03 --> Unknown column 'dt.cedula' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `dt`.`cedula`, `res`.`nombre`, `res`.`apellido`, `mot`.`nombre` as `nombret`
+FROM `mov_movimientos` `mov`
+ORDER BY `id_movimientos` ASC', [], false)
+ 2 APPPATH\Controllers\VistaController.php(160): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-12 22:32:26 --> Undefined array key "nombret"
+in APPPATH\Views\movimientos\movimientos.php on line 119.
+ 1 APPPATH\Views\movimientos\movimientos.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombret"', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 119)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(169): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-12 22:33:18 --> mysqli_sql_exception: Unknown column 'dt.cedula' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...', Array, false)
+#4 C:\wamp64\www\system\app\Controllers\VistaController.php(163): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+#6 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+#7 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-12 22:33:18 --> Unknown column 'dt.cedula' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `dt`.`cedula`, `res`.`nombre`, `res`.`apellido`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `dt`.`cedula`
+ORDER BY `id_movimientos` ASC', [], false)
+ 2 APPPATH\Controllers\VistaController.php(163): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-12 22:33:26 --> mysqli_sql_exception: Unknown column 'dt.cedula' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...', Array, false)
+#4 C:\wamp64\www\system\app\Controllers\VistaController.php(163): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+#6 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+#7 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-12 22:33:26 --> Unknown column 'dt.cedula' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `dt`.`cedula`, `res`.`nombre`, `res`.`apellido`
+FROM `mov_movimientos` `mov`
+ORDER BY `id_movimientos` ASC', [], false)
+ 2 APPPATH\Controllers\VistaController.php(163): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-12 22:37:14 --> Undefined array key "nombret"
+in APPPATH\Views\movimientos\movimientos.php on line 119.
+ 1 APPPATH\Views\movimientos\movimientos.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombret"', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 119)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(169): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-12 22:37:31 --> Undefined array key "nombret"
+in APPPATH\Views\movimientos\movimientos.php on line 119.
+ 1 APPPATH\Views\movimientos\movimientos.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombret"', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 119)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(169): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -77,7 +77,7 @@
                                                         $datos['condicion'] =  $condicion->orderBy('id_condicion')->findAll();
                                                         foreach ($datos['condicion'] as $dato) {
 
-                                                            echo '<option value=' . $dato['id_condicion'] .  '>' . $dato['nombre_condicion'] . '</option>';
+                                                            echo '<option value=' . $dato['id_condicion'] .  '>' . $dato['nombre_condicion'] . "  " .  $dato['id_condicion'] .  '</option>';
                                                         }
                                                         ?>
                                                     </select>

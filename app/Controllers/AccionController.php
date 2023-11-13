@@ -531,7 +531,7 @@ class AccionController extends Controller
         $id = $_POST['id'];
 
         $val = $this->validate([
-            'nombre' => 'alpha_space',
+            'nombre' => 'alpha_space|string',
         ]);
 
         if ($_POST && $val) {
@@ -577,7 +577,7 @@ class AccionController extends Controller
         $resp = new Responsables();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'alpha_space',
+            'nombre' => 'alpha_space|string',
         ]);
 
         if ($_POST && $val) {
@@ -682,8 +682,7 @@ class AccionController extends Controller
         $builder = $db->table('act_activos act')->where('codigo', $id);
         $builder->select('act.*');
         $builder = $db->query($builder->getCompiledSelect())->getRow();
-        var_dump($builder);
-        die;
+
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
@@ -695,11 +694,12 @@ class AccionController extends Controller
     {
         $db      = \Config\Database::connect();
 
-        $builder = $db->table('act_activos act')->where('codigo', $id);
+        $builder = $db->table('act_activos act');
+
         $builder->join('act_marca m', 'm.id_marca = act.marca');
         $builder->join('act_condicion c', 'c.id_activo_condicion = act.condicion_act');
         $builder->join('act_tipo t', 't.id_tipo = act.tipo');
-        $builder->select('act.*, m.nombre as nombre_marca, c.nombre as nombre_condicion , t.nombre as nombre_tipo');
+        $builder->select('act.*, m.nombre as nombre_marca, c.nombre as nombre_condicion , t.nombre as nombre_tipo')->where('codigo', $id);
 
         $builder = $db->query($builder->getCompiledSelect())->getRow();
 
