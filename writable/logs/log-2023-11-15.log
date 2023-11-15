@@ -1,0 +1,829 @@
+CRITICAL - 2023-11-15 09:29:34 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 930.
+ 1 SYSTEMPATH\BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update(null, [])
+ 3 APPPATH\Controllers\AccionController.php(229): CodeIgniter\Model->update()
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->savemov()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 11:28:18 --> Undefined array key "observaciones"
+in APPPATH\Controllers\AccionController.php on line 146.
+ 1 APPPATH\Controllers\AccionController.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "observaciones"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 146)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->saveactivo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 13:25:46 --> Attempt to read property "cedula" on null
+in APPPATH\Views\movimientos\editarmov.php on line 17.
+ 1 APPPATH\Views\movimientos\editarmov.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cedula" on null', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php', 17)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarmov', [], true)
+ 5 APPPATH\Controllers\AccionController.php(746): view('movimientos/editarmov', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('30')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 13:26:19 --> Attempt to read property "cedula" on null
+in APPPATH\Views\movimientos\editarmov.php on line 17.
+ 1 APPPATH\Views\movimientos\editarmov.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cedula" on null', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php', 17)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarmov', [], true)
+ 5 APPPATH\Controllers\AccionController.php(746): view('movimientos/editarmov', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('30')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 13:27:51 --> Attempt to read property "cedula" on null
+in APPPATH\Views\movimientos\editarmov.php on line 17.
+ 1 APPPATH\Views\movimientos\editarmov.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cedula" on null', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php', 17)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarmov', [], true)
+ 5 APPPATH\Controllers\AccionController.php(746): view('movimientos/editarmov', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('30')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 13:28:47 --> Attempt to read property "cedula" on null
+in APPPATH\Views\movimientos\editarmov.php on line 17.
+ 1 APPPATH\Views\movimientos\editarmov.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cedula" on null', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php', 17)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarmov', [], true)
+ 5 APPPATH\Controllers\AccionController.php(746): view('movimientos/editarmov', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('30')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 13:31:20 --> Attempt to read property "cedula" on null
+in APPPATH\Views\movimientos\editarmov.php on line 17.
+ 1 APPPATH\Views\movimientos\editarmov.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cedula" on null', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php', 17)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarmov', [], true)
+ 5 APPPATH\Controllers\AccionController.php(746): view('movimientos/editarmov', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('30')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 13:35:21 --> mysqli_sql_exception: Unknown table 'act' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(738): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 13:35:21 --> Unknown table 'act'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(738): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `act`.*, `m`.`nombre` as `nombre_marca`, `c`.`nombre` as `nombre_condicion`, `t`.`nombre` as `nombre_tipo`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+WHERE `codigo` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 13:37:01 --> mysqli_sql_exception: Unknown column 'm.nombre' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(737): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 13:37:01 --> Unknown column 'm.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(737): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `mov`.*, `m`.`nombre` as `nombre_marca`, `c`.`nombre` as `nombre_condicion`, `t`.`nombre` as `nombre_tipo`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+WHERE `codigo` = \'27\'
+AND `codigo` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 13:37:45 --> Attempt to read property "cedula" on null
+in APPPATH\Views\movimientos\editarmov.php on line 17.
+ 1 APPPATH\Views\movimientos\editarmov.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cedula" on null', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php', 17)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarmov', [], true)
+ 5 APPPATH\Controllers\AccionController.php(746): view('movimientos/editarmov', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 13:39:01 --> Attempt to read property "nombre" on null
+in APPPATH\Views\movimientos\editarmov.php on line 98.
+ 1 APPPATH\Views\movimientos\editarmov.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on null', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php', 98)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarmov', [], true)
+ 5 APPPATH\Controllers\AccionController.php(746): view('movimientos/editarmov', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 13:39:42 --> Attempt to read property "nombre" on null
+in APPPATH\Views\movimientos\editarmov.php on line 98.
+ 1 APPPATH\Views\movimientos\editarmov.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on null', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php', 98)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarmov', [], true)
+ 5 APPPATH\Controllers\AccionController.php(746): view('movimientos/editarmov', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 13:40:16 --> Attempt to read property "nombre" on null
+in APPPATH\Views\movimientos\editarmov.php on line 98.
+ 1 APPPATH\Views\movimientos\editarmov.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on null', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php', 98)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarmov', [], true)
+ 5 APPPATH\Controllers\AccionController.php(746): view('movimientos/editarmov', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 13:49:49 --> mysqli_sql_exception: Unknown column 'resp.gerencia' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 13:49:49 --> Unknown column 'resp.gerencia' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `g`.`nombre` as `nombre_gerencia`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `gerencias` `g` ON `g`.`id` = `resp`.`gerencia`
+WHERE `id_movimientos` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 13:50:28 --> mysqli_sql_exception: Unknown column 'resp.gerencia' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 13:50:28 --> Unknown column 'resp.gerencia' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `res`.`gerencia`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `gerencias` `g` ON `g`.`id` = `resp`.`gerencia`
+WHERE `id_movimientos` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 13:51:37 --> mysqli_sql_exception: Unknown column 'g.gerencia' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 13:51:37 --> Unknown column 'g.gerencia' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `g`.`gerencia`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `gerencias` `g` ON `g`.`id` = `resp`.`gerencia`
+WHERE `id_movimientos` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 13:51:45 --> mysqli_sql_exception: Unknown column 'resp.gerencia' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 13:51:45 --> Unknown column 'resp.gerencia' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `g`.`nombre`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `gerencias` `g` ON `g`.`id` = `resp`.`gerencia`
+WHERE `id_movimientos` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 13:52:21 --> mysqli_sql_exception: Unknown column 'resp.gerencia' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 13:52:21 --> Unknown column 'resp.gerencia' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `gerencias` `g` ON `g`.`id` = `resp`.`gerencia`
+WHERE `id_movimientos` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 13:52:26 --> mysqli_sql_exception: Unknown column 'resp.gerencia' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 13:52:26 --> Unknown column 'resp.gerencia' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `gerencias` `g` ON `g`.`id` = `resp`.`gerencia`
+WHERE `id_movimientos` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 13:53:09 --> mysqli_sql_exception: Unknown table 'mov' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(737): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 13:53:09 --> Unknown table 'mov'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(737): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`
+FROM `resp_responsables` `resp`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+WHERE `cedula` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 13:54:01 --> mysqli_sql_exception: Unknown column 'resp.gerencia' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(737): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 13:54:01 --> Unknown column 'resp.gerencia' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(737): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `gerencias` `g` ON `g`.`id` = `resp`.`gerencia`
+WHERE `id_movimientos` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 13:54:17 --> mysqli_sql_exception: Unknown column 'resp.cedula' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(737): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 13:54:17 --> Unknown column 'resp.cedula' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(737): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `gerencias` `g` ON `g`.`id` = `resp`.`cedula`
+WHERE `id_movimientos` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 13:57:48 --> Call to undefined method stdClass::getCompiledSelect()
+in APPPATH\Controllers\AccionController.php on line 741.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 13:58:00 --> mysqli_sql_exception: Unknown column 'c.nombre_condicion' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `resp`.*...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `resp`.*...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `resp`.*...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(741): CodeIgniter\Database\BaseConnection->query('SELECT `resp`.*...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 13:58:00 --> Unknown column 'c.nombre_condicion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(741): CodeIgniter\Database\BaseConnection->query('SELECT `resp`.*, `c`.`nombre_condicion`, `g`.`nombre` as `nombre_gerencia`, `ca`.`nombre_cargo`, `d`.`nombre_div`
+FROM `resp_responsables` `resp`
+JOIN `gerencias` `g` ON `g`.`id` = `resp`.`gerencia`
+WHERE `cedula` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 13:59:16 --> mysqli_sql_exception: Unknown column 'resp.gerencia' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `res`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `res`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `res`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(741): CodeIgniter\Database\BaseConnection->query('SELECT `res`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 13:59:16 --> Unknown column 'resp.gerencia' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(741): CodeIgniter\Database\BaseConnection->query('SELECT `res`.*, `g`.`nombre` as `nombre_gerencia`
+FROM `resp_responsables` `res`
+JOIN `gerencias` `g` ON `g`.`id` = `resp`.`gerencia`
+WHERE `cedula` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 13:59:48 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\AccionController.php on line 743.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 14:00:37 --> mysqli_sql_exception: Unknown table 'res' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `res`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `res`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `res`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(741): CodeIgniter\Database\BaseConnection->query('SELECT `res`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 14:00:37 --> Unknown table 'res'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(741): CodeIgniter\Database\BaseConnection->query('SELECT `res`.*, `g`.`nombre` as `nombre_gerencia`
+FROM `mov_movimientos` `mov`
+JOIN `gerencias` `g` ON `g`.`id` = `res`.`gerencia`
+WHERE `cedula` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 14:00:53 --> mysqli_sql_exception: Unknown column 'mov.gerencia' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(741): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 14:00:53 --> Unknown column 'mov.gerencia' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(741): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `g`.`nombre` as `nombre_gerencia`
+FROM `mov_movimientos` `mov`
+JOIN `gerencias` `g` ON `g`.`id` = `mov`.`gerencia`
+WHERE `cedula` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 14:09:55 --> mysqli_sql_exception: Not unique table/alias: 'res' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(737): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 14:09:55 --> Not unique table/alias: 'res'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(737): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `res`.`gerencia`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+WHERE `id_movimientos` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 14:12:57 --> mysqli_sql_exception: Not unique table/alias: 'res' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(738): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 14:12:57 --> Not unique table/alias: 'res'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(738): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `res`.`gerencia`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+WHERE `id_movimientos` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 14:13:59 --> mysqli_sql_exception: Unknown column 'act.nombre' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(738): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 14:13:59 --> Unknown column 'act.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(738): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `act`.`nombre` as `p`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `act_activos` `act` ON `act`.`codigo` = `mov`.`codigo`
+WHERE `id_movimientos` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 14:19:12 --> mysqli_sql_exception: Unknown column 'resp.cargo_resp' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(735): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('32')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 14:19:12 --> Unknown column 'resp.cargo_resp' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(735): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `act`.`descripcion`, `res`.`cargo_resp`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `act_activos` `act` ON `act`.`codigo` = `mov`.`codigo`
+JOIN `resp_cargo` `ca` ON `ca`.`id_cargo` = `resp`.`cargo_resp`
+WHERE `id_movimientos` = \'32\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('32')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 14:32:41 --> mysqli_sql_exception: Unknown column 'act.garantia_desde' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('32')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 14:32:41 --> Unknown column 'act.garantia_desde' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `act`.`descripcion`, `act`.`garantia_desde`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `act_activos` `act` ON `act`.`codigo` = `mov`.`codigo`
+WHERE `id_movimientos` = \'32\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('32')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 14:59:10 --> Undefined property: stdClass::$nombre_condicion
+in APPPATH\Views\movimientos\editarmov.php on line 31.
+ 1 APPPATH\Views\movimientos\editarmov.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombre_condicion', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php', 31)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarmov', [], true)
+ 5 APPPATH\Controllers\AccionController.php(753): view('movimientos/editarmov', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 15:12:51 --> Undefined property: stdClass::$nombre_gerencia
+in APPPATH\Views\movimientos\editarmov.php on line 37.
+ 1 APPPATH\Views\movimientos\editarmov.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombre_gerencia', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php', 37)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarmov', [], true)
+ 5 APPPATH\Controllers\AccionController.php(753): view('movimientos/editarmov', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 15:12:58 --> Undefined property: stdClass::$codigo
+in APPPATH\Views\movimientos\editarmov.php on line 16.
+ 1 APPPATH\Views\movimientos\editarmov.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$codigo', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarmov', [], true)
+ 5 APPPATH\Controllers\AccionController.php(573): view('movimientos/editarmov', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('3003485')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 15:13:55 --> Undefined property: stdClass::$nombre_gerencia
+in APPPATH\Views\movimientos\editarmov.php on line 37.
+ 1 APPPATH\Views\movimientos\editarmov.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombre_gerencia', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php', 37)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarmov', [], true)
+ 5 APPPATH\Controllers\AccionController.php(753): view('movimientos/editarmov', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 15:13:59 --> Undefined property: stdClass::$codigo
+in APPPATH\Views\movimientos\editarmov.php on line 16.
+ 1 APPPATH\Views\movimientos\editarmov.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$codigo', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\editarmov.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarmov', [], true)
+ 5 APPPATH\Controllers\AccionController.php(573): view('movimientos/editarmov', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('11466018')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 15:16:59 --> mysqli_sql_exception: Column 'cedula' in where clause is ambiguous in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 15:16:59 --> Column 'cedula' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `act`.`descripcion`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `act_activos` `act` ON `act`.`codigo` = `mov`.`codigo`
+WHERE `id_movimientos` = \'27\'
+AND `cedula` IS NULL')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 15:17:20 --> mysqli_sql_exception: Column 'cedula' in where clause is ambiguous in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 15:17:20 --> Column 'cedula' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `act`.`descripcion`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `act_activos` `act` ON `act`.`codigo` = `mov`.`codigo`
+WHERE `cedula` IS NULL')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 15:22:13 --> mysqli_sql_exception: Unknown column 'res.nombre_cargo' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(735): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 15:22:13 --> Unknown column 'res.nombre_cargo' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(735): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `act`.`descripcion`, `res`.`nombre_cargo`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `act_activos` `act` ON `act`.`codigo` = `mov`.`codigo`
+JOIN `gerencias` `g` ON `g`.`id` = `res`.`gerencia=res`.`cedula`
+WHERE `id_movimientos` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 15:22:28 --> mysqli_sql_exception: Unknown column 'res.gerencia=res.cedula' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(735): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 15:22:28 --> Unknown column 'res.gerencia=res.cedula' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(735): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `act`.`descripcion`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `act_activos` `act` ON `act`.`codigo` = `mov`.`codigo`
+JOIN `gerencias` `g` ON `g`.`id` = `res`.`gerencia=res`.`cedula`
+WHERE `id_movimientos` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 15:23:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`mov`.`cedula`
+WHERE `id_movimientos` = '27'' at line 5 in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(735): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 15:23:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`mov`.`cedula`
+WHERE `id_movimientos` = '27'' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(735): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `act`.`descripcion`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `act_activos` `act` ON `act`.`codigo` = `mov`.`codigo`
+JOIN `gerencias` `g` ON `g`.`id` = `res`.`gerencia = res`.`cedula =` `mov`.`cedula`
+WHERE `id_movimientos` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 15:23:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`mov`.`cedula`
+WHERE `id_movimientos` = '27'' at line 5 in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(735): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 15:23:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`mov`.`cedula`
+WHERE `id_movimientos` = '27'' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(735): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `act`.`descripcion`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `act_activos` `act` ON `act`.`codigo` = `mov`.`codigo`
+JOIN `gerencias` `g` ON `g`.`id` = `res`.`gerencia=` `mov`.`cedula`
+WHERE `id_movimientos` = \'27\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 15:33:13 --> mysqli_sql_exception: Unknown column 'resp.division' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('38')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 15:33:13 --> Unknown column 'resp.division' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `act`.`descripcion`, `g`.`nombre` as `nombre_gerencia`, `d`.`nombre_div`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `gerencias` `g` ON `g`.`id` = `res`.`gerencia`
+JOIN `act_activos` `act` ON `act`.`codigo` = `mov`.`codigo`
+RIGHT JOIN `divisiones` `d` ON `d`.`id_div` = `resp`.`division`
+WHERE `id_movimientos` = \'38\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('38')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 15:34:14 --> mysqli_sql_exception: Unknown column 'resp.cargo_resp' in 'field list' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(735): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('38')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 15:34:14 --> Unknown column 'resp.cargo_resp' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(735): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `act`.`descripcion`, `g`.`nombre` as `nombre_gerencia`, `resp`.`cargo_resp`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `gerencias` `g` ON `g`.`id` = `res`.`gerencia`
+JOIN `act_activos` `act` ON `act`.`codigo` = `mov`.`codigo`
+WHERE `id_movimientos` = \'38\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('38')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 15:35:29 --> mysqli_sql_exception: Unknown column 'resp.cargo_resp' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('38')
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-15 15:35:29 --> Unknown column 'resp.cargo_resp' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(736): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`, `act`.`descripcion`, `g`.`nombre` as `nombre_gerencia`, `ca`.`nombre_cargo`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+JOIN `gerencias` `g` ON `g`.`id` = `res`.`gerencia`
+JOIN `resp_cargo` `ca` ON `ca`.`id_cargo` = `resp`.`cargo_resp`
+JOIN `act_activos` `act` ON `act`.`codigo` = `mov`.`codigo`
+WHERE `id_movimientos` = \'38\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('38')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

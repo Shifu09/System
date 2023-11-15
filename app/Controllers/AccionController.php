@@ -143,7 +143,7 @@ class AccionController extends Controller
                 'condicion_act' => $_POST['condicion'],
                 'tipo' => $_POST['tipo'],
                 'descripcion' => $_POST['descripcion'],
-                'observacion' => $_POST['observaciones'],
+                'observacion' => $_POST['observacion'],
                 'proveedor' => $_POST['proveedor'],
                 'n_factura' => $_POST['factura'],
                 'costo' => $_POST['costo'],
@@ -205,8 +205,7 @@ class AccionController extends Controller
     public function savemov()
     {
         $validation = $this->validate([
-            'codigo' => 'numeric'
-            // 'direccion' => 'alpha_space|string',
+            'codigo' => 'numeric',
         ]);
         if ($_POST && $validation) {
             $datos = [
@@ -215,15 +214,10 @@ class AccionController extends Controller
                 'ubicacion' => $_POST['ubicacion'],
                 'motivo' => $_POST['motivo'],
                 'fecha' => $_POST['fecha'],
-                'observaciones' => 'nada',
-                'id_mov' => ['id_movimientos'],
                 'cedula' => $_POST['resp']
             ];
             $mov = new Movimientos();
             $mov->insertar($datos);
-
-
-
 
             return $this->response->redirect(site_url('movimientos'));
         } else {
@@ -728,8 +722,77 @@ class AccionController extends Controller
         $cargo->update($id, $datos);
         return redirect()->to(site_url('activos'));
     }
+
+    public function movupdate($id = null)
+    {
+        $db      = \Config\Database::connect();
+
+        $builder = $db->table('mov_movimientos  mov')->where('id_movimientos', $id);
+        $builder->join('resp_responsables  res', 'res.cedula = mov.cedula');
+        $builder->join('gerencias g', 'g.id = res.gerencia');
+        $builder->join('resp_cargo ca', 'ca.id_cargo = res.cargo_resp');
+        $builder->join('act_activos  act', 'act.codigo = mov.codigo');
+        $builder->select('mov.*, res.cedula, res.nombre, res.apellido, act.descripcion, g.nombre as nombre_gerencia, ca.nombre_cargo');
+        $builder = $db->query($builder->getCompiledSelect())->getRow();
+
+        // var_dump($builder);
+        //die;
+
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+        $datos['x'] = $builder;
+
+        return view('movimientos/editarmov', $datos);
+    }
+
+    public function updatemov()
+    {
+        $cargo = new Activos();
+        $id = $_POST['id'];
+
+        $datos = [
+            'codigo' => $_POST['id'],
+            'marca' => $_POST['marca'],
+            'modelo' => $_POST['modelo'],
+            'serial' => $_POST['seria'],
+            'condicion_act' => $_POST['condicion'],
+            'tipo' => $_POST['tipo'],
+            'descripcion' => $_POST['descripcion'],
+            'observacion' => $_POST['observacion'],
+            'proveedor' => $_POST['proveedor'],
+            'n_factura' => $_POST['factura'],
+            'costo' => $_POST['costo'],
+            'n_orden' => $_POST['orden'],
+            'garantia_inicio' => $_POST['inicio'],
+            'garantia_fin' => $_POST['fin'],
+        ];
+
+        $cargo->update($id, $datos);
+        return redirect()->to(site_url('activos'));
+    }
     /*
-    ! FIN DE FUNCIONES DE EDITAR DATOS
+    ! FIN DE FUNCIONES DE EDITAR DATOS    public function respupdate($id = null)
+    {
+        $db      = \Config\Database::connect();
+
+        $builder = $db->table('resp_responsables resp')->where('cedula', $id);
+
+        $builder->join('resp_condicion c', 'c.id_condicion = resp.condicion_resp');
+        $builder->join('resp_cargo ca', 'ca.id_cargo = resp.cargo_resp');
+        $builder->join('gerencias g', 'g.id = resp.gerencia');
+        $builder->join('divisiones d', 'd.id_div = resp.division', 'right');
+        $builder->select('resp.*, c.nombre_condicion, g.nombre as nombre_gerencia , ca.nombre_cargo, d.nombre_div');
+        //$data = $builder->getCompiledSelect();
+        $builder = $db->query($builder->getCompiledSelect())->getRow();
+
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+        $datos['x'] = $builder;
+
+        return view('responsables/editarresp', $datos);
+    }
     ------------------------------------------------------------------------------------------
     */
 

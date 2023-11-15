@@ -48,11 +48,12 @@ $routes->get('editartipo/(:num)', 'AccionController::tipoupdate/$1');
 $routes->get('editarzona/(:num)', 'AccionController::zonaupdate/$1');
 $routes->get('editarubicacion/(:num)', 'AccionController::ubicacionupdate/$1');
 $routes->get('editaractivo/(:num)', 'AccionController::activoupdate/$1');
-$routes->post('editaractivoo', 'AccionController::activoupdatee/$1');
+$routes->get('editarmov/(:num)', 'AccionController::movupdate/$1');
 
 
 // RUTAS DE ACTUALIZAR DATOS
 $routes->post('actualizaractivo', 'AccionController::updateactivo');
+$routes->post('actualizarmov', 'AccionController::updatemov');
 $routes->post('actualizartipo', 'AccionController::updatetipo');
 $routes->post('actualizar', 'AccionController::updatecargo');
 $routes->post('actualizarmarca', 'AccionController::updatemarca');
