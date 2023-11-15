@@ -77,7 +77,7 @@
 
         .dropdown-menu .dropdown-item:hover {
             background-color: rgb(100, 145, 74) !important;
-            width: 100%;
+            width: 116%;
             color: #ffffff !important;
             border: solid;
             border-color: #153757;

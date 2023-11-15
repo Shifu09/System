@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SISTEMA DE PATRIMONIO</title>
-    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+
 
     <!-- /**
     * TODO: JS de las tablas by DataTables
@@ -24,43 +24,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
 <body>
-    <!--
-    <section class="container">
-        <div class="sidebar">
-            <div class="side-hide">
-                <i class="fa fa-times" aria-hidden="true"></i>
-            </div>
-
-            <img src="logo.png" width="120" alt="Logo" />
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Galeria</a></li>
-            </ul>
-        </div>
-
-        <button id="button">Mostrar Sidebar</button>
-    </section>
--->
-    <!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-
-    <script>
-        // Muestra SideBar
-        $("button").on("click", function() {
-            $(".container").toggleClass("show");
-        });
-
-        // Oculta SideBar
-        $(".side-hide").on("click", function() {
-            $(".container").toggleClass("show");
-        });
-    </script>
- -->
-
     <div class="list-group list-group-flush">
         <nav class="navbar bg-body-tertiary fixed-top">
             <div class="container-fluid ">
@@ -69,7 +36,7 @@
                 </button>
                 <div class="offcanvas offcanvas-start" data-bs-scroll="true" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header" style="background-color:  rgb(21, 55, 87);">
-                        <img id="img" src="logo_aguas.png">
+                        <!-- <img id="img" src="logo_aguas.png">-->
                         <h5 id="imgAgua">Aguas de Mérida</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         <hr>
@@ -89,6 +56,7 @@
                                     <h6>Inicio</h6>
                                 </a>
                             </li>
+
                             <li class="nav-item dropdown" style="color: #153757;">
                                 <a id="mod" class="nav-link" style="color: #ffffff;" data-bs-toggle="dropdown" href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="currentColor" class="bi bi-buildings" viewBox="0 0 16 16">

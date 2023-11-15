@@ -15,6 +15,7 @@ use App\Models\Responsables;
 use App\Models\Tipo;
 use App\Models\ubicacion;
 use App\Models\Zona;
+use CodeIgniter\Database\RawSql;
 
 class VistaController extends Controller
 {
@@ -153,13 +154,12 @@ class VistaController extends Controller
     {
         $db      = \Config\Database::connect();
 
-        $builder = $db->table('mov_movimientos  mov');
+        $builder = $db->table('mov_movimientos  mov')->select('mov.*, res.cedula, res.nombre, res.apellido');
 
-        $builder->select('mov.*, dt.cedula, res.nombre, res.apellido,mot.nombre as nombret');
-        $builder->join('mov_detalles  dt', 'dt.id_mov = mov.id_movimientos');
-        $builder->join('resp_responsables  res', 'res.cedula = dt.cedula');
-        $builder->join('mov_motivo  mot', 'mot.id_motivo = mov.motivo');
+        $builder->join('resp_responsables  res', 'res.cedula = mov.cedula');
+        //$builder->join('mov_detalles  dt', 'dt.id_mov = mov.id_movimientos');
 
+        // $builder = $db->query($builder->getCompiledSelect())->getRow();
         $datos['movimientos'] = $builder->orderBy('id_movimientos', 'ASC')->get()->getResultArray();
 
         $datos['header'] = view('templates/header');

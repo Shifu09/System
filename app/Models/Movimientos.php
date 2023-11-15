@@ -9,11 +9,11 @@ class Movimientos extends Model
     protected $table      = 'mov_movimientos';
     // Uncomment below if you want add primary key
     protected $primaryKey = 'id_movimientos';
-    protected $allowedFields = ['codigo_act', 'zona', 'ubicacion', 'fecha', 'motivo', 'observacion'];
+    protected $allowedFields = ['codigo', 'zona', 'ubicacion', 'fecha', 'motivo', 'observacion', 'cedula'];
 
-    public function insertar($datos)
+    public function insertar($datos0)
     {
         $table = $this->table('mov_movimientos');
-        $table->insert($datos);
+        $table->insert($datos0);
     }
 }

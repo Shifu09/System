@@ -9,6 +9,7 @@ use App\Models\Condicion;
 use App\Models\Condicion_act;
 use App\Models\Deshabilitaresp;
 use App\Models\Desincorporacion;
+use App\Models\Detalles;
 use App\Models\Marca;
 use App\Models\Motivo;
 use App\Models\Movimientos;
@@ -201,6 +202,37 @@ class AccionController extends Controller
             </script>';
         }
     }
+    public function savemov()
+    {
+        $validation = $this->validate([
+            'codigo' => 'numeric'
+            // 'direccion' => 'alpha_space|string',
+        ]);
+        if ($_POST && $validation) {
+            $datos = [
+                'codigo' => $_POST['codigo'],
+                'zona' => $_POST['zona'],
+                'ubicacion' => $_POST['ubicacion'],
+                'motivo' => $_POST['motivo'],
+                'fecha' => $_POST['fecha'],
+                'observaciones' => 'nada',
+                'id_mov' => ['id_movimientos'],
+                'cedula' => $_POST['resp']
+            ];
+            $mov = new Movimientos();
+            $mov->insertar($datos);
+
+
+
+
+            return $this->response->redirect(site_url('movimientos'));
+        } else {
+            echo '<script> 
+            alert ("Registross exitoso","aja","sds");
+            window.location="movimientos";
+            </script>';
+        }
+    }
 
     public function saveubi()
     {
@@ -264,32 +296,6 @@ class AccionController extends Controller
         }
     }
 
-    /**
-     * TODO ARREGLAR MOVIMIENTOS!!!!!!!
-     */
-    public function savemovimiento()
-    {
-        $validation = $this->validate([
-            'codigo' => 'numeric|is_unique[mov_movimientos.codigo_act]',
-        ]);
-        if ($_POST && $validation) {
-            $datos = [
-                'codigo_act' => $_POST['codigo'],
-                'zona' => $_POST['zona'],
-                'zona' => $_POST['zona'],
-                'motivo' => $_POST['motivo'],
-                'fecha' => $_POST['fecha'],
-            ];
-            $tipo = new Movimientos();
-            $tipo->insertar($datos);
-            return $this->response->redirect(site_url('movimientos'));
-        } else {
-            echo '<script> 
-            alert ("Registross exitoso","aja","sds");
-            window.location="condicionActivo";
-            </script>';
-        }
-    }
     public function desresp($id = null)
     {
 
@@ -349,8 +355,8 @@ class AccionController extends Controller
         $db      = \Config\Database::connect();
         $builder = $db->table('act_activos act');
         $datos = $builder->where('codigo', $id);
-        $builder->set('estado', 0)->set('asignado', 0);
-        $builder->update();
+        $builder->set('estado', 0)->set('asignado', 0)->update();
+
 
         $datos = [
             'codigo_activo' => $_POST['id'],
@@ -667,7 +673,6 @@ class AccionController extends Controller
                 'sede' => $_POST['sede'],
                 'direccion' => $_POST['direccion']
             ];
-
             $cargo->update($id, $datos);
             return redirect()->to(site_url('ubicacion'));
         }
@@ -676,21 +681,7 @@ class AccionController extends Controller
         window.location.href = "ubicacion";
     </script>';
     }
-    public function activoupdate2($id = null)
-    {
-        $db      = \Config\Database::connect();
 
-        $builder = $db->table('act_activos act')->where('codigo', $id);
-        $builder->select('act.*');
-        $builder = $db->query($builder->getCompiledSelect())->getRow();
-
-        $datos['header'] = view('templates/header');
-        $datos['footer'] = view('templates/footer');
-        $datos['style'] = view('templates/style');
-        $datos['x'] = $builder;
-
-        return view('movimientos/movimientos', $datos);
-    }
     public function activoupdate($id = null)
     {
         $db      = \Config\Database::connect();
@@ -742,35 +733,8 @@ class AccionController extends Controller
     ------------------------------------------------------------------------------------------
     */
 
-    /*
-    -----------------------------------------------------------------------------------------
-    ! INICIO DE FUNCIONES DE BORRAR DATOS
-    */
-
-    public function delete($id = null)
-    {
-        $cargo = new Cargo();
-
-        $cargo->where('id_cargo', $id)->delete($id);
-        return $this->response->redirect(site_url('cargo'));
-    }
-
-    public function deletecon($id = null)
-    {
-        $condicion = new condicion();
-
-        $condicion->where('id_condicion', $id)->delete($id);
-        return $this->response->redirect(site_url('condicion'));
-    }
-
-    public function deleteresp($id = null)
-    {
-        $responsable = new Responsables();
-
-        $responsable->where('cedula', $id)->delete($id);
-        return $this->response->redirect(site_url('resp'));
-    }
     public function loginn()
     {
+        return $this->response->redirect(site_url('index'));
     }
 }

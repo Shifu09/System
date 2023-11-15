@@ -179,6 +179,7 @@
         <?php endforeach; ?>
         </tbody>
         </table>
+
         <script>
             let table = new DataTable('#tabla', {
                 perPage: 5,

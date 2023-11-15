@@ -85,3 +85,4 @@ $routes->post('guardarzona', 'AccionController::savezona');
 $routes->post('guardarUbicacion', 'AccionController::saveubi');
 $routes->post('guardarTipo', 'AccionController::savetipo');
 $routes->post('guardarmotivo', 'AccionController::savemotivo');
+$routes->post('guardarmov', 'AccionController::savemov');
