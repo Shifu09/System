@@ -39,7 +39,7 @@ echo view('templates/header')
                                         <div class=" row">
                                             <div class="col-12 col-md-5 ">
                                                 <label>Nombre y cedula del responsable</label>
-                                                <select name="resp" class="form-control" onChange="selectGerenciasRespCons()">
+                                                <select name="resp" class="form-control" onChange="selectGerenciasRespCons()" required>
                                                     <option>Seleccione una opción...</option>
                                                     <?php
 
@@ -101,7 +101,7 @@ echo view('templates/header')
                                             <div class=" row">
                                                 <div class="col-12 col-md-8">
                                                     <label>Codigo y decripción del activo</label>
-                                                    <select name="codigo" class="form-control" onChange="selectGerenciasRespCons()">
+                                                    <select name="codigo" class="form-control" onChange="selectGerenciasRespCons()" required>
                                                         <option>Seleccione una opción...</option>
                                                         <?php
 
@@ -120,7 +120,7 @@ echo view('templates/header')
                                                 <div class="col-12 col-lg-4">
                                                     <div class="form-group">
                                                         <label>Motivo de la entrega</label>
-                                                        <select name="motivo" class="form-control" onChange="selectGerenciasRespCons()">
+                                                        <select name="motivo" class="form-control" onChange="selectGerenciasRespCons()" required>
 
                                                             <option value=" Recepción de cargo del responsable">Recepción de cargo del responsable</option>
                                                             <option value="Adquisición del activo">Adquisión del activo</option>
@@ -139,8 +139,8 @@ echo view('templates/header')
                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="submit" style="background-color: #66944c; color:#ffff" class="btn">Guardar</button>
                                             <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="submit" style="background-color: #66944c; color:#ffff" class="btn">Guardar</button>
                                         </div>
                                     </form>
                                 </div>
@@ -169,7 +169,7 @@ echo view('templates/header')
                 </tbody>
                 <script>
                     let table = new DataTable('#tabla', {
-                        perPage: 5,
+                        perPage: 4,
                         perPageSelect: [5, 7, 10, 15],
 
                     });

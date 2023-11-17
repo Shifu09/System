@@ -30,7 +30,7 @@
                             <div class="col-12 col-md-4">
                                 <div class="form-group">
                                     <label for="nombre">Motivo</label>
-                                    <textarea name="motivo" cols="5" rows="5" class="form-control" placeholder="Motivo de la deshabilitacion" style="width: 315%;"></textarea>
+                                    <textarea name="motivo" cols="5" rows="5" class="form-control" placeholder="Motivo de la deshabilitacion" style="width: 315%;" required spellcheck="false"></textarea>
                                 </div>
                             </div>
                         </div>

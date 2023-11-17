@@ -90,23 +90,23 @@
                 <h1 class="modal-title fs-5" id="exampleModalLabel">MODIFICAR RESPONSABLE</h1>
             </div>
             <div class="modal-body">
-                <form method="post" action="<?= site_url('actualizaresp'); ?>" enctype="multipart/form-data">
+                <form method="post" action="<?= site_url('actualizaresp'); ?>" enctype="multipart/form-data" autocomplete="off">
                     <div class="form-group">
                         <div class=" row">
                             <div class="col-12 col-md-4">
                                 <label for="nombre">Cedula</label>
-                                <input type="text" name="id" readonly class="form-control" value="<?= $x->cedula ?>">
+                                <input type="text" name="id" readonly class="form-control" value="<?= $x->cedula ?>" required>
                             </div>
                             <div class="col-12 col-md-4">
                                 <div class="form-group">
                                     <label for="nombre">Nombre</label>
-                                    <input type="text" name="nombre" class="form-control" value="<?= $x->nombre ?>">
+                                    <input type="text" name="nombre" class="form-control" value="<?= $x->nombre ?>" required spellcheck="false">
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
                                 <div class="form-group">
                                     <label for="nombre">Apellido</label>
-                                    <input type="text" name="apellido" class="form-control" value="<?= $x->apellido ?>">
+                                    <input type="text" name="apellido" class="form-control" value="<?= $x->apellido ?>" required spellcheck="false">
                                 </div>
                             </div>
                         </div>
@@ -114,13 +114,13 @@
                             <div class="col-12 col-md-8">
                                 <div class="form-group">
                                     <label for="nombre">Correo Electronico</label>
-                                    <input type="text" name="correo" class="form-control" value="<?= $x->correo ?>">
+                                    <input type="text" name="correo" class="form-control" value="<?= $x->correo ?>" required>
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
                                 <div class="form-group">
                                     <label for="nombre">Telefono</label>
-                                    <input type="text" name="telefono" class="form-control" value="<?= $x->telefono ?>">
+                                    <input type="text" name="telefono" class="form-control" value="<?= $x->telefono ?>" required>
                                 </div>
                             </div>
                         </div>
@@ -128,7 +128,7 @@
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <label for="nombre">Condicion</label>
-                            <select name="condicion" class="form-control">
+                            <select name="condicion" class="form-control" required>
                                 <option value="">Seleccione una opción...</option>
                                 <?php
 
@@ -147,7 +147,7 @@
                         <div class="col-12 col-md-6">
                             <div class="form-group">
                                 <label for="idcondicion_x">Cargo</label>
-                                <select name="cargo" class="form-control">
+                                <select name="cargo" class="form-control" required>
                                     <option value="">Seleccione una opción...</option>
                                     <?php
 
@@ -167,7 +167,7 @@
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <label for="idcondicion_x">Gerencia</label>
-                            <select name="gerencia" class="form-control" onChange="selectGerenciasxCons()">
+                            <select name="gerencia" class="form-control" onChange="selectGerenciasxCons()" required>
                                 <option value="">Seleccione una opción...</option>
                                 <?php
 
@@ -185,7 +185,7 @@
                         <div class="col-12 col-md-6">
                             <div class="form-group">
                                 <label for="idcondicion_x">Division</label>
-                                <select name="division" class="form-control" onChange="selectGerenciasxCons()">
+                                <select name="division" class="form-control" onChange="selectGerenciasxCons()" required>
                                     <option value="">Seleccione una opción...</option>
                                     <?php
 

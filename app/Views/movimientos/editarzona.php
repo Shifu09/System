@@ -17,11 +17,11 @@
                         </div>
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" class="form-control" value="<?= $zona['nombre'] ?>">
+                            <input type="text" name="nombre" class="form-control" value="<?= $zona['nombre'] ?>" required spellcheck="false">
                         </div>
                         <div class="form-group">
                             <label for="nombre">Direccion</label>
-                            <input type="text" name="direccion" class="form-control" value="<?= $zona['direccion'] ?>">
+                            <input type="text" name="direccion" class="form-control" value="<?= $zona['direccion'] ?>" required spellcheck="false">
                         </div>
                 </div>
                 <div class="modal-footer">

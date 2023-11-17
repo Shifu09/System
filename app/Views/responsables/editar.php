@@ -10,14 +10,14 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">MODIFICAR CARGO</h1>
                 </div>
                 <div class="modal-body">
-                    <form action="<?= base_url('actualizar'); ?>" method="post" enctype="multipart/form-data">
+                    <form action="<?= base_url('actualizar'); ?>" method="post" enctype="multipart/form-data" autocomplete="off">
                         <div class="form-group">
                             <label for="nombre">Codigo</label>
                             <input type="text" name="id" readonly class="form-control" value="<?= $cargos['id_cargo'] ?>">
                         </div>
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" class="form-control" value="<?= $cargos['nombre_cargo'] ?>">
+                            <input type="text" name="nombre" class="form-control" value="<?= $cargos['nombre_cargo'] ?>" required spellcheck="false">
                         </div>
                 </div>
                 <div class="modal-footer">

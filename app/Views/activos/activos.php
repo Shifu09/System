@@ -32,20 +32,20 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="guardarActivo" method="post" enctype="multipart/form-data">
+                                    <form action="guardarActivo" method="post" enctype="multipart/form-data" autocomplete="off">
                                         <div class=" form-group">
                                             <label for="nombre">Codigo del Activo</label>
-                                            <input type="text" class="form-control" placeholder="Codigo" name="codigo">
+                                            <input type="text" class="form-control" placeholder="Codigo" name="codigo" maxlength="9" minlength="9" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="observaciones">Descripcion</label>
-                                            <textarea name="descripcion" id="observaciones" cols="3" rows=3" class="form-control" placeholder="Descripcion "></textarea>
+                                            <textarea name="descripcion" id="observaciones" cols="3" rows=3" class="form-control" placeholder="Descripcion" required spellcheck="false"></textarea>
                                         </div>
                                         <div class="row">
                                             <div class="col-12 col-lg-6">
                                                 <div class="form-group">
                                                     <label for="nombre">Marca</label>
-                                                    <select name="marca" class="form-control" required onChange="selectGerenciasRespCons()" required>
+                                                    <select name="marca" class="form-control" required onChange="selectGerenciasRespCons()">
                                                         <option value="">Seleccione una opción...</option>
                                                         <?php
 
@@ -64,7 +64,7 @@
                                             <div class="col-12 col-lg-6">
                                                 <div class="form-group">
                                                     <label for="nombre">Modelo</label>
-                                                    <input type="text" name="modelo" class="form-control" placeholder="Modelo">
+                                                    <input type="text" name="modelo" class="form-control" placeholder="Modelo" required spellcheck="false">
                                                 </div>
                                             </div>
 
@@ -72,13 +72,13 @@
                                                 <div class="col-12 col-lg-4">
                                                     <div class="form-group">
                                                         <label>Serial</label>
-                                                        <input type="text" name="seria" class="form-control" placeholder="Serial">
+                                                        <input type="text" name="seria" class="form-control" placeholder="Serial" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-lg-4">
                                                     <div class="form-group">
                                                         <label for="nombre">Condicion del Activo</label>
-                                                        <select name="condicion" class="form-control" required onChange="selectGerenciasRespCons()" required>
+                                                        <select name="condicion" class="form-control" required onChange="selectGerenciasRespCons()">
                                                             <option value="">Seleccione una opción...</option>
 
                                                             <?php
@@ -119,19 +119,19 @@
                                                 <div class="col-12 col-lg-4">
                                                     <div class="form-group">
                                                         <label for="proveedor">Nro. de Factura </label>
-                                                        <input type="text" name="factura" class="form-control" placeholder="Nro.Factura">
+                                                        <input type="text" name="factura" class="form-control" placeholder="Nro.Factura" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-lg-4">
                                                     <div class="form-group">
                                                         <label>Proveedor</label>
-                                                        <input type="text" name="proveedor" class="form-control" placeholder="Proveedor">
+                                                        <input type="text" name="proveedor" class="form-control" placeholder="Proveedor" required spellcheck="false">
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-lg-4">
                                                     <div class="form-group">
                                                         <label for="proveedor">Costo</label>
-                                                        <input type="text" name="costo" class="form-control" placeholder="Costo">
+                                                        <input type="text" name="costo" class="form-control" placeholder="Costo" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -139,7 +139,7 @@
                                                 <div class="col-12 col-lg-4">
                                                     <div class="form-group">
                                                         <label for="orden">Número de Orden</label>
-                                                        <input type="text" name="orden" class="form-control" placeholder="Número de Orden">
+                                                        <input type="text" name="orden" class="form-control" placeholder="Número de Orden" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-lg-4">
@@ -157,7 +157,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="observaciones">Observaciones</label>
-                                                <textarea name="observacion" id="observaciones" cols="3" rows=3" class="form-control" placeholder="Observaciones  "></textarea>
+                                                <textarea name="observacion" id="observaciones" cols="3" rows=3" class="form-control" placeholder="Observaciones" spellcheck="false"></textarea>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
@@ -203,7 +203,7 @@
             </table>
             <script>
                 let table = new DataTable('#tabla', {
-                    perPage: 5,
+                    perPage: 4,
                     perPageSelect: [5, 7, 10, 15],
 
                 });

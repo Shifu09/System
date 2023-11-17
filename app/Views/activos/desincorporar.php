@@ -15,17 +15,17 @@
                                 <label for="nombre">Codigo de Activo</label>
                                 <input type="text" name="id" readonly class="form-control" value="<?= $x->codigo ?>">
                             </div>
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-md-8">
                                 <div class="form-group">
-                                    <label for="nombre">Nombre</label>
-                                    <input type="text" disabled class="form-control" value="<?= $x->descripcion ?>">
+                                    <label for="nombre">Descripcion</label>
+                                    <input type="text" readonly class="form-control" value="<?= $x->descripcion ?>">
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-4">
                             <div class="form-group">
                                 <label for="nombre">Motivo</label>
-                                <textarea name="motivo" cols="5" rows="5" class="form-control" placeholder="Motivo de la deshabilitacion" style="width: 300%;"></textarea>
+                                <textarea name="motivo" cols="5" rows="5" class="form-control" placeholder="Motivo de la deshabilitacion" style="width: 300%;" spellcheck="false"></textarea>
                             </div>
                         </div>
 

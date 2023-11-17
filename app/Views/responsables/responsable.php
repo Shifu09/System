@@ -26,24 +26,24 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="guardarResp" method="post" enctype="multipart/form-data">
+                                    <form action="guardarResp" method="post" enctype="multipart/form-data" autocomplete="off">
                                         <div class=" row">
                                             <div class="col-12 col-md-4">
                                                 <div class=" form-group">
                                                     <label>Cedula</label>
-                                                    <input type="text" class="form-control" placeholder="Cedula" name="cedula">
+                                                    <input type="text" class="form-control" placeholder="Cedula" name="cedula" maxlength="8" minlength="7" required>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-4">
                                                 <div class=" form-group">
                                                     <label>Nombre</label>
-                                                    <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+                                                    <input type="text" class="form-control" placeholder="Nombre" name="nombre" required>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-4">
                                                 <div class="form-group">
                                                     <label>Apellido</label>
-                                                    <input type="text" name="apellido" id="descripcion" class="form-control" placeholder="Apellido">
+                                                    <input type="text" name="apellido" id="descripcion" class="form-control" placeholder="Apellido" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -52,13 +52,13 @@
                                             <div class="col-12 col-md-8">
                                                 <div class="form-group">
                                                     <label>Correo Electronico</label>
-                                                    <input type="text" name="correo" id="descripcion" class="form-control" placeholder="Correo">
+                                                    <input type="text" name="correo" id="descripcion" class="form-control" placeholder="Correo" required>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-4">
                                                 <div class="form-group">
                                                     <label>Telefono</label>
-                                                    <input type="text" name="telefono" id="descripcion" class="form-control" placeholder="Telefono">
+                                                    <input type="text" name="telefono" id="descripcion" class="form-control" placeholder="Telefono" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -77,7 +77,7 @@
                                                         $datos['condicion'] =  $condicion->orderBy('id_condicion')->findAll();
                                                         foreach ($datos['condicion'] as $dato) {
 
-                                                            echo '<option value=' . $dato['id_condicion'] .  '>' . $dato['nombre_condicion'] . "  " .  $dato['id_condicion'] .  '</option>';
+                                                            echo '<option value=' . $dato['id_condicion'] .  '>' . $dato['nombre_condicion'] .   '</option>';
                                                         }
                                                         ?>
                                                     </select>
@@ -126,7 +126,7 @@
                                             <div class="col-12 col-md-6">
                                                 <div class="form-group">
                                                     <label>Divisiones</label>
-                                                    <select name="division" class="form-control" onChange="selectGerenciasRespCons()">
+                                                    <select name="division" class="form-control" onChange="selectGerenciasRespCons()" required>
                                                         <option value="">Seleccione una opción...</option>
                                                         <?php
 
@@ -182,7 +182,7 @@
 
         <script>
             let table = new DataTable('#tabla', {
-                perPage: 5,
+                perPage: 4,
                 perPageSelect: [5, 7, 10, 15],
             });
         </script>

@@ -31,11 +31,11 @@
                                     <form action="guardarUbicacion" method="post" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <label for="nombre">Nombre</label>
-                                            <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="nombre">
+                                            <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="nombre" required spellcheck="false">
                                         </div>
                                         <div class="form-group">
                                             <label for="nombre">Direccion</label>
-                                            <input type="text" id="nombre" class="form-control" placeholder="Direccion" name="direccion">
+                                            <input type="text" id="nombre" class="form-control" placeholder="Direccion" name="direccion" required spellcheck="false">
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

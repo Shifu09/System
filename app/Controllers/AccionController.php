@@ -205,9 +205,9 @@ class AccionController extends Controller
     public function savemov()
     {
         $validation = $this->validate([
-            'codigo' => 'numeric',
+            'codigo' => 'required|numeric',
         ]);
-        if ($_POST && $validation) {
+        if (!$_POST && $validation) {
             $datos = [
                 'codigo' => $_POST['codigo'],
                 'zona' => $_POST['zona'],
@@ -633,7 +633,6 @@ class AccionController extends Controller
             $datos = [
                 'nombre' => $_POST['nombre'],
                 'direccion' => $_POST['direccion']
-
             ];
 
             $cargo->update($id, $datos);

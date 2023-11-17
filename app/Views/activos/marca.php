@@ -27,7 +27,7 @@
                                     <form action="guardarMarca" method="post" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <label for="nombre">Nombre de la marca</label>
-                                            <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+                                            <input type="text" class="form-control" placeholder="Nombre" name="nombre" required spellcheck="false">
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -58,7 +58,7 @@
 
         <script>
             let table = new DataTable('#tabla', {
-                perPage: 5,
+                perPage: 4,
                 perPageSelect: [5, 7, 10, 15],
 
             });

@@ -24,10 +24,10 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="guardar" method="post" enctype="multipart/form-data">
+                                    <form action="guardar" method="post" enctype="multipart/form-data" autocomplete="off">
                                         <div class="form-group">
                                             <label for="nombre">Nombre</label>
-                                            <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="nombre" required>
+                                            <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="nombre" required spellcheck="false">
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -60,7 +60,7 @@
 </table>
 <script>
     let table = new DataTable('#tabla', {
-        perPage: 5,
+        perPage: 4,
         perPageSelect: [5, 7, 10, 15],
 
     });
