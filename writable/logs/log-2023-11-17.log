@@ -1,0 +1,32 @@
+CRITICAL - 2023-11-17 07:18:50 --> Invalid file: "templates/c.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/c.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('templates/c', [], true)
+ 3 APPPATH\Controllers\VistaController.php(28): view('templates/c')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 07:19:35 --> file(templates/c): Failed to open stream: No such file or directory
+in APPPATH\Controllers\VistaController.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file(templates/c): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\system\\app\\Controllers\\VistaController.php', 28)
+ 2 APPPATH\Controllers\VistaController.php(28): file('templates/c')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 07:20:25 --> Call to undefined function App\Controllers\CSS()
+in APPPATH\Controllers\VistaController.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 07:21:16 --> Invalid file: "templates/c.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/c.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('templates/c', [], true)
+ 3 APPPATH\Controllers\VistaController.php(28): view('templates/c')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

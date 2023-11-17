@@ -16,6 +16,7 @@ use App\Models\Tipo;
 use App\Models\ubicacion;
 use App\Models\Zona;
 use CodeIgniter\Database\RawSql;
+use Dompdf\Css\Style;
 
 class VistaController extends Controller
 {
@@ -24,6 +25,7 @@ class VistaController extends Controller
         echo  view('templates/footer');
         echo  view('templates/header');
         echo  view('templates/style');
+        echo  model('templates/c');
 
         return view('templates/index');
     }
@@ -170,14 +172,17 @@ class VistaController extends Controller
     {
         $db      = \Config\Database::connect();
 
-        $builder = $db->table('mov_movimientos  mov')->select('mov.*, res.cedula, res.nombre, res.apellido');
+        $builder = $db->table('mov_movimientos  mov')->select('mov.*, res.cedula, res.nombre, res.apellido, act.*, mc.nombre as nombre_marca, c.nombre as condicionn');
 
         $builder->join('resp_responsables  res', 'res.cedula = mov.cedula');
+        $builder->join('act_activos  act', 'act.codigo = mov.codigo');
+        $builder->join('act_marca  mc', 'mc.id_marca = act.marca');
+        $builder->join('act_condicion  c', 'c.id_activo_condicion = act.condicion_act');
+
         $datos['movimientos'] = $builder->orderBy('id_movimientos', 'ASC')->get()->getResultArray();
 
         $datos['pdff'] = view('templates/dompdf/autoload.inc.php');
-        $datos['style'] = view('templates/style');
-        $datos['header'] = view('templates/header');
+
 
         return view('templates/pdf', $datos);
     }

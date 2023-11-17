@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SISTEMA DE PATRIMONIO</title>
+    <title>SISTEMA PATRIMONIO</title>
 
 
     <!-- /**
     * TODO: JS de las tablas by DataTables
     */
     -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 
     <link href="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js">
@@ -32,7 +32,7 @@
     <div class="list-group list-group-flush">
         <nav class="navbar bg-body-tertiary fixed-top">
             <div class="container-fluid ">
-                <button class=" navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <button class=" navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="offcanvas offcanvas-start" data-bs-scroll="true" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
