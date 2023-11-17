@@ -207,7 +207,7 @@
         }
 
         .bn632-hover:hover {
-            background-position: 100% 0;
+            background-position: 99% 0;
             moz-transition: all .4s ease-in-out;
             -o-transition: all .4s ease-in-out;
             -webkit-transition: all .4s ease-in-out;
