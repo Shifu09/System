@@ -163,6 +163,22 @@ class VistaController extends Controller
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
 
+
         return view('movimientos/movimientos', $datos);
+    }
+    public function pdf()
+    {
+        $db      = \Config\Database::connect();
+
+        $builder = $db->table('mov_movimientos  mov')->select('mov.*, res.cedula, res.nombre, res.apellido');
+
+        $builder->join('resp_responsables  res', 'res.cedula = mov.cedula');
+        $datos['movimientos'] = $builder->orderBy('id_movimientos', 'ASC')->get()->getResultArray();
+
+        $datos['pdff'] = view('templates/dompdf/autoload.inc.php');
+        $datos['style'] = view('templates/style');
+        $datos['header'] = view('templates/header');
+
+        return view('templates/pdf', $datos);
     }
 }

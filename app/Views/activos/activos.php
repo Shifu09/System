@@ -205,6 +205,7 @@
                 let table = new DataTable('#tabla', {
                     perPage: 5,
                     perPageSelect: [5, 7, 10, 15],
+
                 });
             </script>
 

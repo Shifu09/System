@@ -216,9 +216,12 @@ class AccionController extends Controller
                 'fecha' => $_POST['fecha'],
                 'cedula' => $_POST['resp']
             ];
+            $id = $_POST['codigo'];
             $mov = new Movimientos();
             $mov->insertar($datos);
-
+            $act = new Activos();
+            $act->where('codigo', $id);
+            $act->set('asignado', 1)->update();
             return $this->response->redirect(site_url('movimientos'));
         } else {
             echo '<script> 
@@ -771,31 +774,21 @@ class AccionController extends Controller
         $cargo->update($id, $datos);
         return redirect()->to(site_url('activos'));
     }
-    /*
-    ! FIN DE FUNCIONES DE EDITAR DATOS    public function respupdate($id = null)
+    public function deletemov($id, $i = null)
     {
-        $db      = \Config\Database::connect();
+        $mov = new Movimientos();
 
-        $builder = $db->table('resp_responsables resp')->where('cedula', $id);
+        if ($mov) {
+            $mov->where('id_movimientos', $id);
+            // $mov->where('codigo', $i);
+            // $mov->set('asignado', 0)->update();
+            $mov->delete($id);
 
-        $builder->join('resp_condicion c', 'c.id_condicion = resp.condicion_resp');
-        $builder->join('resp_cargo ca', 'ca.id_cargo = resp.cargo_resp');
-        $builder->join('gerencias g', 'g.id = resp.gerencia');
-        $builder->join('divisiones d', 'd.id_div = resp.division', 'right');
-        $builder->select('resp.*, c.nombre_condicion, g.nombre as nombre_gerencia , ca.nombre_cargo, d.nombre_div');
-        //$data = $builder->getCompiledSelect();
-        $builder = $db->query($builder->getCompiledSelect())->getRow();
 
-        $datos['header'] = view('templates/header');
-        $datos['footer'] = view('templates/footer');
-        $datos['style'] = view('templates/style');
-        $datos['x'] = $builder;
 
-        return view('responsables/editarresp', $datos);
+            return $this->response->redirect(site_url('movimientos'));
+        }
     }
-    ------------------------------------------------------------------------------------------
-    */
-
     public function loginn()
     {
         return $this->response->redirect(site_url('index'));

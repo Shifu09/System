@@ -49,6 +49,8 @@ $routes->get('editarzona/(:num)', 'AccionController::zonaupdate/$1');
 $routes->get('editarubicacion/(:num)', 'AccionController::ubicacionupdate/$1');
 $routes->get('editaractivo/(:num)', 'AccionController::activoupdate/$1');
 $routes->get('editarmov/(:num)', 'AccionController::movupdate/$1');
+$routes->get('pdf', 'VistaController::pdf');
+
 
 
 // RUTAS DE ACTUALIZAR DATOS
@@ -68,6 +70,7 @@ $routes->get('deshabilitaresp/(:num)', 'AccionController::desresp/$1');
 $routes->get('deshabilitaract/(:num)', 'AccionController::desact/$1');
 $routes->post('disableresp', 'AccionController::disableresp');
 $routes->post('disableact', 'AccionController::disableact');
+$routes->get('eliminarmov/(:num)', 'AccionController::deletemov/$1');
 $routes->post('loginn', 'AccionController::loginn');
 
 
