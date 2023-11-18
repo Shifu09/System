@@ -10,7 +10,7 @@ use CodeIgniter\Router\RouteCollection;
 ///////////////////////////////////////////////////////////////////////////////////////////
  * TODO: Inicio de las Rutas de Vistas
  */
-$routes->get('/', 'VistaController::login', ['as' => 'login']);
+$routes->get('/', 'VistaController::login');
 $routes->get('index', 'VistaController::index', ['as' => 'index']);
 $routes->get('cargo', 'VistaController::cargo', ['as' => 'cargo']);
 $routes->get('condicion', 'VistaController::condicion', ['as' => 'condicion']);
@@ -71,7 +71,10 @@ $routes->get('deshabilitaract/(:num)', 'AccionController::desact/$1');
 $routes->post('disableresp', 'AccionController::disableresp');
 $routes->post('disableact', 'AccionController::disableact');
 $routes->get('eliminarmov/(:num)', 'AccionController::deletemov/$1');
-$routes->post('loginn', 'AccionController::loginn');
+$routes->post('login', 'AccionController::login');
+$routes->get('logout', 'AccionController::logout');
+
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////

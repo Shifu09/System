@@ -9,13 +9,13 @@ use App\Models\Condicion;
 use App\Models\Condicion_act;
 use App\Models\Deshabilitaresp;
 use App\Models\Desincorporacion;
-use App\Models\Detalles;
 use App\Models\Marca;
 use App\Models\Motivo;
 use App\Models\Movimientos;
 use App\Models\Responsables;
 use App\Models\Tipo;
 use App\Models\ubicacion;
+use App\Models\Usuarios;
 use App\Models\Zona;
 use DateTime;
 
@@ -44,7 +44,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('cargo'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="cargo";
             </script>';
         }
@@ -65,7 +65,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('condicion'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="condicion";
             </script>';
         }
@@ -86,7 +86,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('condicionActivo'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="condicionActivo";
             </script>';
         }
@@ -175,7 +175,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('marca'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="marca";
             </script>';
         }
@@ -197,7 +197,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('zona'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="zona";
             </script>';
         }
@@ -225,7 +225,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('movimientos'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="movimientos";
             </script>';
         }
@@ -248,7 +248,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('ubicacion'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="ubicacion";
             </script>';
         }
@@ -267,7 +267,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('tipo'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="tipo";
             </script>';
         }
@@ -287,7 +287,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('motivo'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="motivo";
             </script>';
         }
@@ -327,7 +327,7 @@ class AccionController extends Controller
         return $this->response->redirect(site_url('resp'));
 
         echo '<script> 
-            alert ("Registro exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="resp";
             </script>';
     }
@@ -365,7 +365,7 @@ class AccionController extends Controller
         return $this->response->redirect(site_url('activos'));
 
         echo '<script> 
-            alert ("Registro exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="resp";
             </script>';
     }
@@ -409,7 +409,7 @@ class AccionController extends Controller
             return redirect()->to(site_url('cargo'));
         } else {
             echo '<script> 
-            alert ("Registro exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="cargo";
             </script>';
         }
@@ -444,7 +444,7 @@ class AccionController extends Controller
             return redirect()->to(site_url('marca'));
         }
         echo '<script> 
-    alert ("Registro exitoso","aja","sds");
+    alert ("Ingreso de datos invalidos");
     window.location.href = "marca";
     </script>';
     }
@@ -479,7 +479,7 @@ class AccionController extends Controller
         }
 
         echo '<script> 
-    alert ("Registro exitoso","aja","sds");
+    alert ("Ingreso de datos invalidos");
         window.location.href = "condicionActivo";
     </script>';
     }
@@ -513,7 +513,7 @@ class AccionController extends Controller
         }
 
         echo '<script> 
-    alert ("Registro exitoso","aja","sds");
+    alert ("Ingreso de datos invalidos");
         window.location.href = "condicion";
     </script>';
     }
@@ -550,7 +550,7 @@ class AccionController extends Controller
         }
 
         echo '<script> 
-    alert ("Registro exitoso","aja","sds");
+    alert ("Ingreso de datos invalidos");
         window.location.href = "tipo";
     </script>';
     }
@@ -604,7 +604,7 @@ class AccionController extends Controller
         }
 
         echo '<script> 
-    alert ("Registro exitoso","aja","sds");
+    alert ("Ingreso de datos invalidos");
         window.location.href = "tipo";
     </script>';
     }
@@ -639,7 +639,7 @@ class AccionController extends Controller
             return redirect()->to(site_url('zona'));
         }
         echo '<script> 
-    alert ("Registro exitoso","aja","sds");
+    alert ("Ingreso de datos invalidos");
         window.location.href = "zona";
     </script>';
     }
@@ -673,7 +673,7 @@ class AccionController extends Controller
             return redirect()->to(site_url('ubicacion'));
         }
         echo '<script> 
-    alert ("Registro exitoso","aja","sds");
+    alert ("Ingreso de datos invalidos");
         window.location.href = "ubicacion";
     </script>';
     }
@@ -773,23 +773,33 @@ class AccionController extends Controller
         $cargo->update($id, $datos);
         return redirect()->to(site_url('activos'));
     }
-    public function deletemov($id, $i = null)
+    public function login()
     {
-        $mov = new Movimientos();
 
-        if ($mov) {
-            $mov->where('id_movimientos', $id);
-            // $mov->where('codigo', $i);
-            // $mov->set('asignado', 0)->update();
-            $mov->delete($id);
+        echo  view('templates/style');
+        // Recupera los datos del formulario de inicio de sesión
+        $model = new Usuarios();
+
+        $username = $this->request->getPost('username');
+        $password = $this->request->getPost('password');
+
+        $user = $model->where('username', $username)->where('password', $password)->first();
 
 
+        if (!$user > 0) {
 
-            return $this->response->redirect(site_url('movimientos'));
+            return view('templates/login');
+        } else {
+            $sesion = session();
+            $sesion->set($user);
+            return redirect()->to(base_url('index'));
         }
     }
-    public function loginn()
+
+    public function logout()
     {
-        return $this->response->redirect(site_url('index'));
+        $sesion = session();
+        $sesion->destroy();
+        return redirect()->to(base_url(''));
     }
 }

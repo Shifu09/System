@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <?= $style ?>
+    <?php echo view('templates/style'); ?>
     <div class="card shadow" id="card_index">
 
         <img id="img_index" src=" logo_aguas.png" alt="">
         <br>
         <h1 class="h2">AGUAS DE MÉRIDA, C.A</h1>
         <p class="mb-4 lead">Gerencia de Protección al Patrimonio</p>
-        <form method="post" id="login" action="loginn" novalidate class="col-12 needs-validation">
+        <form method="post" id="login" action="login" novalidate class="col-12 needs-validation" autocomplete="off">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text">
@@ -26,7 +26,7 @@
                         </svg>
                         <span>
                 </div>
-                <input type="text" class="form-control" placeholder="Usuario" name="username" required autofocus>
+                <input type="text" class="form-control" placeholder="Usuario" name="username" autofocus required>
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">

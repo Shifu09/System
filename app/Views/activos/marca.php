@@ -24,10 +24,11 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="guardarMarca" method="post" enctype="multipart/form-data">
+                                    <form action="guardarMarca" method="post" enctype="multipart/form-data" autocomplete="off">
                                         <div class="form-group">
                                             <label for="nombre">Nombre de la marca</label>
                                             <input type="text" class="form-control" placeholder="Nombre" name="nombre" required spellcheck="false">
+
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

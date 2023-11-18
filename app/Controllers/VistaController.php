@@ -7,7 +7,6 @@ use CodeIgniter\Controller;
 use App\Models\Cargo;
 use App\Models\condicion;
 use App\Models\Condicion_act;
-use App\Models\Detalles;
 use App\Models\Marca;
 use App\Models\Motivo;
 use App\Models\Movimientos;
@@ -15,8 +14,6 @@ use App\Models\Responsables;
 use App\Models\Tipo;
 use App\Models\ubicacion;
 use App\Models\Zona;
-use CodeIgniter\Database\RawSql;
-use Dompdf\Css\Style;
 
 class VistaController extends Controller
 {
@@ -25,8 +22,6 @@ class VistaController extends Controller
         echo  view('templates/footer');
         echo  view('templates/header');
         echo  view('templates/style');
-        echo  model('templates/c');
-
         return view('templates/index');
     }
     public function login()

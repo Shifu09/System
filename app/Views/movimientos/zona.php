@@ -65,7 +65,7 @@
             </table>
             <script>
                 let table = new DataTable('#tabla', {
-                    perPage: 5,
+                    perPage: 4,
                     perPageSelect: [5, 7, 10, 15],
 
                 });

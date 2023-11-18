@@ -227,6 +227,14 @@
             box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
         }
 
+        #cerrar {
+            position: absolute;
+            top: 15%;
+            left: 96%;
+            float: left;
+
+        }
+
         #button {
             background: black;
             color: white;
