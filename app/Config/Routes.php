@@ -7,7 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 /**
-///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  * TODO: Inicio de las Rutas de Vistas
  */
 $routes->get('/', 'VistaController::login');
@@ -25,15 +25,8 @@ $routes->get('ubicacion', 'VistaController::ubicacion_mov');
 $routes->get('tipo', 'VistaController::tipo_act', ['as' => 'tipo']);
 $routes->get('movimientos', 'VistaController::movimiento', ['as' => 'movimientos']);
 $routes->get('motivo', 'VistaController::motivo', ['as' => 'motivo']);
-
-
 /**
- * TODO: FIN de las Rutas de Vistas
-/////////////////////////////////////////////////////////////////////////////////////////////
- */
-
-/**
-/////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  * TODO: Inicio de las Rutas de Acciones
  */
 $routes->get('borrar/(:num)', 'AccionController::delete/$1');
@@ -50,10 +43,10 @@ $routes->get('editarubicacion/(:num)', 'AccionController::ubicacionupdate/$1');
 $routes->get('editaractivo/(:num)', 'AccionController::activoupdate/$1');
 $routes->get('editarmov/(:num)', 'AccionController::movupdate/$1');
 $routes->get('pdf', 'VistaController::pdf');
-
-
-
-// RUTAS DE ACTUALIZAR DATOS
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * TODO:RUTAS DE ACTUALIZAR DATOS
+ */
 $routes->post('actualizaractivo', 'AccionController::updateactivo');
 $routes->post('actualizarmov', 'AccionController::updatemov');
 $routes->post('actualizartipo', 'AccionController::updatetipo');
@@ -64,8 +57,10 @@ $routes->post('actualizarconn', 'AccionController::updatecondicionrep');
 $routes->post('actualizaresp', 'AccionController::updateresp');
 $routes->post('actualizarzona', 'AccionController::updatezona');
 $routes->post('actualizarubi', 'AccionController::updateubicacion');
-
-// DESHABILITAR Y DESINCORPORAR
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * TODO:DESHABILITAR Y DESINCORPORAR
+ */
 $routes->get('deshabilitaresp/(:num)', 'AccionController::desresp/$1');
 $routes->get('deshabilitaract/(:num)', 'AccionController::desact/$1');
 $routes->post('disableresp', 'AccionController::disableresp');
@@ -73,15 +68,10 @@ $routes->post('disableact', 'AccionController::disableact');
 $routes->get('eliminarmov/(:num)', 'AccionController::deletemov/$1');
 $routes->post('login', 'AccionController::login');
 $routes->get('logout', 'AccionController::logout');
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*
-? TODO:Rutas de Guardar
+? TODO:Rutas de Guardar Datos
  */
-
 $routes->post('guardarActivo', 'AccionController::saveactivo');
 $routes->post('guardarMarca', 'AccionController::savemarca');
 $routes->post('guardar', 'AccionController::save');

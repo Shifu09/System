@@ -120,7 +120,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('resp'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso");
+            alert ("Ingreso de datos invalidos");
             window.location="resp";
             </script>';
         }
@@ -156,7 +156,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('activos'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso");
+            alert ("Ingreso de datos invalidos");
             window.location="activos";
             </script>';
         }
@@ -204,31 +204,22 @@ class AccionController extends Controller
     }
     public function savemov()
     {
-        $validation = $this->validate([
-            'codigo' => 'required|numeric',
-        ]);
-        if (!$_POST && $validation) {
-            $datos = [
-                'codigo' => $_POST['codigo'],
-                'zona' => $_POST['zona'],
-                'ubicacion' => $_POST['ubicacion'],
-                'motivo' => $_POST['motivo'],
-                'fecha' => $_POST['fecha'],
-                'cedula' => $_POST['resp']
-            ];
-            $id = $_POST['codigo'];
-            $mov = new Movimientos();
-            $mov->insertar($datos);
-            $act = new Activos();
-            $act->where('codigo', $id);
-            $act->set('asignado', 1)->update();
-            return $this->response->redirect(site_url('movimientos'));
-        } else {
-            echo '<script> 
-            alert ("Ingreso de datos invalidos");
-            window.location="movimientos";
-            </script>';
-        }
+
+        $datos = [
+            'codigo' => $_POST['codigo'],
+            'zona' => $_POST['zona'],
+            'ubicacion' => $_POST['ubicacion'],
+            'motivo' => $_POST['motivo'],
+            'fecha' => $_POST['fecha'],
+            'cedula' => $_POST['resp']
+        ];
+        $id = $_POST['codigo'];
+        $mov = new Movimientos();
+        $mov->insertar($datos);
+        $act = new Activos();
+        $act->where('codigo', $id);
+        $act->set('asignado', 1)->update();
+        return $this->response->redirect(site_url('movimientos'));
     }
 
     public function saveubi()
