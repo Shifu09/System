@@ -163,22 +163,26 @@ class VistaController extends Controller
 
         return view('movimientos/movimientos', $datos);
     }
-    public function pdf()
+    public function pdf($id = null)
     {
         $db      = \Config\Database::connect();
 
-        $builder = $db->table('mov_movimientos  mov')->select('mov.*, res.cedula, res.nombre, res.apellido, act.*, mc.nombre as nombre_marca, c.nombre as condicionn');
-
+        $builder = $db->table('mov_movimientos  mov')->where('id_movimientos', $id);
         $builder->join('resp_responsables  res', 'res.cedula = mov.cedula');
+        $builder->join('gerencias g', 'g.id = res.gerencia');
+        $builder->join('resp_cargo ca', 'ca.id_cargo = res.cargo_resp');
         $builder->join('act_activos  act', 'act.codigo = mov.codigo');
-        $builder->join('act_marca  mc', 'mc.id_marca = act.marca');
-        $builder->join('act_condicion  c', 'c.id_activo_condicion = act.condicion_act');
+        $builder->join('act_tipo  t', 't.id_tipo = act.tipo');
+        $builder->join('act_marca  m', 'm.id_marca = act.marca');
+        $builder->select('mov.*, res.cedula, res.nombre, res.apellido, act.descripcion, g.nombre as nombre_gerencia, ca.nombre_cargo,t.nombre as tipo,m.nombre as marca,act.serial,act.codigo,act.costo,act.n_factura,res.nombre,res.apellido,res.cedula,act.proveedor,act.garantia_inicio,act.garantia_fin,act.modelo');
+        $builder = $db->query($builder->getCompiledSelect())->getRow();
 
-        $datos['movimientos'] = $builder->orderBy('id_movimientos', 'ASC')->get()->getResultArray();
-
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
         $datos['pdff'] = view('templates/dompdf/autoload.inc.php');
+        $datos['x'] = $builder;
 
-
-        return view('templates/pdf', $datos);
+        return view('movimientos/pdf', $datos);
     }
 }

@@ -725,7 +725,7 @@ class AccionController extends Controller
         $builder->join('gerencias g', 'g.id = res.gerencia');
         $builder->join('resp_cargo ca', 'ca.id_cargo = res.cargo_resp');
         $builder->join('act_activos  act', 'act.codigo = mov.codigo');
-        $builder->select('mov.*, res.cedula, res.nombre, res.apellido, act.descripcion, g.nombre as nombre_gerencia, ca.nombre_cargo');
+        $builder->select('mov.*, res.cedula, res.nombre, res.apellido, act.descripcion, g.nombre as nombre_gerencia, ca.nombre_cargo,act.serial');
         $builder = $db->query($builder->getCompiledSelect())->getRow();
 
         // var_dump($builder);
@@ -734,6 +734,7 @@ class AccionController extends Controller
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
+        $datos['pdff'] = view('templates/dompdf/autoload.inc.php');
         $datos['x'] = $builder;
 
         return view('movimientos/editarmov', $datos);

@@ -42,7 +42,7 @@ $routes->get('editarzona/(:num)', 'AccionController::zonaupdate/$1');
 $routes->get('editarubicacion/(:num)', 'AccionController::ubicacionupdate/$1');
 $routes->get('editaractivo/(:num)', 'AccionController::activoupdate/$1');
 $routes->get('editarmov/(:num)', 'AccionController::movupdate/$1');
-$routes->get('pdf', 'VistaController::pdf');
+$routes->get('pdf/(:num)', 'VistaController::pdf/$1');
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * TODO:RUTAS DE ACTUALIZAR DATOS
