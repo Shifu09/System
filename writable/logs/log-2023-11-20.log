@@ -1,0 +1,292 @@
+CRITICAL - 2023-11-20 09:40:20 --> Invalid file: "templates/tcpdf/tcpdf_autoconfig.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/tcpdf/tcpdf_autoconfig.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('templates/tcpdf/tcpdf_autoconfig.php', [], true)
+ 3 APPPATH\Controllers\VistaController.php(179): view('templates/tcpdf/tcpdf_autoconfig.php')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->pdf()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 09:41:08 --> Invalid file: "templates/tcpdf/tcpdf_autoconfig.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/tcpdf/tcpdf_autoconfig.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('templates/tcpdf/tcpdf_autoconfig.php', [], true)
+ 3 APPPATH\Controllers\VistaController.php(179): view('templates/tcpdf/tcpdf_autoconfig.php')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->pdf()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 09:41:23 --> Invalid file: "templates/tcpdf/tcpdf_autoconfig.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/tcpdf/tcpdf_autoconfig.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('templates/tcpdf/tcpdf_autoconfig.php', [], true)
+ 3 APPPATH\Controllers\VistaController.php(179): view('templates/tcpdf/tcpdf_autoconfig.php')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->pdf()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 10:24:03 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Views\movimientos\editarmov.php on line 68.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarmov', [], true)
+ 4 APPPATH\Controllers\AccionController.php(739): view('movimientos/editarmov', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 14:34:06 --> Undefined variable $svg
+in APPPATH\Views\movimientos\pdf.php on line 70.
+ 1 APPPATH\Views\movimientos\pdf.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $svg', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\pdf.php', 70)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\pdf.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/pdf', [], true)
+ 5 APPPATH\Controllers\VistaController.php(187): view('movimientos/pdf', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->pdf('2')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 14:34:57 --> mb_convert_encoding(): Argument #3 ($from_encoding) contains invalid encoding "<img src="data:image/svg+xml;base64"
+in APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\Dompdf.php on line 435.
+ 1 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\Dompdf.php(435): mb_convert_encoding('
+<style>
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+</style>
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" data-bs-target="#exampleModal">
+                <h1 style="border: black solid;">HOJA DE CUSTODIA DE ACTIVOS FIJOS</h1>
+            </div>
+            <div class="modal-body" style="border: black solid;">
+                <form method="post" enctype="multipart/form-data">
+
+                    <div class=" row">
+                        <div class=" form-group">
+                            <div>
+                                <label for="nombre">Codigo del Activo</label>
+                                <hr>
+                            </div>
+                            <label for="nombre">Codigo del Activo</label>
+                            <input type="text" class="form-control" readonly placeholder="Codigo" name="codigo" value="201000222">
+                        </div>
+                        <div class="form-group">
+                            <label for="observaciones">Descripción del Activo</label>
+                            <input type="text" class="form-control" readonly placeholder="Codigo" name="codigo" value="Laptop DELL">
+                            <br>
+                        </div>
+                        <div class="modal-header">
+                            <h1>HOJA DE CUSTODIA DE ACTIVOS FIJOS</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-15">
+                            <div class="form-group">
+                                <label for="nombre">Nombre y Apellido</label>
+                                <input type="text" readonly class="form-control" value="juan  izquierdo">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="form-group">
+                                <label for="nombre">Cedula</label>
+                                <input type="text" readonly class="form-control" value="30034855">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="nombre">Cargo</label>
+                            <input type="text" readonly class="form-control" value="Analista de base de datos">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="nombre">Gerencia</label>
+                            <input type="text" readonly class="form-control" value="Gerencia General Integral de Obras">
+                        </div>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+', 'UTF-8', '<img src="data:image/svg+xml;base64,logo_aguas.png" ...>')
+ 2 APPPATH\Views\movimientos\pdf.php(80): Dompdf\Dompdf->loadHtml('
+<style>
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+</style>
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" data-bs-target="#exampleModal">
+                <h1 style="border: black solid;">HOJA DE CUSTODIA DE ACTIVOS FIJOS</h1>
+            </div>
+            <div class="modal-body" style="border: black solid;">
+                <form method="post" enctype="multipart/form-data">
+
+                    <div class=" row">
+                        <div class=" form-group">
+                            <div>
+                                <label for="nombre">Codigo del Activo</label>
+                                <hr>
+                            </div>
+                            <label for="nombre">Codigo del Activo</label>
+                            <input type="text" class="form-control" readonly placeholder="Codigo" name="codigo" value="201000222">
+                        </div>
+                        <div class="form-group">
+                            <label for="observaciones">Descripción del Activo</label>
+                            <input type="text" class="form-control" readonly placeholder="Codigo" name="codigo" value="Laptop DELL">
+                            <br>
+                        </div>
+                        <div class="modal-header">
+                            <h1>HOJA DE CUSTODIA DE ACTIVOS FIJOS</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-15">
+                            <div class="form-group">
+                                <label for="nombre">Nombre y Apellido</label>
+                                <input type="text" readonly class="form-control" value="juan  izquierdo">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="form-group">
+                                <label for="nombre">Cedula</label>
+                                <input type="text" readonly class="form-control" value="30034855">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="nombre">Cargo</label>
+                            <input type="text" readonly class="form-control" value="Analista de base de datos">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="nombre">Gerencia</label>
+                            <input type="text" readonly class="form-control" value="Gerencia General Integral de Obras">
+                        </div>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+', '<img src="data:image/svg+xml;base64,logo_aguas.png" ...>')
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\pdf.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/pdf', [], true)
+ 6 APPPATH\Controllers\VistaController.php(187): view('movimientos/pdf', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->pdf('2')
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 14:35:50 --> Undefined variable $p
+in APPPATH\Views\movimientos\pdf.php on line 79.
+ 1 APPPATH\Views\movimientos\pdf.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\pdf.php', 79)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\pdf.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/pdf', [], true)
+ 5 APPPATH\Controllers\VistaController.php(187): view('movimientos/pdf', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->pdf('2')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 14:42:35 --> Call to a member function get_cellmap() on null
+in APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\TableRow.php on line 68.
+ 1 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\TableRow->reflow(Object(Dompdf\FrameDecorator\Block))
+ 2 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+ 3 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(Object(Dompdf\FrameDecorator\Block))
+ 4 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+ 5 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(Object(Dompdf\FrameDecorator\Block))
+ 6 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+ 7 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(Object(Dompdf\FrameDecorator\Block))
+ 8 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+ 9 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(Object(Dompdf\FrameDecorator\Block))
+10 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+11 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(Object(Dompdf\FrameDecorator\Block))
+12 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+13 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(Object(Dompdf\FrameDecorator\Block))
+14 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+15 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(Object(Dompdf\FrameDecorator\Block))
+16 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+17 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(Object(Dompdf\FrameDecorator\Block))
+18 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+19 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(null)
+20 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Page.php(142): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+21 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Page->reflow(null)
+22 APPPATH\Views\templates\dompdf\vendor\dompdf\dompdf\src\Dompdf.php(765): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+23 APPPATH\Views\movimientos\pdf.php(81): Dompdf\Dompdf->render()
+24 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\pdf.php')
+25 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+26 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/pdf', [], true)
+27 APPPATH\Controllers\VistaController.php(187): view('movimientos/pdf', [...])
+28 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->pdf('2')
+29 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+30 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+31 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 14:42:36 --> Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes)
+【Previous Exception】
+Error
+Call to a member function get_cellmap() on null
+#0 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\TableRow->reflow(Object(Dompdf\FrameDecorator\Block))
+#1 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+#2 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(Object(Dompdf\FrameDecorator\Block))
+#3 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+#4 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(Object(Dompdf\FrameDecorator\Block))
+#5 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+#6 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(Object(Dompdf\FrameDecorator\Block))
+#7 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+#8 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(Object(Dompdf\FrameDecorator\Block))
+#9 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+#10 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(Object(Dompdf\FrameDecorator\Block))
+#11 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+#12 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(Object(Dompdf\FrameDecorator\Block))
+#13 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+#14 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(Object(Dompdf\FrameDecorator\Block))
+#15 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+#16 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(Object(Dompdf\FrameDecorator\Block))
+#17 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Block.php(865): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow(Object(Dompdf\FrameDecorator\Block))
+#18 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Block->reflow(NULL)
+#19 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Page.php(142): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+#20 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Page->reflow(NULL)
+#21 C:\wamp64\www\system\app\Views\templates\dompdf\vendor\dompdf\dompdf\src\Dompdf.php(765): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+#22 C:\wamp64\www\system\app\Views\movimientos\pdf.php(81): Dompdf\Dompdf->render()
+#23 C:\wamp64\www\system\system\View\View.php(226): include('C:\\wamp64\\www\\s...')
+#24 C:\wamp64\www\system\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#25 C:\wamp64\www\system\system\Common.php(1188): CodeIgniter\View\View->render('movimientos/pdf', Array, true)
+#26 C:\wamp64\www\system\app\Controllers\VistaController.php(187): view('movimientos/pdf', Array)
+#27 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\VistaController->pdf('2')
+#28 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+#29 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#30 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#31 {main}
+in APPPATH\Views\errors\html\error_exception.php on line 101.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-20 15:33:19 --> Undefined property: stdClass::$nombre_tipo
+in APPPATH\Views\movimientos\pdf.php on line 28.
+ 1 APPPATH\Views\movimientos\pdf.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombre_tipo', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\pdf.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\pdf.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/pdf', [], true)
+ 5 APPPATH\Controllers\VistaController.php(187): view('movimientos/pdf', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->pdf('2')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 15:33:57 --> Undefined property: stdClass::$nombre_tipo
+in APPPATH\Views\movimientos\pdf.php on line 28.
+ 1 APPPATH\Views\movimientos\pdf.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombre_tipo', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\pdf.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\pdf.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/pdf', [], true)
+ 5 APPPATH\Controllers\VistaController.php(187): view('movimientos/pdf', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->pdf('2')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
