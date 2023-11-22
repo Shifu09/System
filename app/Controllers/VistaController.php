@@ -174,7 +174,7 @@ class VistaController extends Controller
         $builder->join('act_activos  act', 'act.codigo = mov.codigo');
         $builder->join('act_tipo  t', 't.id_tipo = act.tipo');
         $builder->join('act_marca  m', 'm.id_marca = act.marca');
-        $builder->select('mov.*, res.cedula, res.nombre, res.apellido, act.descripcion, g.nombre as nombre_gerencia, ca.nombre_cargo,t.nombre as tipo,m.nombre as marca,act.serial,act.codigo,act.costo,act.n_factura,res.nombre,res.apellido,res.cedula,act.proveedor,act.garantia_inicio,act.garantia_fin,act.modelo');
+        $builder->select('mov.*, res.cedula, res.nombre, res.apellido, act.descripcion, g.nombre as nombre_gerencia, ca.nombre_cargo,t.nombre as tipo,m.nombre as marca,act.serial,act.codigo,act.costo,act.n_factura,res.nombre,res.apellido,res.cedula,act.proveedor,act.garantia_inicio,act.garantia_fin,act.modelo,act.n_orden');
         $builder = $db->query($builder->getCompiledSelect())->getRow();
 
         $datos['header'] = view('templates/header');

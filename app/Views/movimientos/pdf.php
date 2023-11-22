@@ -64,9 +64,9 @@ ob_start();
         </tr>
         <tr>
             <td colspan="6">
-                <p><strong>NÚMERO DE LA FACTURA: </strong><label style="font-size: 13px;"><?= $x->n_factura ?></label></p>
+                <p><strong>NÚMERO DE LA FACTURA: </strong><label style="font-size: 12px;"><?= $x->n_factura ?></label></p>
             </td>
-            <td colspan="2"><strong>No ORDEN DE PAGO:</strong></td>
+            <td colspan="2"><strong>No ORDEN DE PAGO: </strong> <label style="font-size: 11px;"><?= $x->n_orden ?></label></td>
         </tr>
         <tr>
             <td rowspan="2"><strong>GARANTÍA DEL EQUIPO:</strong></td>
