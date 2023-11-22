@@ -149,8 +149,8 @@ $options->set(array('isRemoteEnabled' => true));
 
 $dompdf->setOptions($options);
 $dompdf->loadHtml($html);
-$dompdf->setpaper('A3');
+$dompdf->setpaper('letter');
 $dompdf->render();
-$dompdf->stream("reporte.pdf", array("Attachment" => false));
+$dompdf->stream("Hoja de custodio.pdf", array("Attachment" => false));
 
 ?>
