@@ -38,7 +38,7 @@
                 </div>
                 <input type="password" class="form-control" placeholder="Contraseña" name="password" required>
             </div>
-            <button type="submit" class="btn btn-dark w-100 mb-3 shadow" name="login" value="login" style="background-color: #153757; font-weight: bold">Iniciar sesión</button>
+            <button type="submit" class="btn btn-dark w-100 mb-3 shadow" name="login" value="login" style="background-color: #153757; font-weight: bold">Iniciar sesiónn</button>
         </form>
     </div>
 
