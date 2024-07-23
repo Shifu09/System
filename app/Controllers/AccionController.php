@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use Config\Encryption;
+use Config\Services;
 use App\Models\Activos;
 use CodeIgniter\Controller;
 use App\Models\cargo;
@@ -545,19 +547,59 @@ class AccionController extends Controller
         window.location.href = "tipo";
     </script>';
     }
+    public function activoupdate2($id = null)
+    {
+        if (isset($_POST['buscar'])) {
+
+            $db      = \Config\Database::connect();
+            $cedula = $_POST['nombre'];
+            $val = array();
+            $val['existe'] = "0";
+            $builder = $db->query->table('resp_responsables resp')->where('cedula', $cedula);
+            while ($consulta = mysqli_fetch_array($builder)) {
+                $val['existe'] = "1";
+                $val['existe'] = $consulta['nombre'];
+            }
+            $val = json_encode($val);
+            echo $val;
+        }
+        /** 
+        $db      = \Config\Database::connect();
+
+        $builder = $db->table('resp_responsables resp')->where('cedula', $id);
+        $builder->join('resp_condicion c', 'c.id_condicion = resp.condicion_resp');
+        $builder->join('resp_cargo ca', 'ca.id_cargo = resp.cargo_resp');
+        $builder->join('gerencias g', 'g.id = resp.gerencia');
+        $builder->join('divisiones d', 'd.id_div = resp.division', 'right');
+        $builder->select('resp.*, c.nombre_condicion, g.nombre as nombre_gerencia , ca.nombre_cargo, d.nombre_div');
+
+        $builder = $db->query($builder->getCompiledSelect())->getRow();
+        var_dump($builder);
+        die;
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+        $datos['x'] = $builder;
+         */
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+        $datos['x'] = $builder;
+        return view('movimientos/movimientos', $datos);
+    }
     public function respupdate($id = null)
     {
         $db      = \Config\Database::connect();
 
-        $builder = $db->table('resp_responsables resp')->where('cedula', $id);
-
+        $builder = $db->table('resp_responsables resp');
+        $data = $builder->where('cedula', $id);
         $builder->join('resp_condicion c', 'c.id_condicion = resp.condicion_resp');
         $builder->join('resp_cargo ca', 'ca.id_cargo = resp.cargo_resp');
         $builder->join('gerencias g', 'g.id = resp.gerencia');
         $builder->join('divisiones d', 'd.id_div = resp.division', 'right');
         $builder->select('resp.*, c.nombre_condicion, g.nombre as nombre_gerencia , ca.nombre_cargo, d.nombre_div');
         //$data = $builder->getCompiledSelect();
-        $builder = $db->query($builder->getCompiledSelect())->getRow();
+        $data = $db->query($builder->getCompiledSelect())->getRow();
 
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
@@ -681,7 +723,8 @@ class AccionController extends Controller
         $builder->select('act.*, m.nombre as nombre_marca, c.nombre as nombre_condicion , t.nombre as nombre_tipo')->where('codigo', $id);
 
         $builder = $db->query($builder->getCompiledSelect())->getRow();
-
+        //  var_dump($builder);
+        //  die;
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
@@ -767,31 +810,14 @@ class AccionController extends Controller
     }
     public function login()
     {
-
-        echo  view('templates/style');
-        // Recupera los datos del formulario de inicio de sesión
-        $model = new Usuarios();
-
-        $username = $this->request->getPost('username');
-        $password = $this->request->getPost('password');
-
-        $user = $model->where('username', $username)->where('password', $password)->first();
-
-
-        if (!$user > 0) {
-
-            return view('templates/login');
-        } else {
-            $sesion = session();
-            $sesion->set($user);
-            return redirect()->to(base_url('index'));
+        $db      = \Config\Database::connect();
+        $builder = $db->table('usuarios')->where('username' and 'password');
+        if ($builder > 0) {
+            $_SESSION['usuario'] = 'username';
+            echo '<script> 
+             alert ("Registro exitoso","aja","sds");
+            window.location.href = "marca";
+            </script>';
         }
-    }
-
-    public function logout()
-    {
-        $sesion = session();
-        $sesion->destroy();
-        return redirect()->to(base_url(''));
     }
 }

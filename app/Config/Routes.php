@@ -48,7 +48,6 @@ $routes->get('pdf/(:num)', 'VistaController::pdf/$1');
  * TODO:RUTAS DE ACTUALIZAR DATOS
  */
 $routes->post('actualizaractivo', 'AccionController::updateactivo');
-$routes->post('actualizarmov', 'AccionController::updatemov');
 $routes->post('actualizartipo', 'AccionController::updatetipo');
 $routes->post('actualizar', 'AccionController::updatecargo');
 $routes->post('actualizarmarca', 'AccionController::updatemarca');
