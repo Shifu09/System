@@ -14,7 +14,7 @@
 # ENVIRONMENT
 #--------------------------------------------------------------------
 
-# CI_ENVIRONMENT = development
+CI_ENVIRONMENT = development
 
 #--------------------------------------------------------------------
 # APP
@@ -89,7 +89,7 @@
 # ENCRYPTION
 #--------------------------------------------------------------------
 
-# encryption.key =
+# encryption.key = 
 # encryption.driver = OpenSSL
 # encryption.blockSize = 16
 # encryption.digest = SHA512

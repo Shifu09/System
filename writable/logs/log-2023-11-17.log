@@ -1,0 +1,218 @@
+CRITICAL - 2023-11-17 07:18:50 --> Invalid file: "templates/c.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/c.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('templates/c', [], true)
+ 3 APPPATH\Controllers\VistaController.php(28): view('templates/c')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 07:19:35 --> file(templates/c): Failed to open stream: No such file or directory
+in APPPATH\Controllers\VistaController.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file(templates/c): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\system\\app\\Controllers\\VistaController.php', 28)
+ 2 APPPATH\Controllers\VistaController.php(28): file('templates/c')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 07:20:25 --> Call to undefined function App\Controllers\CSS()
+in APPPATH\Controllers\VistaController.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 07:21:16 --> Invalid file: "templates/c.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/c.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('templates/c', [], true)
+ 3 APPPATH\Controllers\VistaController.php(28): view('templates/c')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-17 17:21:35 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`mov_movimientos`, CONSTRAINT `mov_movimientos_ibfk_6` FOREIGN KEY (`cedula`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE RESTRICT) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `mo...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mo...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mo...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mo...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Movimientos.php(17): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(221): App\Models\Movimientos->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->savemov()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-17 17:21:35 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`mov_movimientos`, CONSTRAINT `mov_movimientos_ibfk_6` FOREIGN KEY (`cedula`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE RESTRICT)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mov_movimientos` (`codigo`, `zona`, `ubicacion`, `motivo`, `fecha`, `cedula`) VALUES (:codigo:, :zona:, :ubicacion:, :motivo:, :fecha:, :cedula:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Movimientos.php(17): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(221): App\Models\Movimientos->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->savemov()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-17 17:22:19 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`mov_movimientos`, CONSTRAINT `mov_movimientos_ibfk_6` FOREIGN KEY (`cedula`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE RESTRICT) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `mo...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mo...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mo...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mo...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Movimientos.php(17): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(221): App\Models\Movimientos->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->savemov()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-17 17:22:19 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`mov_movimientos`, CONSTRAINT `mov_movimientos_ibfk_6` FOREIGN KEY (`cedula`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE RESTRICT)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mov_movimientos` (`codigo`, `zona`, `ubicacion`, `motivo`, `fecha`, `cedula`) VALUES (:codigo:, :zona:, :ubicacion:, :motivo:, :fecha:, :cedula:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Movimientos.php(17): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(221): App\Models\Movimientos->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->savemov()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-17 17:22:30 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`mov_movimientos`, CONSTRAINT `mov_movimientos_ibfk_6` FOREIGN KEY (`cedula`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE RESTRICT) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `mo...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mo...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mo...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mo...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Movimientos.php(17): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(221): App\Models\Movimientos->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->savemov()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-17 17:22:30 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`mov_movimientos`, CONSTRAINT `mov_movimientos_ibfk_6` FOREIGN KEY (`cedula`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE RESTRICT)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mov_movimientos` (`codigo`, `zona`, `ubicacion`, `motivo`, `fecha`, `cedula`) VALUES (:codigo:, :zona:, :ubicacion:, :motivo:, :fecha:, :cedula:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Movimientos.php(17): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(221): App\Models\Movimientos->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->savemov()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-17 17:24:06 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`mov_movimientos`, CONSTRAINT `mov_movimientos_ibfk_6` FOREIGN KEY (`cedula`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE RESTRICT) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `mo...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mo...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mo...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mo...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Movimientos.php(17): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(221): App\Models\Movimientos->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->savemov()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-17 17:24:06 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`mov_movimientos`, CONSTRAINT `mov_movimientos_ibfk_6` FOREIGN KEY (`cedula`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE RESTRICT)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mov_movimientos` (`codigo`, `zona`, `ubicacion`, `motivo`, `fecha`, `cedula`) VALUES (:codigo:, :zona:, :ubicacion:, :motivo:, :fecha:, :cedula:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Movimientos.php(17): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(221): App\Models\Movimientos->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->savemov()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-17 17:24:12 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`mov_movimientos`, CONSTRAINT `mov_movimientos_ibfk_6` FOREIGN KEY (`cedula`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE RESTRICT) in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `mo...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mo...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mo...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mo...', Array, false)
+#4 C:\wamp64\www\system\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\system\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\system\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\system\app\Models\Movimientos.php(17): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\system\app\Controllers\AccionController.php(221): App\Models\Movimientos->insertar(Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->savemov()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-17 17:24:12 --> Cannot add or update a child row: a foreign key constraint fails (`patrimonioprueba`.`mov_movimientos`, CONSTRAINT `mov_movimientos_ibfk_6` FOREIGN KEY (`cedula`) REFERENCES `resp_responsables` (`cedula`) ON DELETE CASCADE ON UPDATE RESTRICT)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mov_movimientos` (`codigo`, `zona`, `ubicacion`, `motivo`, `fecha`, `cedula`) VALUES (:codigo:, :zona:, :ubicacion:, :motivo:, :fecha:, :cedula:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Movimientos.php(17): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\AccionController.php(221): App\Models\Movimientos->insertar([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->savemov()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-17 17:32:06 --> mysqli_sql_exception: Unknown column 'mov.cedula' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...', Array, false)
+#4 C:\wamp64\www\system\app\Controllers\VistaController.php(162): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+#6 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+#7 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-17 17:32:06 --> Unknown column 'mov.cedula' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+ORDER BY `id_movimientos` ASC', [], false)
+ 2 APPPATH\Controllers\VistaController.php(162): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-17 17:33:03 --> mysqli_sql_exception: Unknown column 'mov.cedula' in 'on clause' in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `mov`.*,...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mov`.*,...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mov`.*,...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*,...', Array, false)
+#4 C:\wamp64\www\system\app\Controllers\VistaController.php(162): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+#6 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+#7 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-17 17:33:03 --> Unknown column 'mov.cedula' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `mov`.*, `res`.`cedula`, `res`.`nombre`, `res`.`apellido`
+FROM `mov_movimientos` `mov`
+JOIN `resp_responsables` `res` ON `res`.`cedula` = `mov`.`cedula`
+ORDER BY `id_movimientos` ASC', [], false)
+ 2 APPPATH\Controllers\VistaController.php(162): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

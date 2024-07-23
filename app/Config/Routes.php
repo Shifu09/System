@@ -7,11 +7,12 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 /**
-///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  * TODO: Inicio de las Rutas de Vistas
  */
-$routes->get('/', 'VistaController::indexx', ['as' => 'index']);
-$routes->get('cargo', 'VistaController::index', ['as' => 'cargo']);
+$routes->get('/', 'VistaController::login');
+$routes->get('index', 'VistaController::index', ['as' => 'index']);
+$routes->get('cargo', 'VistaController::cargo', ['as' => 'cargo']);
 $routes->get('condicion', 'VistaController::condicion', ['as' => 'condicion']);
 $routes->get('crear', 'VistaController::CrearCargo');
 $routes->get('activos', 'VistaController::activo', ['as' => 'activos']);
@@ -24,15 +25,8 @@ $routes->get('ubicacion', 'VistaController::ubicacion_mov');
 $routes->get('tipo', 'VistaController::tipo_act', ['as' => 'tipo']);
 $routes->get('movimientos', 'VistaController::movimiento', ['as' => 'movimientos']);
 $routes->get('motivo', 'VistaController::motivo', ['as' => 'motivo']);
-
-
 /**
- * TODO: FIN de las Rutas de Vistas
-/////////////////////////////////////////////////////////////////////////////////////////////
- */
-
-/**
-/////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  * TODO: Inicio de las Rutas de Acciones
  */
 $routes->get('borrar/(:num)', 'AccionController::delete/$1');
@@ -47,11 +41,13 @@ $routes->get('editartipo/(:num)', 'AccionController::tipoupdate/$1');
 $routes->get('editarzona/(:num)', 'AccionController::zonaupdate/$1');
 $routes->get('editarubicacion/(:num)', 'AccionController::ubicacionupdate/$1');
 $routes->get('editaractivo/(:num)', 'AccionController::activoupdate/$1');
-
-
-// RUTAS DE ACTUALIZAR DATOS
+$routes->get('editarmov/(:num)', 'AccionController::movupdate/$1');
+$routes->get('pdf/(:num)', 'VistaController::pdf/$1');
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * TODO:RUTAS DE ACTUALIZAR DATOS
+ */
 $routes->post('actualizaractivo', 'AccionController::updateactivo');
-$routes->post('actualizaractivo2', 'AccionController::updateactivo2');
 $routes->post('actualizartipo', 'AccionController::updatetipo');
 $routes->post('actualizar', 'AccionController::updatecargo');
 $routes->post('actualizarmarca', 'AccionController::updatemarca');
@@ -60,20 +56,21 @@ $routes->post('actualizarconn', 'AccionController::updatecondicionrep');
 $routes->post('actualizaresp', 'AccionController::updateresp');
 $routes->post('actualizarzona', 'AccionController::updatezona');
 $routes->post('actualizarubi', 'AccionController::updateubicacion');
-
-// DESHABILITAR Y DESINCORPORAR
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * TODO:DESHABILITAR Y DESINCORPORAR
+ */
 $routes->get('deshabilitaresp/(:num)', 'AccionController::desresp/$1');
 $routes->get('deshabilitaract/(:num)', 'AccionController::desact/$1');
 $routes->post('disableresp', 'AccionController::disableresp');
 $routes->post('disableact', 'AccionController::disableact');
+$routes->get('eliminarmov/(:num)', 'AccionController::deletemov/$1');
 $routes->post('login', 'AccionController::login');
-
-
+$routes->get('logout', 'AccionController::logout');
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*
-? TODO:Rutas de Guardar
+? TODO:Rutas de Guardar Datos
  */
-
 $routes->post('guardarActivo', 'AccionController::saveactivo');
 $routes->post('guardarMarca', 'AccionController::savemarca');
 $routes->post('guardar', 'AccionController::save');
@@ -84,3 +81,4 @@ $routes->post('guardarzona', 'AccionController::savezona');
 $routes->post('guardarUbicacion', 'AccionController::saveubi');
 $routes->post('guardarTipo', 'AccionController::savetipo');
 $routes->post('guardarmotivo', 'AccionController::savemotivo');
+$routes->post('guardarmov', 'AccionController::savemov');

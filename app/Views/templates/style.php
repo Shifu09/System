@@ -23,15 +23,26 @@
         }
 
         #but {
-
+            height: 45px;
+            font-weight: 500;
             background-color: rgb(100, 145, 74);
             color: #ffffff;
+            border-radius: 30px;
+            moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
 
+        #but:hover {
+            -webkit-box-shadow: 0px 0px 3px #000;
+            box-shadow: 0px 0px 3px #000;
         }
 
         #modal-content {
             width: 150%;
             height: 130%;
+
             left: -25%;
             top: 100%;
         }
@@ -54,6 +65,17 @@
             width: 35px
         }
 
+        #img_index {
+            border-radius: 160px;
+            position: relative;
+            align-self: center;
+            height: 105px;
+            width: 105px;
+            color: #ffffff;
+            box-shadow: 0px 0px 30px 0px #a1a1a1;
+            margin-top: 5%;
+        }
+
         #imgAgua {
             position: relative;
             top: 15px;
@@ -66,29 +88,67 @@
 
         }
 
+        .dropdown-menu {
+
+            color: #ffffff !important;
+            border: solid;
+            border-color: #153757;
+        }
+
+
         .dropdown-menu .dropdown-item:hover {
-            background-color: #dedede !important;
-            color: #153757 !important;
+            background-color: rgb(100, 145, 74) !important;
+            width: 116%;
+            color: #ffffff !important;
+            border: solid;
+            border-color: #153757;
         }
 
         #table {
             width: 85%;
             height: 50%;
             left: 5%;
+            position: relative;
         }
+
+        .input-group {
+            margin: 0px auto;
+        }
+
+
+
+        .login-containerA {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            -webkit-box-shadow: 1px 1px 10px #000;
+            box-shadow: 1px 1px 13px #000;
+        }
+
 
         #card_index {
             width: 550px;
             height: 450px;
             background: white;
             border-radius: 10px;
-            top: 55px;
-            left: 30%;
-            text-align: center;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             -webkit-box-shadow: 1px 1px 12px #000;
             box-shadow: 1px 1px 20px #000;
         }
+
 
         .h4 {
             position: relative;
@@ -102,88 +162,77 @@
             font-size: large;
         }
 
-        #img_index {
+        #card_index {
+            width: 550px;
+            height: 450px;
+            background: white;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            -webkit-box-shadow: 1px 1px 12px #000;
+            box-shadow: 1px 1px 20px #000;
+        }
+
+        #img_index02 {
             border-radius: 160px;
             position: relative;
             align-self: center;
-            height: 105px;
-            width: 105px;
+            height: 100px;
+            width: 100px;
             color: #ffffff;
-            box-shadow: 0px 0px 30px 0px #a1a1a1;
-            margin-top: 5%;
+            box-shadow: 0px 0px 30px 5px #a1a1a1;
         }
 
-        .container {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            left: -320px;
-            transition: all ease-in-out 300ms;
+        .bn632-hover {
+            width: 140px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #fff;
+            margin: 10px;
+            height: 46px;
+            text-align: center;
+            border: none;
+            background-size: 300% 100%;
+            border-radius: 30px;
+            moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
         }
 
-        .sidebar {
-            width: 320px;
-            height: 100%;
-            background: black;
-            overflow: auto;
+        .bn632-hover:hover {
+            background-position: 99% 0;
+            moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
+
+        .bn632-hover:focus {
+            outline: none;
+        }
+
+        .bn632-hover.bn28 {
+            background-image: linear-gradient(to right,
+                    #eb3941,
+                    #f15e64,
+                    #e14e53,
+                    #e2373f);
+            box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+        }
+
+        #cerrar {
+            position: absolute;
+            top: 15%;
+            left: 96%;
             float: left;
-        }
 
-        .sidebar img {
-            width: 130px;
-            display: block;
-            margin: 10px auto;
-            opacity: .7;
-        }
-
-        .side-hide {
-            float: right;
-            margin: 12px;
-            color: white;
-            opacity: .7;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .sidebar ul li {
-            list-style: none;
-            padding: 12px 10px;
-        }
-
-        .sidebar ul li:hover {
-            background: #4e4e4e;
-            cursor: pointer;
-
-        }
-
-        .sidebar ul li a {
-            text-decoration: none;
-            color: white;
-            opacity: .7;
-            font-size: 17px;
-            font-family: sans-serif;
-        }
-
-        .content {
-            padding: 20px;
-            font-size: 16px;
-            color: black;
-            font-family: sans-serif;
-        }
-
-        .content h2 {
-            font-size: 30px;
-            text-transform: uppercase;
-            margin-left: 310px;
-            margin-bottom: 10px;
-
-        }
-
-        .content p {
-            font-size: 18px;
-            text-align: justify;
-            margin-left: 310px
         }
 
         #button {

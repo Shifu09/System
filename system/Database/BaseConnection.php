@@ -395,9 +395,9 @@ abstract class BaseConnection implements ConnectionInterface
         }
 
         // No connection resource? Check if there is a failover else throw an error
-        if (! $this->connID) {
+        if (!$this->connID) {
             // Check if there is a failover set
-            if (! empty($this->failover) && is_array($this->failover)) {
+            if (!empty($this->failover) && is_array($this->failover)) {
                 // Go over all the failovers
                 foreach ($this->failover as $index => $failover) {
                     // Replace the current settings with those of the failover
@@ -423,7 +423,7 @@ abstract class BaseConnection implements ConnectionInterface
             }
 
             // We still don't have a connection?
-            if (! $this->connID) {
+            if (!$this->connID) {
                 throw new DatabaseException(sprintf(
                     'Unable to connect to the database.%s%s',
                     PHP_EOL,
@@ -536,7 +536,7 @@ abstract class BaseConnection implements ConnectionInterface
      */
     public function addTableAlias(string $table)
     {
-        if (! in_array($table, $this->aliasedTables, true)) {
+        if (!in_array($table, $this->aliasedTables, true)) {
             $this->aliasedTables[] = $table;
         }
 
@@ -581,7 +581,7 @@ abstract class BaseConnection implements ConnectionInterface
 
         $query->setQuery($sql, $binds, $setEscapeFlags);
 
-        if (! empty($this->swapPre) && ! empty($this->DBPrefix)) {
+        if (!empty($this->swapPre) && !empty($this->DBPrefix)) {
             $query->swapPrefix($this->DBPrefix, $this->swapPre);
         }
 
@@ -728,7 +728,7 @@ abstract class BaseConnection implements ConnectionInterface
      */
     public function transStart(bool $testMode = false): bool
     {
-        if (! $this->transEnabled) {
+        if (!$this->transEnabled) {
             return false;
         }
 
@@ -752,7 +752,7 @@ abstract class BaseConnection implements ConnectionInterface
      */
     public function transComplete(): bool
     {
-        if (! $this->transEnabled) {
+        if (!$this->transEnabled) {
             return false;
         }
 
@@ -786,7 +786,7 @@ abstract class BaseConnection implements ConnectionInterface
      */
     public function transBegin(bool $testMode = false): bool
     {
-        if (! $this->transEnabled) {
+        if (!$this->transEnabled) {
             return false;
         }
 
@@ -820,7 +820,7 @@ abstract class BaseConnection implements ConnectionInterface
      */
     public function transCommit(): bool
     {
-        if (! $this->transEnabled || $this->transDepth === 0) {
+        if (!$this->transEnabled || $this->transDepth === 0) {
             return false;
         }
 
@@ -839,7 +839,7 @@ abstract class BaseConnection implements ConnectionInterface
      */
     public function transRollback(): bool
     {
-        if (! $this->transEnabled || $this->transDepth === 0) {
+        if (!$this->transEnabled || $this->transDepth === 0) {
             return false;
         }
 
@@ -1010,7 +1010,7 @@ abstract class BaseConnection implements ConnectionInterface
      */
     public function protectIdentifiers($item, bool $prefixSingle = false, ?bool $protectIdentifiers = null, bool $fieldExists = true)
     {
-        if (! is_bool($protectIdentifiers)) {
+        if (!is_bool($protectIdentifiers)) {
             $protectIdentifiers = $this->protectIdentifiers;
         }
 
@@ -1082,7 +1082,7 @@ abstract class BaseConnection implements ConnectionInterface
             }
         }
 
-        if ($protectIdentifiers === true && ! in_array($item, $this->reservedIdentifiers, true)) {
+        if ($protectIdentifiers === true && !in_array($item, $this->reservedIdentifiers, true)) {
             $item = $this->escapeIdentifiers($item);
         }
 
@@ -1099,10 +1099,10 @@ abstract class BaseConnection implements ConnectionInterface
         //
         // NOTE: The ! empty() condition prevents this method
         // from breaking when QB isn't enabled.
-        if (! empty($this->aliasedTables) && in_array($parts[0], $this->aliasedTables, true)) {
+        if (!empty($this->aliasedTables) && in_array($parts[0], $this->aliasedTables, true)) {
             if ($protectIdentifiers === true) {
                 foreach ($parts as $key => $val) {
-                    if (! in_array($val, $this->reservedIdentifiers, true)) {
+                    if (!in_array($val, $this->reservedIdentifiers, true)) {
                         $parts[$key] = $this->escapeIdentifiers($val);
                     }
                 }
@@ -1183,10 +1183,12 @@ abstract class BaseConnection implements ConnectionInterface
         }
 
         // Avoid breaking functions and literal values inside queries
-        if (ctype_digit($item)
+        if (
+            ctype_digit($item)
             || $item[0] === "'"
             || ($this->escapeChar !== '"' && $item[0] === '"')
-            || strpos($item, '(') !== false) {
+            || strpos($item, '(') !== false
+        ) {
             return $item;
         }
 
@@ -1356,7 +1358,7 @@ abstract class BaseConnection implements ConnectionInterface
             $functionName = $driver . $functionName;
         }
 
-        if (! function_exists($functionName)) {
+        if (!function_exists($functionName)) {
             if ($this->DBDebug) {
                 throw new DatabaseException('This feature is not available for the database you are using.');
             }
@@ -1439,7 +1441,7 @@ abstract class BaseConnection implements ConnectionInterface
         $tableExists = $this->query($sql)->getResultArray() !== [];
 
         // if cache has been built already
-        if (! empty($this->dataCache['table_names'])) {
+        if (!empty($this->dataCache['table_names'])) {
             $key = array_search(
                 strtolower($tableName),
                 array_map('strtolower', $this->dataCache['table_names']),
@@ -1448,7 +1450,7 @@ abstract class BaseConnection implements ConnectionInterface
 
             // table doesn't exist but still in cache - lets reset cache, it can be rebuilt later
             // OR if table does exist but is not found in cache
-            if (($key !== false && ! $tableExists) || ($key === false && $tableExists)) {
+            if (($key !== false && !$tableExists) || ($key === false && $tableExists)) {
                 $this->resetDataCache();
             }
         }
@@ -1488,7 +1490,7 @@ abstract class BaseConnection implements ConnectionInterface
 
         foreach ($query->getResultArray() as $row) {
             // Do we know from where to get the column's name?
-            if (! isset($key)) {
+            if (!isset($key)) {
                 if (isset($row['column_name'])) {
                     $key = 'column_name';
                 } elseif (isset($row['COLUMN_NAME'])) {

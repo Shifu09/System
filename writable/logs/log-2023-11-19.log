@@ -1,0 +1,9 @@
+CRITICAL - 2023-11-19 09:44:29 --> Invalid file: "movimientos/editarmov.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('movimientos/editarmov.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/editarmov', [], true)
+ 3 APPPATH\Controllers\AccionController.php(748): view('movimientos/editarmov', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->movupdate('2')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

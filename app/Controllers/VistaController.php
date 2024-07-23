@@ -7,7 +7,6 @@ use CodeIgniter\Controller;
 use App\Models\Cargo;
 use App\Models\condicion;
 use App\Models\Condicion_act;
-use App\Models\Detalles;
 use App\Models\Marca;
 use App\Models\Motivo;
 use App\Models\Movimientos;
@@ -18,16 +17,22 @@ use App\Models\Zona;
 
 class VistaController extends Controller
 {
-
-    public function indexx()
+    public function index()
+    {
+        echo  view('templates/footer');
+        echo  view('templates/header');
+        echo  view('templates/style');
+        return view('templates/index');
+    }
+    public function login()
     {
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
 
-        return view('templates/index', $datos);
+        return view('templates/login', $datos);
     }
-    public function index()
+    public function cargo()
     {
         $cargo = new Cargo();
         $datos['cargos'] = $cargo->orderBy('id_cargo', 'ASC')->findAll();
@@ -66,6 +71,7 @@ class VistaController extends Controller
     {
         $resp = new Activos();
         $datos['activos'] =  $resp->where('estado', 1)->findAll();
+
 
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
@@ -144,19 +150,39 @@ class VistaController extends Controller
     public function movimiento()
     {
         $db      = \Config\Database::connect();
-        $builder = $db->table('mov_movimientos  mov');
 
-        $builder->select('mov.*, dt.cedula, res.nombre, res.apellido, mot.nombre as nombret');
-        $builder->join('mov_detalles  dt', 'dt.id = mov.id_movimientos');
-        $builder->join('resp_responsables  res', 'res.cedula = dt.cedula');
-        $builder->join('mov_motivo  mot', 'mot.id_motivo = mov.motivo');
+        $builder = $db->table('mov_movimientos  mov')->select('mov.*, res.cedula, res.nombre, res.apellido');
 
+        $builder->join('resp_responsables  res', 'res.cedula = mov.cedula');
         $datos['movimientos'] = $builder->orderBy('id_movimientos', 'ASC')->get()->getResultArray();
 
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
 
+
         return view('movimientos/movimientos', $datos);
+    }
+    public function pdf($id = null)
+    {
+        $db      = \Config\Database::connect();
+
+        $builder = $db->table('mov_movimientos  mov')->where('id_movimientos', $id);
+        $builder->join('resp_responsables  res', 'res.cedula = mov.cedula');
+        $builder->join('gerencias g', 'g.id = res.gerencia');
+        $builder->join('resp_cargo ca', 'ca.id_cargo = res.cargo_resp');
+        $builder->join('act_activos  act', 'act.codigo = mov.codigo');
+        $builder->join('act_tipo  t', 't.id_tipo = act.tipo');
+        $builder->join('act_marca  m', 'm.id_marca = act.marca');
+        $builder->select('mov.*, res.cedula, res.nombre, res.apellido, act.descripcion, g.nombre as nombre_gerencia, ca.nombre_cargo,t.nombre as tipo,m.nombre as marca,act.serial,act.codigo,act.costo,act.n_factura,res.nombre,res.apellido,res.cedula,act.proveedor,act.garantia_inicio,act.garantia_fin,act.modelo,act.n_orden');
+        $builder = $db->query($builder->getCompiledSelect())->getRow();
+
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+        $datos['pdff'] = view('templates/dompdf/autoload.inc.php');
+        $datos['x'] = $builder;
+
+        return view('movimientos/pdf', $datos);
     }
 }

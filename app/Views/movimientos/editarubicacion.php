@@ -17,11 +17,11 @@
                         </div>
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
-                            <input type="text" name="sede" class="form-control" value="<?= $ubicacion['sede'] ?>">
+                            <input type="text" name="sede" class="form-control" value="<?= $ubicacion['sede'] ?>" required spellcheck="false">
                         </div>
                         <div class="form-group">
                             <label for="nombre">Direccion</label>
-                            <input type="text" name="direccion" class="form-control" value="<?= $ubicacion['direccion'] ?>">
+                            <input type="text" name="direccion" class="form-control" value="<?= $ubicacion['direccion'] ?>" required spellcheck="false">
                         </div>
                 </div>
                 <div class="modal-footer">

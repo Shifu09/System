@@ -17,6 +17,7 @@ use App\Models\Movimientos;
 use App\Models\Responsables;
 use App\Models\Tipo;
 use App\Models\ubicacion;
+use App\Models\Usuarios;
 use App\Models\Zona;
 use DateTime;
 
@@ -28,8 +29,9 @@ class AccionController extends Controller
     */
     public function save()
     {
+
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[resp_cargo.nombre_cargo]',
+            'nombre' => 'alpha_space|string',
 
         ]);
 
@@ -38,12 +40,13 @@ class AccionController extends Controller
                 'nombre_cargo' => $_POST['nombre']
 
             ];
+
             $cargo = new Cargo();
             $cargo->insertar($datos);
             return $this->response->redirect(site_url('cargo'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="cargo";
             </script>';
         }
@@ -52,7 +55,7 @@ class AccionController extends Controller
     public function savecon()
     {
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[resp_condicion.nombre_condicion]',
+            'nombre' => 'alpha_space|string',
         ]);
 
         if ($_POST && $validation) {
@@ -64,7 +67,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('condicion'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="condicion";
             </script>';
         }
@@ -73,7 +76,7 @@ class AccionController extends Controller
     public function saveconact()
     {
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[resp_condicion.nombre_condicion]',
+            'nombre' => 'alpha_space|string'
         ]);
 
         if ($_POST && $validation) {
@@ -85,7 +88,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('condicionActivo'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="condicionActivo";
             </script>';
         }
@@ -95,8 +98,8 @@ class AccionController extends Controller
     {
         $validation = $this->validate([
             'cedula' => 'numeric|is_unique[resp_responsables.cedula]',
-            'nombre' => 'string',
-            'apellido' => 'string',
+            'nombre' => 'alpha_space|string',
+            'apellido' => 'alpha_space|string',
             'telefono' => 'is_natural',
             'correo' => 'valid_email',
         ]);
@@ -119,7 +122,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('resp'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="resp";
             </script>';
         }
@@ -142,7 +145,7 @@ class AccionController extends Controller
                 'condicion_act' => $_POST['condicion'],
                 'tipo' => $_POST['tipo'],
                 'descripcion' => $_POST['descripcion'],
-                'observacion' => $_POST['observaciones'],
+                'observacion' => $_POST['observacion'],
                 'proveedor' => $_POST['proveedor'],
                 'n_factura' => $_POST['factura'],
                 'costo' => $_POST['costo'],
@@ -155,7 +158,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('activos'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso");
+            alert ("Ingreso de datos invalidos");
             window.location="activos";
             </script>';
         }
@@ -163,7 +166,7 @@ class AccionController extends Controller
     public function savemarca()
     {
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[act_marca.nombre]',
+            'nombre' => 'alpha_space|string',
         ]);
         if ($_POST && $validation) {
             $datos = [
@@ -174,7 +177,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('marca'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="marca";
             </script>';
         }
@@ -183,8 +186,8 @@ class AccionController extends Controller
     public function savezona()
     {
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[mov_zona.nombre]',
-            'direccion' => 'alpha_space',
+            'nombre' => 'alpha_space|string',
+            'direccion' => 'alpha_space|string',
         ]);
         if ($_POST && $validation) {
             $datos = [
@@ -196,18 +199,37 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('zona'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="zona";
             </script>';
         }
+    }
+    public function savemov()
+    {
+
+        $datos = [
+            'codigo' => $_POST['codigo'],
+            'zona' => $_POST['zona'],
+            'ubicacion' => $_POST['ubicacion'],
+            'motivo' => $_POST['motivo'],
+            'fecha' => $_POST['fecha'],
+            'cedula' => $_POST['resp']
+        ];
+        $id = $_POST['codigo'];
+        $mov = new Movimientos();
+        $mov->insertar($datos);
+        $act = new Activos();
+        $act->where('codigo', $id);
+        $act->set('asignado', 1)->update();
+        return $this->response->redirect(site_url('movimientos'));
     }
 
     public function saveubi()
     {
 
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[mov_ubicacion.sede]',
-            'direccion' => 'alpha_space',
+            'nombre' => 'alpha_space|string',
+            'direccion' => 'alpha_space|string',
         ]);
         if ($_POST && $validation) {
             $datos = [
@@ -219,7 +241,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('ubicacion'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="ubicacion";
             </script>';
         }
@@ -227,7 +249,7 @@ class AccionController extends Controller
     public function savetipo()
     {
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[act_tipo.nombre]',
+            'nombre' => 'alpha_space|string',
         ]);
         if ($_POST && $validation == true) {
             $datos = [
@@ -238,7 +260,7 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('tipo'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="tipo";
             </script>';
         }
@@ -246,7 +268,7 @@ class AccionController extends Controller
     public function savemotivo()
     {
         $validation = $this->validate([
-            'nombre' => 'alpha_space|is_unique[mov_motivo.nombre]',
+            'nombre' => 'alpha_space|string',
 
         ]);
         if ($_POST && $validation) {
@@ -258,51 +280,25 @@ class AccionController extends Controller
             return $this->response->redirect(site_url('motivo'));
         } else {
             echo '<script> 
-            alert ("Registross exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="motivo";
             </script>';
         }
     }
 
-    /**
-     * TODO ARREGLAR MOVIMIENTOS!!!!!!!
-     */
-    public function savemovimiento()
-    {
-        $validation = $this->validate([
-            'codigo' => 'integer|is_unique[mov_movimientos.codigo_act]',
-        ]);
-        if ($_POST && $validation) {
-            $datos = [
-                'codigo_act' => $_POST['codigo'],
-                'zona' => $_POST['zona'],
-                'zona' => $_POST['zona'],
-                'motivo' => $_POST['motivo'],
-                'fecha' => $_POST['fecha'],
-            ];
-            $tipo = new Movimientos();
-            $tipo->insertar($datos);
-            return $this->response->redirect(site_url('movimientos'));
-        } else {
-            echo '<script> 
-            alert ("Registross exitoso","aja","sds");
-            window.location="condicionActivo";
-            </script>';
-        }
-    }
     public function desresp($id = null)
     {
 
         $db      = \Config\Database::connect();
 
-        $builder = $db->table('resp_responsables resp');
-        $data = $builder->where('cedula', $id);
+        $builder = $db->table('resp_responsables resp')->where('cedula', $id);
         $builder->select('resp.*');
-        $data = $db->query($builder->getCompiledSelect())->getRow();
+        $builder = $db->query($builder->getCompiledSelect())->getRow();
+
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
-        $datos['x'] = $data;
+        $datos['x'] = $builder;
 
         return view('responsables/deshabilitar', $datos);
     }
@@ -310,8 +306,7 @@ class AccionController extends Controller
     {
         $id = $_POST['id'];
         $db      = \Config\Database::connect();
-        $builder = $db->table('resp_responsables resp');
-        $datos = $builder->where('cedula', $id);
+        $builder = $db->table('resp_responsables resp')->where('cedula', $id);
         $builder->set('estado', 0);
         $builder->update();
 
@@ -325,7 +320,7 @@ class AccionController extends Controller
         return $this->response->redirect(site_url('resp'));
 
         echo '<script> 
-            alert ("Registro exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="resp";
             </script>';
     }
@@ -334,14 +329,13 @@ class AccionController extends Controller
 
         $db      = \Config\Database::connect();
 
-        $builder = $db->table('act_activos act');
-        $data = $builder->where('codigo', $id);
+        $builder = $db->table('act_activos act')->where('codigo', $id);
         $builder->select('act.*');
-        $data = $db->query($builder->getCompiledSelect())->getRow();
+        $builder = $db->query($builder->getCompiledSelect())->getRow();
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
-        $datos['x'] = $data;
+        $datos['x'] = $builder;
 
         return view('activos/desincorporar', $datos);
     }
@@ -351,8 +345,8 @@ class AccionController extends Controller
         $db      = \Config\Database::connect();
         $builder = $db->table('act_activos act');
         $datos = $builder->where('codigo', $id);
-        $builder->set('estado', 0);
-        $builder->update();
+        $builder->set('estado', 0)->set('asignado', 0)->update();
+
 
         $datos = [
             'codigo_activo' => $_POST['id'],
@@ -364,7 +358,7 @@ class AccionController extends Controller
         return $this->response->redirect(site_url('activos'));
 
         echo '<script> 
-            alert ("Registro exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="resp";
             </script>';
     }
@@ -395,7 +389,7 @@ class AccionController extends Controller
         $cargo = new Cargo();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'alpha_space|is_unique[resp_cargo.nombre_cargo]',
+            'nombre' => 'alpha_space|string',
         ]);
 
         if ($_POST && $val) {
@@ -408,7 +402,7 @@ class AccionController extends Controller
             return redirect()->to(site_url('cargo'));
         } else {
             echo '<script> 
-            alert ("Registro exitoso","aja","sds");
+            alert ("Ingreso de datos invalidos");
             window.location="cargo";
             </script>';
         }
@@ -430,7 +424,7 @@ class AccionController extends Controller
         $cargo = new Marca();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'alpha_space|is_unique[act_marca.nombre]',
+            'nombre' => 'alpha_space|string',
         ]);
 
         if ($_POST && $val) {
@@ -443,7 +437,7 @@ class AccionController extends Controller
             return redirect()->to(site_url('marca'));
         }
         echo '<script> 
-    alert ("Registro exitoso","aja","sds");
+    alert ("Ingreso de datos invalidos");
     window.location.href = "marca";
     </script>';
     }
@@ -464,7 +458,7 @@ class AccionController extends Controller
         $cargo = new Condicion_act();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'alpha_space|is_unique[act_condicion.nombre]',
+            'nombre' => 'alpha_space|string',
         ]);
 
         if ($_POST && $val) {
@@ -478,7 +472,7 @@ class AccionController extends Controller
         }
 
         echo '<script> 
-    alert ("Registro exitoso","aja","sds");
+    alert ("Ingreso de datos invalidos");
         window.location.href = "condicionActivo";
     </script>';
     }
@@ -499,7 +493,7 @@ class AccionController extends Controller
         $cargo = new Condicion();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'alpha_space|is_unique[resp_condicion.nombre_condicion]',
+            'nombre' => 'alpha_space|string',
         ]);
 
         if ($_POST && $val) {
@@ -512,7 +506,7 @@ class AccionController extends Controller
         }
 
         echo '<script> 
-    alert ("Registro exitoso","aja","sds");
+    alert ("Ingreso de datos invalidos");
         window.location.href = "condicion";
     </script>';
     }
@@ -534,7 +528,7 @@ class AccionController extends Controller
         $id = $_POST['id'];
 
         $val = $this->validate([
-            'nombre' => 'alpha_space',
+            'nombre' => 'alpha_space|string',
         ]);
 
         if ($_POST && $val) {
@@ -549,7 +543,7 @@ class AccionController extends Controller
         }
 
         echo '<script> 
-    alert ("Registro exitoso","aja","sds");
+    alert ("Ingreso de datos invalidos");
         window.location.href = "tipo";
     </script>';
     }
@@ -597,14 +591,15 @@ class AccionController extends Controller
     {
         $db      = \Config\Database::connect();
 
-        $builder = $db->table('resp_responsables resp')->where('cedula', $id);
+        $builder = $db->table('resp_responsables resp');
+        $data = $builder->where('cedula', $id);
         $builder->join('resp_condicion c', 'c.id_condicion = resp.condicion_resp');
         $builder->join('resp_cargo ca', 'ca.id_cargo = resp.cargo_resp');
         $builder->join('gerencias g', 'g.id = resp.gerencia');
         $builder->join('divisiones d', 'd.id_div = resp.division', 'right');
         $builder->select('resp.*, c.nombre_condicion, g.nombre as nombre_gerencia , ca.nombre_cargo, d.nombre_div');
-
-        $builder = $db->query($builder->getCompiledSelect())->getRow();
+        //$data = $builder->getCompiledSelect();
+        $data = $db->query($builder->getCompiledSelect())->getRow();
 
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
@@ -619,7 +614,7 @@ class AccionController extends Controller
         $resp = new Responsables();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'alpha_space',
+            'nombre' => 'alpha_space|string',
         ]);
 
         if ($_POST && $val) {
@@ -642,7 +637,7 @@ class AccionController extends Controller
         }
 
         echo '<script> 
-    alert ("Registro exitoso","aja","sds");
+    alert ("Ingreso de datos invalidos");
         window.location.href = "tipo";
     </script>';
     }
@@ -663,23 +658,22 @@ class AccionController extends Controller
         $cargo = new Zona();
         $id = $_POST['id'];
         $val = $this->validate([
-            'nombre' => 'string|is_unique[mov_zona.nombre]',
-            'direccion' => 'string'
+            'nombre' => 'alpha_space|string',
+            'direccion' => 'alpha_space|string',
         ]);
 
         if ($_POST && $val) {
             $datos = [
                 'nombre' => $_POST['nombre'],
                 'direccion' => $_POST['direccion']
-
             ];
 
             $cargo->update($id, $datos);
             return redirect()->to(site_url('zona'));
         }
         echo '<script> 
-    alert ("Registro exitoso","aja","sds");
-     window.location.href = "zona";
+    alert ("Ingreso de datos invalidos");
+        window.location.href = "zona";
     </script>';
     }
     public function ubicacionupdate($id = null)
@@ -699,8 +693,8 @@ class AccionController extends Controller
         $cargo = new ubicacion();
         $id = $_POST['id'];
         $val = $this->validate([
-            'sede' => 'string',
-            'direccion' => 'string',
+            'sede' => 'alpha_space|string',
+            'direccion' => 'alpha_space|string',
         ]);
 
         if ($_POST && $val) {
@@ -708,12 +702,11 @@ class AccionController extends Controller
                 'sede' => $_POST['sede'],
                 'direccion' => $_POST['direccion']
             ];
-
             $cargo->update($id, $datos);
             return redirect()->to(site_url('ubicacion'));
         }
         echo '<script> 
-    alert ("Registro exitoso","aja","sds");
+    alert ("Ingreso de datos invalidos");
         window.location.href = "ubicacion";
     </script>';
     }
@@ -722,15 +715,16 @@ class AccionController extends Controller
     {
         $db      = \Config\Database::connect();
 
-        $builder = $db->table('act_activos act')->where('codigo', $id);
+        $builder = $db->table('act_activos act');
+
         $builder->join('act_marca m', 'm.id_marca = act.marca');
         $builder->join('act_condicion c', 'c.id_activo_condicion = act.condicion_act');
         $builder->join('act_tipo t', 't.id_tipo = act.tipo');
-        $builder->select('act.*, m.nombre as nombre_marca, c.nombre as nombre_condicion , t.nombre as nombre_tipo');
+        $builder->select('act.*, m.nombre as nombre_marca, c.nombre as nombre_condicion , t.nombre as nombre_tipo')->where('codigo', $id);
 
         $builder = $db->query($builder->getCompiledSelect())->getRow();
-        //var_dump($builder);
-        //die;
+        //  var_dump($builder);
+        //  die;
         $datos['header'] = view('templates/header');
         $datos['footer'] = view('templates/footer');
         $datos['style'] = view('templates/style');
@@ -764,46 +758,64 @@ class AccionController extends Controller
         $cargo->update($id, $datos);
         return redirect()->to(site_url('activos'));
     }
-    /*
-    ! FIN DE FUNCIONES DE EDITAR DATOS
-    ------------------------------------------------------------------------------------------
-    */
 
-    /*
-    -----------------------------------------------------------------------------------------
-    ! INICIO DE FUNCIONES DE BORRAR DATOS
-    */
-
-    public function delete($id = null)
+    public function movupdate($id = null)
     {
-        $cargo = new Cargo();
+        $db      = \Config\Database::connect();
 
-        $cargo->where('id_cargo', $id)->delete($id);
-        return $this->response->redirect(site_url('cargo'));
+        $builder = $db->table('mov_movimientos  mov')->where('id_movimientos', $id);
+        $builder->join('resp_responsables  res', 'res.cedula = mov.cedula');
+        $builder->join('gerencias g', 'g.id = res.gerencia');
+        $builder->join('resp_cargo ca', 'ca.id_cargo = res.cargo_resp');
+        $builder->join('act_activos  act', 'act.codigo = mov.codigo');
+        $builder->select('mov.*, res.cedula, res.nombre, res.apellido, act.descripcion, g.nombre as nombre_gerencia, ca.nombre_cargo,act.serial');
+        $builder = $db->query($builder->getCompiledSelect())->getRow();
+
+        // var_dump($builder);
+        //die;
+
+        $datos['header'] = view('templates/header');
+        $datos['footer'] = view('templates/footer');
+        $datos['style'] = view('templates/style');
+        $datos['pdff'] = view('templates/dompdf/autoload.inc.php');
+        $datos['x'] = $builder;
+
+        return view('movimientos/editarmov', $datos);
     }
 
-    public function deletecon($id = null)
+    public function updatemov()
     {
-        $condicion = new condicion();
+        $cargo = new Activos();
+        $id = $_POST['id'];
 
-        $condicion->where('id_condicion', $id)->delete($id);
-        return $this->response->redirect(site_url('condicion'));
-    }
+        $datos = [
+            'codigo' => $_POST['id'],
+            'marca' => $_POST['marca'],
+            'modelo' => $_POST['modelo'],
+            'serial' => $_POST['seria'],
+            'condicion_act' => $_POST['condicion'],
+            'tipo' => $_POST['tipo'],
+            'descripcion' => $_POST['descripcion'],
+            'observacion' => $_POST['observacion'],
+            'proveedor' => $_POST['proveedor'],
+            'n_factura' => $_POST['factura'],
+            'costo' => $_POST['costo'],
+            'n_orden' => $_POST['orden'],
+            'garantia_inicio' => $_POST['inicio'],
+            'garantia_fin' => $_POST['fin'],
+        ];
 
-    public function deleteresp($id = null)
-    {
-        $responsable = new Responsables();
-
-        $responsable->where('cedula', $id)->delete($id);
-        return $this->response->redirect(site_url('resp'));
+        $cargo->update($id, $datos);
+        return redirect()->to(site_url('activos'));
     }
     public function login()
     {
         $db      = \Config\Database::connect();
         $builder = $db->table('usuarios')->where('username' and 'password');
         if ($builder > 0) {
+            $_SESSION['usuario'] = 'username';
             echo '<script> 
-            alert ("Registro exitoso","aja","sds");
+             alert ("Registro exitoso","aja","sds");
             window.location.href = "marca";
             </script>';
         }

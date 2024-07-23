@@ -17,7 +17,7 @@
                         </div>
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" class="form-control" value="<?= $marca['nombre'] ?>">
+                            <input type="text" name="nombre" class="form-control" value="<?= $marca['nombre'] ?>" required spellcheck="false">
                         </div>
                 </div>
                 <div class="modal-footer">

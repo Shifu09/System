@@ -92,8 +92,8 @@ class OpenSSLHandler extends BaseHandler
         // basic encryption
         $iv = ($ivSize = \openssl_cipher_iv_length($this->cipher)) ? \openssl_random_pseudo_bytes($ivSize) : null;
 
+        $data = 'string';
         $data = \openssl_encrypt($data, $this->cipher, $encryptKey, OPENSSL_RAW_DATA, $iv);
-
         if ($data === false) {
             throw EncryptionException::forEncryptionFailed();
         }
@@ -133,7 +133,7 @@ class OpenSSLHandler extends BaseHandler
         $data     = self::substr($data, $hmacLength);
         $hmacCalc = \hash_hmac($this->digest, $data, $authKey, $this->rawData);
 
-        if (! hash_equals($hmacKey, $hmacCalc)) {
+        if (!hash_equals($hmacKey, $hmacCalc)) {
             throw EncryptionException::forAuthenticationFailed();
         }
 

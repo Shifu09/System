@@ -1,0 +1,293 @@
+CRITICAL - 2023-11-13 00:07:45 --> Undefined array key "username"
+in APPPATH\Controllers\AccionController.php on line 775.
+ 1 APPPATH\Controllers\AccionController.php(775): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 775)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 00:09:57 --> Undefined array key "username"
+in APPPATH\Controllers\AccionController.php on line 775.
+ 1 APPPATH\Controllers\AccionController.php(775): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 775)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 00:10:19 --> Undefined array key "username"
+in APPPATH\Controllers\AccionController.php on line 775.
+ 1 APPPATH\Controllers\AccionController.php(775): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 775)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 00:13:54 --> Undefined array key "username"
+in APPPATH\Controllers\AccionController.php on line 775.
+ 1 APPPATH\Controllers\AccionController.php(775): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 775)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 00:15:41 --> Object of type CodeIgniter\Database\MySQLi\Connection is not callable
+in APPPATH\Controllers\AccionController.php on line 776.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 00:17:48 --> Call to a member function select() on null
+in APPPATH\Controllers\AccionController.php on line 776.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 00:36:55 --> Attempt to read property "id" on null
+in APPPATH\Controllers\AccionController.php on line 779.
+ 1 APPPATH\Controllers\AccionController.php(779): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 779)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 00:37:50 --> Attempt to read property "id" on null
+in APPPATH\Controllers\AccionController.php on line 779.
+ 1 APPPATH\Controllers\AccionController.php(779): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 779)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 00:38:24 --> Attempt to read property "id" on null
+in APPPATH\Controllers\AccionController.php on line 779.
+ 1 APPPATH\Controllers\AccionController.php(779): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 779)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 08:55:42 --> Encrypter needs a starter key.
+in SYSTEMPATH\Encryption\Encryption.php on line 124.
+ 1 SYSTEMPATH\Encryption\Encryption.php(124): CodeIgniter\Encryption\Exceptions\EncryptionException::forNeedsStarterKey()
+ 2 SYSTEMPATH\Config\Services.php(251): CodeIgniter\Encryption\Encryption->initialize(Object(Config\Encryption))
+ 3 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::encrypter(Object(Config\Encryption))
+ 4 APPPATH\Controllers\AccionController.php(44): CodeIgniter\Config\BaseService::__callStatic('encrypter', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 08:56:21 --> Encrypter needs a starter key.
+in SYSTEMPATH\Encryption\Encryption.php on line 124.
+ 1 SYSTEMPATH\Encryption\Encryption.php(124): CodeIgniter\Encryption\Exceptions\EncryptionException::forNeedsStarterKey()
+ 2 SYSTEMPATH\Config\Services.php(251): CodeIgniter\Encryption\Encryption->initialize(Object(Config\Encryption))
+ 3 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::encrypter(Object(Config\Encryption))
+ 4 APPPATH\Controllers\AccionController.php(44): CodeIgniter\Config\BaseService::__callStatic('encrypter', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 08:56:55 --> Encrypter needs a starter key.
+in SYSTEMPATH\Encryption\Encryption.php on line 124.
+ 1 SYSTEMPATH\Encryption\Encryption.php(124): CodeIgniter\Encryption\Exceptions\EncryptionException::forNeedsStarterKey()
+ 2 SYSTEMPATH\Config\Services.php(251): CodeIgniter\Encryption\Encryption->initialize(Object(Config\Encryption))
+ 3 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::encrypter(Object(Config\Encryption))
+ 4 APPPATH\Controllers\AccionController.php(44): CodeIgniter\Config\BaseService::__callStatic('encrypter', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 08:58:04 --> openssl_encrypt(): Argument #1 ($data) must be of type string, App\Models\cargo given
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 95.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(95): openssl_encrypt(Object(App\Models\cargo), 'AES-256-CTR', 'ûª]‰q[®[yjâÈÀò^¹Œà8ÿ1A°¨aA÷z¼•yÚ~\\BíÅ\\±h§)ÍSä\\£Œç+··ƒf¬
+', 1, 'ZpêM½İrùSö9')
+ 2 APPPATH\Controllers\AccionController.php(49): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt(Object(App\Models\cargo))
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 08:59:08 --> openssl_encrypt(): Argument #1 ($data) must be of type string, App\Models\cargo given
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 95.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(95): openssl_encrypt(Object(App\Models\cargo), 'AES-256-CTR', 'ûª]‰q[®[yjâÈÀò^¹Œà8ÿ1A°¨aA÷z¼•yÚ~\\BíÅ\\±h§)ÍSä\\£Œç+··ƒf¬
+', 1, 'P§9LmØªj’Úƒ#©Ic')
+ 2 APPPATH\Controllers\AccionController.php(49): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt(Object(App\Models\cargo))
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 09:01:09 --> openssl_encrypt(): Argument #1 ($data) must be of type string, App\Models\cargo given
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 95.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(95): openssl_encrypt(Object(App\Models\cargo), 'AES-256-CTR', 'ûª]‰q[®[yjâÈÀò^¹Œà8ÿ1A°¨aA÷z¼•yÚ~\\BíÅ\\±h§)ÍSä\\£Œç+··ƒf¬
+', 1, '¿å!Ô]N™Ë+–')
+ 2 APPPATH\Controllers\AccionController.php(49): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt(Object(App\Models\cargo))
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 09:01:15 --> openssl_encrypt(): Argument #1 ($data) must be of type string, App\Models\cargo given
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 95.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(95): openssl_encrypt(Object(App\Models\cargo), 'AES-256-CTR', 'ûª]‰q[®[yjâÈÀò^¹Œà8ÿ1A°¨aA÷z¼•yÚ~\\BíÅ\\±h§)ÍSä\\£Œç+··ƒf¬
+', 1, 'š¿«jT÷zRH-
+%Á')
+ 2 APPPATH\Controllers\AccionController.php(49): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt(Object(App\Models\cargo))
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 09:03:31 --> openssl_encrypt(): Argument #1 ($data) must be of type string, App\Models\cargo given
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 95.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(95): openssl_encrypt(Object(App\Models\cargo), 'AES-256-CTR', 'ûª]‰q[®[yjâÈÀò^¹Œà8ÿ1A°¨aA÷z¼•yÚ~\\BíÅ\\±h§)ÍSä\\£Œç+··ƒf¬
+', 1, ']ø)[^gïB„Ä‰ yğâ')
+ 2 APPPATH\Controllers\AccionController.php(49): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt(Object(App\Models\cargo))
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 09:06:52 --> openssl_encrypt(): Argument #1 ($data) must be of type string, App\Models\cargo given
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 95.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(95): openssl_encrypt(Object(App\Models\cargo), 'AES-256-CTR', 'ûª]‰q[®[yjâÈÀò^¹Œà8ÿ1A°¨aA÷z¼•yÚ~\\BíÅ\\±h§)ÍSä\\£Œç+··ƒf¬
+', 1, 'ÿÍµÙ‘?' . "\0" . '™ô˜à·(Zß')
+ 2 APPPATH\Controllers\AccionController.php(49): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt(Object(App\Models\cargo))
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->save()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-13 10:17:39 --> mysqli_sql_exception: Table 'patrimonioprueba.users' doesn't exist in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM u...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 C:\wamp64\www\system\app\Controllers\AccionController.php(776): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\AccionController->login()
+#5 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+#6 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-13 10:17:39 --> Table 'patrimonioprueba.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\AccionController.php(776): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users LIMIT 1;')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 10:33:31 --> CodeIgniter\Database\BaseConnection::query(): Argument #1 ($sql) must be of type string, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp64\www\system\app\Controllers\AccionController.php on line 781
+in SYSTEMPATH\Database\BaseConnection.php on line 569.
+ 1 APPPATH\Controllers\AccionController.php(781): CodeIgniter\Database\BaseConnection->query(Object(CodeIgniter\Database\MySQLi\Result))
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 10:35:40 --> Class "string" not found
+in SYSTEMPATH\Database\BaseConnection.php on line 581.
+ 1 APPPATH\Controllers\AccionController.php(779): CodeIgniter\Database\BaseConnection->query('SELECT * FROM usuarios WHERE username=\'s\' and password=\'d\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 10:36:22 --> CodeIgniter\Database\BaseConnection::query(): Argument #1 ($sql) must be of type string, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp64\www\system\app\Controllers\AccionController.php on line 781
+in SYSTEMPATH\Database\BaseConnection.php on line 569.
+ 1 APPPATH\Controllers\AccionController.php(781): CodeIgniter\Database\BaseConnection->query(Object(CodeIgniter\Database\MySQLi\Result))
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 10:36:44 --> Class "string" not found
+in SYSTEMPATH\Database\BaseConnection.php on line 581.
+ 1 APPPATH\Controllers\AccionController.php(779): CodeIgniter\Database\BaseConnection->query('SELECT * FROM usuarios WHERE username=\'s\' and password=\'d\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 10:37:02 --> Class "string" not found
+in SYSTEMPATH\Database\BaseConnection.php on line 581.
+ 1 APPPATH\Controllers\AccionController.php(779): CodeIgniter\Database\BaseConnection->query('SELECT * FROM usuarios WHERE username=\'s\' and password=\'d\'')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 10:37:32 --> CodeIgniter\Database\BaseConnection::query(): Argument #1 ($sql) must be of type string, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp64\www\system\app\Controllers\AccionController.php on line 781
+in SYSTEMPATH\Database\BaseConnection.php on line 569.
+ 1 APPPATH\Controllers\AccionController.php(781): CodeIgniter\Database\BaseConnection->query(Object(CodeIgniter\Database\MySQLi\Result))
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 15:45:29 --> Undefined variable $db
+in APPPATH\Views\movimientos\movimientos.php on line 42.
+ 1 APPPATH\Views\movimientos\movimientos.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 42)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(169): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 15:54:26 --> Undefined variable $resp
+in APPPATH\Views\movimientos\movimientos.php on line 36.
+ 1 APPPATH\Views\movimientos\movimientos.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $resp', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 36)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(169): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 18:42:04 --> Undefined variable $movimiento
+in APPPATH\Views\movimientos\movimientos.php on line 85.
+ 1 APPPATH\Views\movimientos\movimientos.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $movimiento', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 85)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(169): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 18:58:26 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\movimientos\movimientos.php on line 129.
+ 1 APPPATH\Views\movimientos\movimientos.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 129)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(169): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 19:00:08 --> Call to undefined method CodeIgniter\View\View::getGet()
+in APPPATH\Views\movimientos\movimientos.php on line 129.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 4 APPPATH\Controllers\VistaController.php(169): view('movimientos/movimientos', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 19:00:25 --> Undefined variable $activo
+in APPPATH\Views\movimientos\movimientos.php on line 129.
+ 1 APPPATH\Views\movimientos\movimientos.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activo', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 129)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(169): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 19:01:40 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\movimientos\movimientos.php on line 158.
+ 1 APPPATH\Views\movimientos\movimientos.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 158)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(169): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 21:00:52 --> Undefined array key "id_ubicaciona"
+in APPPATH\Views\movimientos\movimientos.php on line 87.
+ 1 APPPATH\Views\movimientos\movimientos.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_ubicaciona"', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 87)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(169): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

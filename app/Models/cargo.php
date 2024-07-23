@@ -8,6 +8,7 @@ class cargo extends Model
 {
     protected $table        = 'resp_cargo';
     protected $primaryKey = 'id_cargo';
+
     protected $allowedFields = ['nombre_cargo'];
 
     public function insertar($datos)

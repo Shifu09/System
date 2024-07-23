@@ -10,14 +10,14 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">MODIFICAR CONDICION</h1>
                 </div>
                 <div class="modal-body">
-                    <form action="<?= base_url('actualizarcon'); ?>" method="post" enctype="multipart/form-data">
+                    <form action="<?= base_url('actualizarcon'); ?>" method="post" enctype="multipart/form-data" autocomplete="off">
                         <div class="form-group">
                             <label for="nombre">Codigo</label>
                             <input type="text" name="id" readonly class="form-control" value="<?= $condicion['id_activo_condicion'] ?>">
                         </div>
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" class="form-control" value="<?= $condicion['nombre'] ?>">
+                            <input type="text" name="nombre" class="form-control" value="<?= $condicion['nombre'] ?>" required spellcheck="false">
                         </div>
                 </div>
                 <div class="modal-footer">

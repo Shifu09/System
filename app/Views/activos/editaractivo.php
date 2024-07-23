@@ -9,20 +9,20 @@
                 <h1 class="modal-title fs-5" id="exampleModalLabel">MODIFICAR ACTIVO</h1>
             </div>
             <div class="modal-body">
-                <form action="<?= base_url('actualizaractivo'); ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url('actualizaractivo'); ?>" method="post" enctype="multipart/form-data" autocomplete="off">
                     <div class=" form-group">
                         <label for="nombre">Codigo</label>
                         <input type="text" class="form-control" readonly placeholder="Codigo" name="id" value="<?= $x->codigo ?>">
                     </div>
                     <div class="form-group">
                         <label for="descripcion">Descripción</label>
-                        <textarea name="descripcion" id="descripcion" cols="3" rows="3" class="form-control"></textarea  value="<?= $x->descripcion ?>">
+                        <textarea name="descripcion" id="descripcion" value="<?= $x->descripcion ?>" cols="3" rows="3" class="form-control" required spellcheck="false"></textarea>
                     </div>
                     <div class="row">
                         <div class="col-12 col-lg-6">
                             <div class="form-group">
                                 <label for="nombre">Marca</label>
-                                <select name="marca" class="form-control" onChange="selectGerenciasRespCons()">
+                                <select name="marca" class="form-control" onChange="selectGerenciasRespCons()" required>
                                     <option value="">Seleccione una opción...</option>
                                     <?php
 
@@ -41,20 +41,20 @@
                         <div class="col-12 col-lg-6">
                             <div class="form-group">
                                 <label for="nombre">Modelo</label>
-                                <input type="text" name="modelo" class="form-control" placeholder="Modelo" value="<?= $x->modelo ?>">
+                                <input type="text" name="modelo" class="form-control" placeholder="Modelo" value="<?= $x->modelo ?>" required spellcheck="false">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12 col-lg-4">
                                 <div class="form-group">
                                     <label>Serial</label>
-                                    <input type="text" name="seria" class="form-control" placeholder="Serial" value="<?= $x->serial ?>">
+                                    <input type="text" name="seria" class="form-control" placeholder="Serial" value="<?= $x->serial ?>" required>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-4">
                                 <div class="form-group">
                                     <label for="nombre">Condicion del Activo</label>
-                                    <select name="condicion" class="form-control" onChange="selectGerenciasRespCons()">
+                                    <select name="condicion" class="form-control" onChange="selectGerenciasRespCons()" required>
                                         <option value="">Seleccione una opción...</option>
 
                                         <?php
@@ -95,19 +95,19 @@
                             <div class="col-12 col-lg-4">
                                 <div class="form-group">
                                     <label for="proveedor">Proveedor</label>
-                                    <input type="text" name="proveedor" class="form-control" placeholder="Proveedor" value="<?= $x->proveedor ?>">
+                                    <input type="text" name="proveedor" class="form-control" placeholder="Proveedor" value="<?= $x->proveedor ?>" required spellcheck="false">
                                 </div>
                             </div>
                             <div class="col-12 col-lg-4">
                                 <div class="form-group">
                                     <label for="proveedor">Nro. de Factura </label>
-                                    <input type="text" name="factura" class="form-control" placeholder="Nro.Factura" value="<?= $x->n_factura ?>">
+                                    <input type="text" name="factura" class="form-control" placeholder="Nro.Factura" value="<?= $x->n_factura ?>" required>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-4">
                                 <div class="form-group">
                                     <label for="proveedor">Costo</label>
-                                    <input type="text" name="costo" class="form-control" placeholder="Costo" value="<?= $x->costo ?>">
+                                    <input type="text" name="costo" class="form-control" placeholder="Costo" value="<?= $x->costo ?>" required>
                                 </div>
                             </div>
                         </div>
@@ -115,36 +115,36 @@
                             <div class="col-12 col-lg-4">
                                 <div class="form-group">
                                     <label for="orden">Número de Orden</label>
-                                    <input type="text" name="orden" class="form-control" placeholder="Número de Orden" value="<?= $x->n_orden ?>">
+                                    <input type="text" name="orden" class="form-control" placeholder="Número de Orden" value="<?= $x->n_orden ?>" required>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-4">
                                 <div class="form-group">
                                     <label for="periodo">Periodo de garantía desde</label>
-                                    <input type="date" name="inicio" id="periodo" class="form-control" value="<?= $x->garantia_inicio ?>">
+                                    <input type="date" name="inicio" id="periodo" class="form-control" value="<?= $x->garantia_inicio ?>" required>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-4">
                                 <div class="form-group">
                                     <label for="periodo">Periodo de garantía hasta</label>
-                                    <input type="date" name="fin" class="form-control" value="<?= $x->garantia_fin ?>">
+                                    <input type="date" name="fin" class="form-control" value="<?= $x->garantia_fin ?>" required>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Observaciones</label>
-                            <textarea name="observacion" cols="3" rows="3" class="form-control"></textarea>
+                            <textarea name="observacion" cols="3" rows="3" class="form-control" spellcheck="false"></textarea>
+                        </div>
                     </div>
             </div>
-        </div>
-        <div class="modal-footer">
-            <a type="button" class="btn btn-primary" data-bs-target="#modalUpdate2" data-bs-toggle="modal">Volver a la consulta</a>
-            <a type="button" class="btn btn-secondary" href="<?= site_url('activos'); ?>">Cerrar</a>
-            <button type="submit" style="background-color: #66944c; color:#ffff" class="btn">Guardar</button>
-            </form>
+            <div class="modal-footer">
+                <a type="button" class="btn btn-primary" data-bs-target="#modalUpdate2" data-bs-toggle="modal">Volver a la consulta</a>
+                <a type="button" class="btn btn-secondary" href="<?= site_url('activos'); ?>">Cerrar</a>
+                <button type="submit" style="background-color: #66944c; color:#ffff" class="btn">Guardar</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 <div class="modal fade" id="modalUpdate2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -154,7 +154,7 @@
                 <h1 class="modal-title fs-5" id="exampleModalLabel">CONSULTA ACTIVO</h1>
             </div>
             <div class="modal-body">
-                <form method="post" enctype="multipart/form-data">
+                <form method="post" enctype="multipart/form-data" autocomplete="off">
                     <div class=" form-group">
                         <label for="nombre">Codigo</label>
                         <input type="text" class="form-control" value="<?= $x->codigo ?>" readonly>

@@ -212,3 +212,139 @@ in APPPATH\Controllers\AccionController.php on line 713.
  3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
  4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-09 15:54:58 --> Attempt to read property "key" on string
+in APPPATH\Controllers\AccionController.php on line 104.
+ 1 APPPATH\Controllers\AccionController.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "key" on string', 'C:\\wamp64\\www\\system\\app\\Controllers\\AccionController.php', 104)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->saveresp()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-09 19:20:10 --> Undefined variable $x
+in APPPATH\Views\movimientos\movimientos.php on line 36.
+ 1 APPPATH\Views\movimientos\movimientos.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $x', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 36)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(160): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-09 19:21:10 --> Undefined variable $x
+in APPPATH\Views\movimientos\movimientos.php on line 36.
+ 1 APPPATH\Views\movimientos\movimientos.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $x', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 36)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(160): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-09 21:21:48 --> Undefined array key "cedula"
+in APPPATH\Views\movimientos\movimientos.php on line 32.
+ 1 APPPATH\Views\movimientos\movimientos.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cedula"', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 32)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(160): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-09 21:22:10 --> Undefined array key "cedula"
+in APPPATH\Views\movimientos\movimientos.php on line 39.
+ 1 APPPATH\Views\movimientos\movimientos.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cedula"', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 39)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(160): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-09 21:22:31 --> Undefined array key "cedula"
+in APPPATH\Views\movimientos\movimientos.php on line 39.
+ 1 APPPATH\Views\movimientos\movimientos.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cedula"', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 39)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(160): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-09 21:22:43 --> Undefined variable $cedula
+in APPPATH\Views\movimientos\movimientos.php on line 43.
+ 1 APPPATH\Views\movimientos\movimientos.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cedula', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 43)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(160): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-09 21:22:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:' at line 3 in C:\wamp64\www\system\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\system\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\system\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\system\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\system\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\system\app\Views\movimientos\movimientos.php(43): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\wamp64\www\system\system\View\View.php(226): include('C:\\wamp64\\www\\s...')
+#6 C:\wamp64\www\system\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\wamp64\www\system\system\Common.php(1188): CodeIgniter\View\View->render('movimientos/mov...', Array, true)
+#8 C:\wamp64\www\system\app\Controllers\VistaController.php(160): view('movimientos/mov...', Array)
+#9 C:\wamp64\www\system\system\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+#10 C:\wamp64\www\system\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+#11 C:\wamp64\www\system\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\system\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-09 21:22:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `resp_responsables`
+WHERE 0 = :0:', [...], false)
+ 2 APPPATH\Views\movimientos\movimientos.php(43): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 6 APPPATH\Controllers\VistaController.php(160): view('movimientos/movimientos', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-09 22:19:15 --> Undefined property: CodeIgniter\Database\MySQLi\Builder::$cedula
+in APPPATH\Views\responsables\editarresp.php on line 17.
+ 1 APPPATH\Views\responsables\editarresp.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Builder::$cedula', 'C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarresp.php', 17)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\responsables\\editarresp.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('responsables/editarresp', [], true)
+ 5 APPPATH\Controllers\AccionController.php(594): view('responsables/editarresp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AccionController->respupdate('3003485')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccionController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-09 22:23:30 --> Undefined variable $x
+in APPPATH\Views\movimientos\movimientos.php on line 35.
+ 1 APPPATH\Views\movimientos\movimientos.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $x', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 35)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(160): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-09 22:35:08 --> Undefined variable $x
+in APPPATH\Views\movimientos\movimientos.php on line 35.
+ 1 APPPATH\Views\movimientos\movimientos.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $x', 'C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php', 35)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\wamp64\\www\\system\\app\\Views\\movimientos\\movimientos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('movimientos/movimientos', [], true)
+ 5 APPPATH\Controllers\VistaController.php(160): view('movimientos/movimientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\VistaController->movimiento()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
